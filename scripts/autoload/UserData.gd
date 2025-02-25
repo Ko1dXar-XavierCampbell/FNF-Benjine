@@ -7,7 +7,7 @@ const SAVE_DATA_PATH: String = "user://FNF_Benjine_Save.data"
 const IMPORTED_PACKAGES_PATH: String = "res://packages"
 const DEFAULT_SETTINGS_PATH: String = "res://assets/data/default_settings.data"
 
-"func get_modpacks_path():
+func get_modpacks_path():
 	return "res://testing/mods" if OS.has_feature("editor") else OS.get_executable_path().get_base_dir().plus_file("mods")
 
 func get_mod_desc_path(package: String):
@@ -23,7 +23,7 @@ func get_keybinds_path(package: String):
 	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("keybinds.tres")
 
 func get_song_list_path(package: String):
-	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("songs/song_list.tres")"
+	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("songs/song_list.tres")
 
 func _ready():
 	_attempt_first_time_setup()

@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://6qccjllpujl8"]
+[gd_scene load_steps=19 format=3 uid="uid://6qccjllpujl8"]
 
 [ext_resource type="Material" path="res://assets/materials/menus/StoryModeCharacterShader.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://2bjwp8118ys3" path="res://scenes/shared/game/characters/Boyfriend.tscn" id="2"]
-[ext_resource type="SpriteFrames" path="res://assets/graphics/boyfriend/Spritesheet_Boyfriend.res" id="3_boei1"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Death_Confirm.tres" id="4_pe1ou"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Death_Loop.tres" id="5_28jxd"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Death_Start.tres" id="6_hix0i"]
@@ -319,8 +318,6 @@ _data = {
 [node name="BF_StoryMode" instance=ExtResource("2")]
 material = ExtResource("1")
 position = Vector2(870, 450)
-sprite_frames = ExtResource("3_boei1")
-animation = &"BF idle dance"
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
