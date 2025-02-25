@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Inst.ogg-a27db83a0ba2969b3609923254cecb03.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cair5m576rcys"
+path="res://.godot/imported/Inst.ogg-a27db83a0ba2969b3609923254cecb03.oggvorbisstr"
 
 [deps]
 
 source_file="res://packages/fnf/songs/cocoa/Inst.ogg"
-dest_files=[ "res://.import/Inst.ogg-a27db83a0ba2969b3609923254cecb03.oggstr" ]
+dest_files=["res://.godot/imported/Inst.ogg-a27db83a0ba2969b3609923254cecb03.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

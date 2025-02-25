@@ -2,18 +2,18 @@ extends Control
 
 const LERP_VAL = 0.3
 
-export(NodePath) var scroll_sound_path = NodePath("../../Scroll_SFX")
-export(NodePath) var confirm_sound_path = NodePath("../../Confirm_SFX")
-export(NodePath) var back_sound_path = NodePath("../../Cancel_SFX")
-export(Array, NodePath) var valid_options_paths
-export(float) var y_start = 120
-export(String) var submenu_desc = "WIP"
+@export var scroll_sound_path: NodePath = NodePath("../../Scroll_SFX")
+@export var confirm_sound_path: NodePath = NodePath("../../Confirm_SFX")
+@export var back_sound_path: NodePath = NodePath("../../Cancel_SFX")
+@export var valid_options_paths # (Array, NodePath)
+@export var y_start: float = 120
+@export var submenu_desc: String = "WIP"
 
-onready var options_ui = get_parent().get_parent()
+@onready var options_ui = get_parent().get_parent()
 
-onready var scroll_sound = get_node(scroll_sound_path)
-onready var confirm_sound = get_node(confirm_sound_path)
-onready var back_sound = get_node(back_sound_path)
+@onready var scroll_sound = get_node(scroll_sound_path)
+@onready var confirm_sound = get_node(confirm_sound_path)
+@onready var back_sound = get_node(back_sound_path)
 
 var options = []
 var cur_option = 0
@@ -24,7 +24,7 @@ func _ready():
 
 func _process(_delta):
 	if len(options) > 0:
-		rect_position.y = lerp(rect_position.y, y_start - options[cur_option].rect_position.y, GodotX.get_haxeflixel_lerp(LERP_VAL))
+		position.y = lerp(position.y, y_start - options[cur_option].position.y, GodotX.get_haxeflixel_lerp(LERP_VAL))
 
 func on_input(event: InputEvent):
 	if GodotX.xor(event.is_action_released("ui_up"), event.is_action_released("ui_down")):

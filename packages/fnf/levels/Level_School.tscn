@@ -9,10 +9,10 @@
 [ext_resource path="res://scenes/shared/game/characters/Girlfriend_Pixel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/shared/game/notes/2d/pixel/Right_Pixel_Lane.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/shared/game/notes/2d/pixel/Down_Pixel_Lane.tscn" type="PackedScene" id=9]
-[ext_resource path="res://packages/fnf/resources/graphics/week6/weebSky.png" type="Texture" id=10]
-[ext_resource path="res://packages/fnf/resources/graphics/week6/weebSchool.png" type="Texture" id=11]
-[ext_resource path="res://packages/fnf/resources/graphics/week6/weebStreet.png" type="Texture" id=12]
-[ext_resource path="res://packages/fnf/resources/graphics/week6/weebTreesBack.png" type="Texture" id=13]
+[ext_resource path="res://packages/fnf/resources/graphics/week6/weebSky.png" type="Texture2D" id=10]
+[ext_resource path="res://packages/fnf/resources/graphics/week6/weebSchool.png" type="Texture2D" id=11]
+[ext_resource path="res://packages/fnf/resources/graphics/week6/weebStreet.png" type="Texture2D" id=12]
+[ext_resource path="res://packages/fnf/resources/graphics/week6/weebTreesBack.png" type="Texture2D" id=13]
 [ext_resource path="res://packages/fnf/resources/graphics/week6/trees_front/Weeb_Trees.tres" type="SpriteFrames" id=14]
 [ext_resource path="res://packages/fnf/resources/graphics/week6/Weeb_Petals.res" type="SpriteFrames" id=15]
 [ext_resource path="res://packages/fnf/resources/scenes/week6/Fangirls.tscn" type="PackedScene" id=16]
@@ -40,7 +40,7 @@ hud_path = NodePath("HUDPackage2D/HUD")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 visible = false
-polygon = PoolVector2Array( -109.755, -196.012, -137.301, 1126.2, 1841.78, 1128.32, 1759.14, -193.893 )
+polygon = PackedVector2Array( -109.755, -196.012, -137.301, 1126.2, 1841.78, 1128.32, 1759.14, -193.893 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -48,7 +48,7 @@ polygon = PoolVector2Array( -109.755, -196.012, -137.301, 1126.2, 1841.78, 1128.
 motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( -576, -324 )
 
-[node name="WeebSky" type="Sprite" parent="ParallaxBackground/Sky"]
+[node name="WeebSky" type="Sprite2D" parent="ParallaxBackground/Sky"]
 scale = Vector2( 6, 6 )
 texture = ExtResource( 10 )
 centered = false
@@ -57,7 +57,7 @@ centered = false
 motion_scale = Vector2( 0.6, 0.9 )
 motion_offset = Vector2( -256, -36 )
 
-[node name="WeebSchool" type="Sprite" parent="ParallaxBackground/School"]
+[node name="WeebSchool" type="Sprite2D" parent="ParallaxBackground/School"]
 position = Vector2( -200, 0 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 11 )
@@ -67,7 +67,7 @@ centered = false
 motion_scale = Vector2( 0.95, 0.95 )
 motion_offset = Vector2( -32, -18 )
 
-[node name="WeebStreet" type="Sprite" parent="ParallaxBackground/Street"]
+[node name="WeebStreet" type="Sprite2D" parent="ParallaxBackground/Street"]
 position = Vector2( -200, 0 )
 scale = Vector2( 6, 6 )
 texture = ExtResource( 12 )
@@ -77,7 +77,7 @@ centered = false
 motion_scale = Vector2( 0.9, 0.9 )
 motion_offset = Vector2( -64, -36 )
 
-[node name="WeebTreesBack" type="Sprite" parent="ParallaxBackground/Tree_Trunks"]
+[node name="WeebTreesBack" type="Sprite2D" parent="ParallaxBackground/Tree_Trunks"]
 position = Vector2( -30, 130 )
 scale = Vector2( 4.8, 4.8 )
 texture = ExtResource( 13 )
@@ -87,14 +87,14 @@ centered = false
 motion_scale = Vector2( 0.85, 0.85 )
 motion_offset = Vector2( -96, -54 )
 
-[node name="Foliage" type="AnimatedSprite" parent="ParallaxBackground/Tree_Tops"]
+[node name="Foliage" type="AnimatedSprite2D" parent="ParallaxBackground/Tree_Tops"]
 position = Vector2( -580, -800 )
 scale = Vector2( 5.102, 5.102 )
 frames = ExtResource( 14 )
 centered = false
 script = ExtResource( 19 )
 
-[node name="Petals" type="AnimatedSprite" parent="ParallaxBackground/Tree_Tops"]
+[node name="Petals" type="AnimatedSprite2D" parent="ParallaxBackground/Tree_Tops"]
 position = Vector2( -200, -40 )
 scale = Vector2( 6, 6 )
 frames = ExtResource( 15 )
@@ -102,7 +102,7 @@ animation = "PETALS ALL"
 centered = false
 script = ExtResource( 19 )
 
-[node name="Position2D" type="Position2D" parent="ParallaxBackground/Tree_Tops"]
+[node name="Marker2D" type="Marker2D" parent="ParallaxBackground/Tree_Tops"]
 position = Vector2( -200, -40 )
 scale = Vector2( 6, 6 )
 __meta__ = {

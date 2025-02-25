@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var lane_type = get_child(0).lane_type
+@onready var lane_type = get_child(0).lane_type
 
 func _ready():
 	_adjust_for_downscroll()

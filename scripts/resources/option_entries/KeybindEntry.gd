@@ -27,7 +27,7 @@ enum Keys {
 	KEY_PAGEUP = 16777235,
 	KEY_PAGEDOWN = 16777236,
 	KEY_SHIFT = 16777237,
-	KEY_CONTROL = 16777238,
+	KEY_CTRL = 16777238,
 	KEY_META = 16777239,
 	KEY_ALT = 16777240,
 	KEY_CAPSLOCK = 16777241,
@@ -277,15 +277,15 @@ enum JoyButtons {
 }
 const UNKNOWN_JOYPAD_BTN: int = 23
 
-export(String) var action_name = ""
+@export var action_name: String = ""
 
-export(bool) var input1_is_key = true
-export(Keys) var input1_as_key = 0
-export(JoyButtons) var input1_as_btn = 0
+@export var input1_is_key: bool = true
+@export var input1_as_key: Keys = 0
+@export var input1_as_btn: JoyButtons = 0
 
-export(bool) var input2_is_key = true
-export(Keys) var input2_as_key = 0
-export(JoyButtons) var input2_as_btn = 0
+@export var input2_is_key: bool = true
+@export var input2_as_key: Keys = 0
+@export var input2_as_btn: JoyButtons = 0
 
 func _init(
 	action_name_: String = "",
@@ -310,7 +310,7 @@ func get_as_events():
 func _get_as_event(input: int):
 	if get("input" + str(input) + "_is_key"):
 		var ev = InputEventKey.new()
-		ev.scancode = get("input" + str(input) + "_as_key")
+		ev.keycode = get("input" + str(input) + "_as_key")
 		return ev
 	else:
 		var ev = InputEventJoypadButton.new()

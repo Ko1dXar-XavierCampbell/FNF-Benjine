@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://assets/fonts/VCR_32_Options.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/fonts/VCR_32_Options.tres" type="FontFile" id=1]
 [ext_resource path="res://scripts/menus/story_mode/WeekSelection.gd" type="Script" id=2]
 [ext_resource path="res://scenes/shared/menus/story_menu/WeekOption.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/shared/game/characters/GF_StoryMode.tscn" type="PackedScene" id=4]
@@ -37,17 +37,17 @@ bus = "SFX"
 
 [node name="BG2" type="Polygon2D" parent="."]
 color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( 0, 0, 1280, 0, 1280, 75, 0, 75 )
+polygon = PackedVector2Array( 0, 0, 1280, 0, 1280, 75, 0, 75 )
 
 [node name="BG" type="Polygon2D" parent="."]
 position = Vector2( 0, 56 )
 color = Color( 0.976471, 0.811765, 0.317647, 1 )
-polygon = PoolVector2Array( 0, 0, 1280, 0, 1280, 400, 0, 400 )
+polygon = PackedVector2Array( 0, 0, 1280, 0, 1280, 400, 0, 400 )
 
 [node name="ClipRect" type="Control" parent="BG"]
-margin_right = 1280.0
-margin_bottom = 400.0
-rect_clip_content = true
+offset_right = 1280.0
+offset_bottom = 400.0
+clip_contents = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -63,13 +63,13 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Opponents" type="Node2D" parent="BG/ClipRect/Characters"]
 
 [node name="Week_Name" type="Label" parent="."]
-margin_left = 942.0
-margin_top = 13.0
-margin_right = 1265.0
-margin_bottom = 42.0
+offset_left = 942.0
+offset_top = 13.0
+offset_right = 1265.0
+offset_bottom = 42.0
 grow_horizontal = 0
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "week name"
 align = 2
 valign = 1
@@ -79,12 +79,12 @@ __meta__ = {
 }
 
 [node name="Week_Score" type="Label" parent="."]
-margin_left = 15.0
-margin_top = 13.0
-margin_right = 338.0
-margin_bottom = 42.0
-custom_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
-custom_fonts/font = ExtResource( 1 )
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 338.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color( 0.698039, 0.698039, 0.698039, 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Week Score: --"
 valign = 1
 uppercase = true
@@ -93,12 +93,12 @@ __meta__ = {
 }
 
 [node name="Tracklist" type="Label" parent="."]
-margin_top = 500.0
-margin_right = 384.0
-margin_bottom = 593.0
+offset_top = 500.0
+offset_right = 384.0
+offset_bottom = 593.0
 grow_horizontal = 2
-custom_colors/font_color = Color( 0.898039, 0.341176, 0.466667, 1 )
-custom_fonts/font = ExtResource( 1 )
+theme_override_colors/font_color = Color( 0.898039, 0.341176, 0.466667, 1 )
+theme_override_fonts/font = ExtResource( 1 )
 text = "Tracks:
 
 --"
@@ -109,19 +109,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Prev_Difficulty" type="AnimatedSprite" parent="."]
+[node name="Prev_Difficulty" type="AnimatedSprite2D" parent="."]
 position = Vector2( 895.5, 518.5 )
 frames = ExtResource( 12 )
 animation = "arrow left"
 
-[node name="Cur_Difficulty" type="AnimatedSprite" parent="."]
+[node name="Cur_Difficulty" type="AnimatedSprite2D" parent="."]
 position = Vector2( 1080, 524.5 )
 frames = ExtResource( 11 )
 animation = "0"
 
 [node name="Tween" type="Tween" parent="Cur_Difficulty"]
 
-[node name="Next_Difficulty" type="AnimatedSprite" parent="."]
+[node name="Next_Difficulty" type="AnimatedSprite2D" parent="."]
 position = Vector2( 1271, 518.5 )
 frames = ExtResource( 12 )
 animation = "arrow right"

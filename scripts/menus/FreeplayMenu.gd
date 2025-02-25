@@ -3,37 +3,37 @@ extends Node
 const MAIN_MENU = preload("res://scenes/shared/menus/default_menus/MainMenu.tscn")
 const LEVEL_MANAGER = preload("res://scenes/shared/game/LevelManager.tscn")
 
-export(NodePath) var song_select_menu_path
-export(NodePath) var inst_player_path
-export(NodePath) var tween_path
-export(NodePath) var bg_path
+@export var song_select_menu_path: NodePath
+@export var inst_player_path: NodePath
+@export var tween_path: NodePath
+@export var bg_path: NodePath
 
-export(NodePath) var score_fg_path
-export(NodePath) var score_bg_path
-export(NodePath) var difficulty_name_path
+@export var score_fg_path: NodePath
+@export var score_bg_path: NodePath
+@export var difficulty_name_path: NodePath
 
-export(NodePath) var song_speed_indicator_path
-export(NodePath) var song_speed_changer_path
+@export var song_speed_indicator_path: NodePath
+@export var song_speed_changer_path: NodePath
 
-export(NodePath) var botplay_button_path
+@export var botplay_button_path: NodePath
 
-export(NodePath) var cancel_sound_path
+@export var cancel_sound_path: NodePath
 
-onready var song_selection_menu = get_node(song_select_menu_path)
-onready var inst_player = get_node(inst_player_path)
-onready var tween = get_node(tween_path)
-onready var bg = get_node(bg_path)
+@onready var song_selection_menu = get_node(song_select_menu_path)
+@onready var inst_player = get_node(inst_player_path)
+@onready var tween = get_node(tween_path)
+@onready var bg = get_node(bg_path)
 
-onready var score_fg = get_node(score_fg_path)
-onready var score_bg = get_node(score_bg_path)
-onready var difficulty_name = get_node(difficulty_name_path)
+@onready var score_fg = get_node(score_fg_path)
+@onready var score_bg = get_node(score_bg_path)
+@onready var difficulty_name = get_node(difficulty_name_path)
 
-onready var song_speed_indicator = get_node(song_speed_indicator_path)
-onready var song_speed_changer = get_node(song_speed_changer_path)
+@onready var song_speed_indicator = get_node(song_speed_indicator_path)
+@onready var song_speed_changer = get_node(song_speed_changer_path)
 
-onready var botplay_button = get_node(botplay_button_path)
+@onready var botplay_button = get_node(botplay_button_path)
 
-onready var cancel_sound = get_node(cancel_sound_path)
+@onready var cancel_sound = get_node(cancel_sound_path)
 
 var freeplay_list = []
 var prev_menu_path = ""
@@ -60,7 +60,7 @@ func _input(event):
 
 # Pre: If no freeplay list specified, at least the FNF freeplay list exists
 func on_ready():
-	if freeplay_list.empty():
+	if freeplay_list.is_empty():
 		freeplay_list = UserData.get_entire_basic_mod_freeplay_list()
 	
 	# CORNER: the first song has only 1 difficulty
@@ -78,7 +78,7 @@ func on_ready():
 	song_select_menu_ref.on_ready(false)
 	
 	for idx in song_select_menu_ref.options_container.get_child_count():
-		var icon = AnimatedSprite.new()
+		var icon = AnimatedSprite2D.new()
 		var option = song_select_menu_ref.options_container.get_child(idx)
 		
 		icon.frames = freeplay_list[idx].icons
@@ -86,15 +86,15 @@ func on_ready():
 		
 		option.add_child(icon)
 		
-		icon.position.x = option.rect_size.x + 75 + 20
+		icon.position.x = option.size.x + 75 + 20
 		icon.position.y = 27.5
 	
 	song_select_menu_ref.change_option_to(song_idx)
 	
 	change_song(get_node(inst_player_path))
 	
-	get_node(bg_path).material.set_shader_param("bg_color", cur_bg_color)
-	get_node(bg_path).material.set_shader_param("outline_color", cur_outline_color)
+	get_node(bg_path).material.set_shader_parameter("bg_color", cur_bg_color)
+	get_node(bg_path).material.set_shader_parameter("outline_color", cur_outline_color)
 	
 	change_song_stats()
 	song_lerp_score = song_score
@@ -102,7 +102,7 @@ func on_ready():
 	get_node(song_speed_indicator_path).text = "Song Speed: " + str(Conductor.pitch_scale)
 	get_node(song_speed_changer_path).value = Conductor.pitch_scale
 	
-	get_node(botplay_button_path).pressed = Debug.botplay
+	get_node(botplay_button_path).button_pressed = Debug.botplay
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_IN)
 
@@ -110,8 +110,8 @@ func on_update(delta):
 	if !inst_player.playing:
 		inst_player.play()
 	
-	if db2linear(inst_player.volume_db) < 0.7:
-		inst_player.volume_db = linear2db(db2linear(inst_player.volume_db) + (0.5 * delta))
+	if db_to_linear(inst_player.volume_db) < 0.7:
+		inst_player.volume_db = linear_to_db(db_to_linear(inst_player.volume_db) + (0.5 * delta))
 	
 	song_lerp_score = lerp(song_lerp_score, song_score, GodotX.get_haxeflixel_lerp(0.2))
 	score_fg.text = String(round(song_lerp_score))
@@ -136,23 +136,23 @@ func on_input(event):
 		cancel_sound.play()
 		
 		TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-		TransitionSystem.connect("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_main_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 	
 	else:
 		song_selection_menu.on_input(event)
 
 func update_bg_material():
-	if bg.material.get_shader_param("bg_color") != cur_bg_color:
+	if bg.material.get_shader_parameter("bg_color") != cur_bg_color:
 		var lerp_val = GodotX.get_haxeflixel_lerp(0.08)
 		
-		bg.material.set_shader_param("bg_color", lerp(bg.material.get_shader_param("bg_color"), cur_bg_color, lerp_val))
-		bg.material.set_shader_param("outline_color", lerp(bg.material.get_shader_param("outline_color"), cur_outline_color, lerp_val))
+		bg.material.set_shader_parameter("bg_color", lerp(bg.material.get_shader_parameter("bg_color"), cur_bg_color, lerp_val))
+		bg.material.set_shader_parameter("outline_color", lerp(bg.material.get_shader_parameter("outline_color"), cur_outline_color, lerp_val))
 
 func change_song(inst_player_ref = null):
 	var i_player = inst_player_ref if inst_player_ref else inst_player
 	_check_for_instrumental(song_idx)
 	
-	i_player.volume_db = linear2db(0)
+	i_player.volume_db = linear_to_db(0)
 	i_player.stream = cached_instrumentals[song_idx]
 	i_player.play()
 	
@@ -190,19 +190,19 @@ func _on_option_changed(option_idx, _option):
 func _on_option_selected(_option_idx, _option):
 	_disable_input()
 	
-	tween.interpolate_property(inst_player, "volume_db", linear2db(0.7), linear2db(0.005), 0.7)
+	tween.interpolate_property(inst_player, "volume_db", linear_to_db(0.7), linear_to_db(0.005), 0.7)
 	tween.start()
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-	TransitionSystem.connect("transition_finished", self, "_stop_music", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
-	TransitionSystem.connect("transition_finished", self, "_switch_to_level", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	TransitionSystem.connect("transition_finished", Callable(self, "_stop_music").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
+	TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_level").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _disable_input():
 	set_process(false)
 	set_process_input(false)
 	
 	song_selection_menu.disable_input()
-	song_selection_menu.disconnect("option_changed", self, "_on_option_changed")
+	song_selection_menu.disconnect("option_changed", Callable(self, "_on_option_changed"))
 	
 	song_speed_changer.editable = false
 	
@@ -235,7 +235,7 @@ func _switch_to_level(_trans_name):
 	get_parent().switch_state(LEVEL_MANAGER, level_manager_args)
 
 func _switch_to_main_menu(_trans_name):
-	if prev_menu_path.empty():
+	if prev_menu_path.is_empty():
 		get_parent().switch_state(MAIN_MENU)
 		return
 	

@@ -17,11 +17,11 @@ const CAR_Y_MAX = 250
 const CAR_END_POS_MULT_MIN = 0.8
 const CAR_END_POS_MULT_MAX = 1.0
 
-onready var bg_limo = $ParallaxBackground/Dancing_Demons/BG_Limo
-onready var fg_limo = $FG_Limo
-onready var fast_car = $ParallaxBackground/Fast_Car/FastCarLol
-onready var fast_car_tween = $ParallaxBackground/Fast_Car/FastCarLol/Tween
-onready var car_pass_sound = $Car_Pass_Sound
+@onready var bg_limo = $ParallaxBackground/Dancing_Demons/BG_Limo
+@onready var fg_limo = $FG_Limo
+@onready var fast_car = $ParallaxBackground/Fast_Car/FastCarLol
+@onready var fast_car_tween = $ParallaxBackground/Fast_Car/FastCarLol/Tween
+@onready var car_pass_sound = $Car_Pass_Sound
 
 func do_level_specific_prep():
 	bg_limo.play("background limo pink")
@@ -30,7 +30,7 @@ func do_level_specific_prep():
 # I'm not recreating HaxeFlixel physics in Godot!!! you can't make me
 func send_fast_car():
 	if randf() <= CAR_CHANCE && !fast_car_tween.is_active():
-		var final_x = CAR_END_X * rand_range(CAR_END_POS_MULT_MIN, CAR_END_POS_MULT_MAX)
+		var final_x = CAR_END_X * randf_range(CAR_END_POS_MULT_MIN, CAR_END_POS_MULT_MAX)
 		
 		fast_car.position.x = CAR_START_X
 		fast_car.position.y = randi() % CAR_Y_MIN + (CAR_Y_MAX - CAR_Y_MIN)

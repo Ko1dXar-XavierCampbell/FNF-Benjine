@@ -1,4 +1,4 @@
-extends ARVROrigin
+extends XROrigin3D
 
 signal initialised
 signal failed_initialisation
@@ -10,13 +10,13 @@ signal focused_state
 signal visible_state
 signal pose_recentered
 
-export var auto_initialise = true
-export var start_passthrough = false
-export (NodePath) var viewport = null
+@export var auto_initialise = true
+@export var start_passthrough = false
+@export var viewport: NodePath = null
 
-var interface : ARVRInterface
+var interface : XRInterface
 
-func get_interface() -> ARVRInterface:
+func get_interface() -> XRInterface:
 	return interface
 
 func _ready():
@@ -28,12 +28,12 @@ func initialise() -> bool:
 		# we are already initialised
 		return true
 
-	interface = ARVRServer.find_interface("OpenXR")
+	interface = XRServer.find_interface("OpenXR")
 	if interface and interface.initialize():
 		print("OpenXR Interface initialized")
 
 		# Find the viewport we're using to render our XR output
-		var vp : Viewport = _get_xr_viewport()
+		var vp : SubViewport = _get_xr_viewport()
 
 		# Start passthrough?
 		_start_passthrough()
@@ -53,12 +53,12 @@ func initialise() -> bool:
 			print("No refresh rate given by XR runtime")
 
 			# Use something sufficiently high
-			Engine.iterations_per_second = 144
+			Engine.physics_ticks_per_second = 144
 		else:
 			print("HMD refresh rate is set to " + str(refresh_rate))
 
 			# Match our physics to our HMD
-			Engine.iterations_per_second = refresh_rate
+			Engine.physics_ticks_per_second = refresh_rate
 
 		emit_signal("initialised")
 		return true
@@ -66,9 +66,9 @@ func initialise() -> bool:
 		emit_signal("failed_initialisation")
 		return false
 
-func _get_xr_viewport() -> Viewport:
+func _get_xr_viewport() -> SubViewport:
 	if viewport:
-		var vp : Viewport = get_node(viewport)
+		var vp : SubViewport = get_node(viewport)
 		return vp
 	else:
 		return get_viewport()
@@ -82,16 +82,16 @@ func _start_passthrough():
 		$Configuration.start_passthrough()
 
 func _connect_plugin_signals():
-	ARVRServer.connect("openxr_session_begun", self, "_on_openxr_session_begun")
-	ARVRServer.connect("openxr_session_ending", self, "_on_openxr_session_ending")
-	ARVRServer.connect("openxr_focused_state", self, "_on_openxr_focused_state")
-	ARVRServer.connect("openxr_visible_state", self, "_on_openxr_visible_state")
-	ARVRServer.connect("openxr_pose_recentered", self, "_on_openxr_pose_recentered")
+	XRServer.connect("openxr_session_begun", Callable(self, "_on_openxr_session_begun"))
+	XRServer.connect("openxr_session_ending", Callable(self, "_on_openxr_session_ending"))
+	XRServer.connect("openxr_focused_state", Callable(self, "_on_openxr_focused_state"))
+	XRServer.connect("openxr_visible_state", Callable(self, "_on_openxr_visible_state"))
+	XRServer.connect("openxr_pose_recentered", Callable(self, "_on_openxr_pose_recentered"))
 
 func _on_openxr_session_begun():
 	print("OpenXR session begun")
 
-	var vp : Viewport = _get_xr_viewport()
+	var vp : SubViewport = _get_xr_viewport()
 	if vp:
 		# Our interface will tell us whether we should keep our render buffer in linear color space
 		vp.keep_3d_linear = $Configuration.keep_3d_linear()

@@ -4,8 +4,8 @@ const BENJINE_CREDITS = preload("res://assets/data/benjine_credits.tres")
 const SEPARATOR = "-----------------------------------------------"
 const MAIN_MENU = preload("res://scenes/shared/menus/default_menus/MainMenu.tscn")
 
-onready var credits = $Credits
-onready var cancel_sound = $Cancel_Sound
+@onready var credits = $Credits
+@onready var cancel_sound = $Cancel_Sound
 
 func _ready():
 	_create_credits()
@@ -21,7 +21,7 @@ func on_input(event):
 		cancel_sound.play()
 		
 		TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-		TransitionSystem.connect("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_main_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _create_credits():
 	credits.parse_bbcode("[center]")
@@ -73,24 +73,24 @@ func _add_links_from_credit(credit_entry: CreditEntry):
 	
 	if num_links > 0 && num_links == num_link_names:
 		for i in num_links:
-			var color = credit_entry.link_colors[i] if i < num_link_colors else Color.white
+			var color = credit_entry.link_colors[i] if i < num_link_colors else Color.WHITE
 			_add_link(credit_entry.links[i], credit_entry.link_names[i], color)
 			
 			if i < num_links - 1:
 				credits.append_bbcode(" / ")
 
-func _add_header(icon: Texture, title: String):
+func _add_header(icon: Texture2D, title: String):
 	_add_icon(icon)
 	credits.append_bbcode(" ")
 	_add_big_text(title)
 
-func _add_icon(texture: Texture):
+func _add_icon(texture: Texture2D):
 	credits.append_bbcode("[img=73]" + texture.resource_path + "[/img]")
 
 func _add_big_text(string: String):
 	credits.append_bbcode("[b]" + string + "[/b]")
 
-func _add_link(link: String, link_name: String, link_color: Color = Color.white):
+func _add_link(link: String, link_name: String, link_color: Color = Color.WHITE):
 	var result = ""
 	
 	result += "[color=#" + link_color.to_html(false) + "]"

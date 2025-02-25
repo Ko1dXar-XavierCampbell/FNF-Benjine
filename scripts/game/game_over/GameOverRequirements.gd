@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 func get_requirements(lvl):
 	var player = lvl.get_performer("player")

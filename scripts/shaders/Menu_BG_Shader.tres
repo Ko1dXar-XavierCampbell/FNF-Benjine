@@ -3,9 +3,9 @@
 [resource]
 code = "shader_type canvas_item;
 
-uniform vec4 prominent_color : hint_color = vec4(0.88, 0.88, 0.88, 1.0);
-uniform vec4 bg_color : hint_color = vec4(0.55, 0.55, 0.55, 1.0);
-uniform vec4 outline_color : hint_color = vec4(0.88, 0.88, 0.88, 1.0);
+uniform vec4 prominent_color : source_color = vec4(0.88, 0.88, 0.88, 1.0);
+uniform vec4 bg_color : source_color = vec4(0.55, 0.55, 0.55, 1.0);
+uniform vec4 outline_color : source_color = vec4(0.88, 0.88, 0.88, 1.0);
 
 void fragment()
 {

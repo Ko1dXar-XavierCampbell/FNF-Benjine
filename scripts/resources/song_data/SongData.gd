@@ -7,14 +7,14 @@ const DEFAULT_DIFFICULTY_NAMES = [
 	"Hard"
 ]
 
-export(String) var name = ""
-export(Array, String, FILE, "*.lvl_info.res,*.lvl_info.tres") var level_info_paths = []
-export(Array, String) var difficulty_names = DEFAULT_DIFFICULTY_NAMES
-export(SpriteFrames) var icons = null
-export(int) var icon_index = 0
-export(Color) var freeplay_bg_color = Color("#9271fd")
-export(Color) var freeplay_outline_color = Color("#2846dc")
-export(String, FILE, "*.mp3,*.ogg") var inst_preview_path = ""
+@export var name: String = ""
+@export var level_info_paths = [] # (Array, String, FILE, "*.lvl_info.res,*.lvl_info.tres")
+@export var difficulty_names = DEFAULT_DIFFICULTY_NAMES # (Array, String)
+@export var icons: SpriteFrames = null
+@export var icon_index: int = 0
+@export var freeplay_bg_color: Color = Color("#9271fd")
+@export var freeplay_outline_color: Color = Color("#2846dc")
+@export var inst_preview_path = "" # (String, FILE, "*.mp3,*.ogg")
 
 func _init(name_ = "",
 		   level_info_paths_ = [],

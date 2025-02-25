@@ -3,16 +3,16 @@ class_name OptionEntry
 
 const DEFAULT_OPTIONS = ["Off", "On"]
 
-export(String) var option_name = ""
-export(String) var option_display_name = ""
+@export var option_name: String = ""
+@export var option_display_name: String = ""
 
-export(Array, String) var options = DEFAULT_OPTIONS
+@export var options = DEFAULT_OPTIONS # (Array, String)
 
-export(bool) var num_range = false
-export(int) var num_range_min = 0
-export(int) var num_range_max = 0
+@export var num_range: bool = false
+@export var num_range_min: int = 0
+@export var num_range_max: int = 0
 
-export(int) var default_option = 0
+@export var default_option: int = 0
 
 func _init(
 	option_name_: String = "",

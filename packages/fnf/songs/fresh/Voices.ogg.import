@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Voices.ogg-6e3197a3d4e954e9baf4ce4bec298ac8.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0fgw3rumiixt"
+path="res://.godot/imported/Voices.ogg-6e3197a3d4e954e9baf4ce4bec298ac8.oggvorbisstr"
 
 [deps]
 
 source_file="res://packages/fnf/songs/fresh/Voices.ogg"
-dest_files=[ "res://.import/Voices.ogg-6e3197a3d4e954e9baf4ce4bec298ac8.oggstr" ]
+dest_files=["res://.godot/imported/Voices.ogg-6e3197a3d4e954e9baf4ce4bec298ac8.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,6 +1,6 @@
 extends "res://scripts/game/Level.gd"
 
-onready var gf_layer = $ParallaxBackground/GF
+@onready var gf_layer = $ParallaxBackground/GF
 
 func do_level_specific_prep():
 	match song_data.name:

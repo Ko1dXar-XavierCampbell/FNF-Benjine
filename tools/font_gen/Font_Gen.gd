@@ -6,8 +6,8 @@ extends Node
 const CHARS = "%()+-0123456789;=@Aa&ß'Bb\\Cc:,Dd$↓Ee”!Ff/Gg>Hh#♡IiJjKkLl←<Mm×NnOoPp.Qq?Rr→Ss*“TtUu↑Vv|WwXxYyZz[]^_~"
 
 func _ready():
-	var bold1_font = BitmapFont.new()
-	var bold2_font = BitmapFont.new()
+	var bold1_font = FontFile.new()
+	var bold2_font = FontFile.new()
 	var cur_char = 0
 	
 	
@@ -23,10 +23,10 @@ func _ready():
 	
 #	print(ResourceSaver.get_recognized_extensions(new_font))
 	
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	dir.open("res://assets/fonts/fnf_psych/imgs")
 	
-	dir.list_dir_begin()
+	dir.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	var file_name = dir.get_next()
 	while file_name != "":
 		if dir.current_is_dir():
@@ -94,20 +94,20 @@ func _ready():
 				bold2_font.add_char(ord(char_to_add), 0, char_tex_b2.region, align, advance)
 				cur_char += 1
 		
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		file_name = dir.get_next()
 	
 	var space_img = Image.new()
 	space_img.create(40, 70, false, Image.FORMAT_RGBA8)
 	
-	space_img.lock()
+	false # space_img.lock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	for i in 40:
 		for j in 70:
-			space_img.set_pixel(i, j, Color.transparent)
-	space_img.unlock()
+			space_img.set_pixel(i, j, Color.TRANSPARENT)
+	false # space_img.unlock() # TODOConverter3To4, Image no longer requires locking, `false` helps to not break one line if/else, so it can freely be removed
 	
 	var space_tex = ImageTexture.new()
-	space_tex.create_from_image(space_img, Texture.FLAG_FILTER)
+	space_tex.create_from_image(space_img) #,Texture2D.FLAG_FILTER
 	
 	bold1_font.add_texture(space_tex)
 	bold2_font.add_texture(space_tex)

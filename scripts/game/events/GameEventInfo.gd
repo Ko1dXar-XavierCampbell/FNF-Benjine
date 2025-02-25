@@ -1,15 +1,15 @@
 extends Resource
 class_name GameEventInfo
 
-export(float) var occurrence_time : float = 0
-export(Conductor.Notes) var time_units := Conductor.Notes.SECONDS
-export(bool) var check_floored_time := false
+@export var occurrence_time: float = 0
+@export var time_units := Conductor.Notes.SECONDS # (Conductor.Notes)
+@export var check_floored_time := false
 
-export(String) var func_ref_nodepath := "."
-export(String) var func_ref_property_path := ""
-export(String) var func_ref_func_name := ""
+@export var func_ref_nodepath := "."
+@export var func_ref_property_path := ""
+@export var func_ref_func_name := ""
 
-export(Array) var func_ref_args := []
+@export var func_ref_args := []
 
 func _init(occurrence_time_: float = 0,
 		time_units_ = -1,

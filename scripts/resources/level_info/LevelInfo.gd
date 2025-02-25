@@ -1,16 +1,16 @@
 extends Resource
 class_name LevelInfo, "res://scripts/resources/level_info/level_info_icon.svg"
 
-export(Resource) var chart = null
-export(PackedScene) var level = null
+@export var chart: Resource = null
+@export var level: PackedScene = null
 
-export(AudioStream) var instrumental_override = null
-export(AudioStream) var vocals_override = null
+@export var instrumental_override: AudioStream = null
+@export var vocals_override: AudioStream = null
 
-export(Resource) var onetime_events = null
-export(Resource) var repeating_events = null
-export(Resource) var rand_repeat_events = null
-export(Resource) var camera_pan_events = null
+@export var onetime_events: Resource = null
+@export var repeating_events: Resource = null
+@export var rand_repeat_events: Resource = null
+@export var camera_pan_events: Resource = null
 
 func _init(
 	chart_: SongChart = null,

@@ -1,7 +1,7 @@
 extends Node
 
-export(NodePath) var gles3_particles_path = NodePath("ParticlesGLES3")
-export(NodePath) var gles2_particles_path = NodePath("ParticlesGLES2")
+@export var gles3_particles_path: NodePath = NodePath("ParticlesGLES3")
+@export var gles2_particles_path: NodePath = NodePath("ParticlesGLES2")
 
 var particles
 

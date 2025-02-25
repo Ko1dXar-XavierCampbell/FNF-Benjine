@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=12 format=2]
 
 [ext_resource path="res://scripts/resources/mod_credits/ModCredits.gd" type="Script" id=1]
-[ext_resource path="res://assets/graphics/game/hud/icon_grid_extended.png" type="Texture" id=2]
-[ext_resource path="res://assets/graphics/menus/credits/bk_icon_small.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/game/hud/icon_grid_extended.png" type="Texture2D" id=2]
+[ext_resource path="res://assets/graphics/menus/credits/bk_icon_small.png" type="Texture2D" id=3]
 [ext_resource path="res://scripts/resources/credit_entry/CreditEntry.gd" type="Script" id=4]
-[ext_resource path="res://assets/graphics/menus/credits/PhantomArcade-Icon.png" type="Texture" id=5]
-[ext_resource path="res://assets/graphics/menus/credits/evilsk8r-Icon(2).png" type="Texture" id=6]
-[ext_resource path="res://assets/graphics/menus/credits/Ninjamuffin-Icon.png" type="Texture" id=7]
-[ext_resource path="res://assets/graphics/menus/credits/Kawaisprite-Icon.png" type="Texture" id=8]
+[ext_resource path="res://assets/graphics/menus/credits/PhantomArcade-Icon.png" type="Texture2D" id=5]
+[ext_resource path="res://assets/graphics/menus/credits/evilsk8r-Icon(2).png" type="Texture2D" id=6]
+[ext_resource path="res://assets/graphics/menus/credits/Ninjamuffin-Icon.png" type="Texture2D" id=7]
+[ext_resource path="res://assets/graphics/menus/credits/Kawaisprite-Icon.png" type="Texture2D" id=8]
 
 [sub_resource type="Resource" id=2]
 script = ExtResource( 4 )

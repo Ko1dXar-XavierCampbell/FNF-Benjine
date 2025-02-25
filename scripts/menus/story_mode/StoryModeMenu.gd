@@ -6,25 +6,25 @@ const FREAKY_MENU = preload("res://assets/music/freakyMenu.ogg")
 const NO_WEEK_LOGO = preload("res://assets/graphics/menus/story_mode/no_week.png")
 const NO_WEEK_NAME = "Week ??"
 
-export(NodePath) var week_select_menu_path
+@export var week_select_menu_path: NodePath
 
-onready var week_select_menu = get_node(week_select_menu_path)
-onready var confirm_sound = $Confirm_Sound
-onready var cancel_sound = $Cancel_Sound
+@onready var week_select_menu = get_node(week_select_menu_path)
+@onready var confirm_sound = $Confirm_Sound
+@onready var cancel_sound = $Cancel_Sound
 
-onready var week_name_display = $Week_Name
-onready var week_score_display = $Week_Score
-onready var week_tracklist_display = $Tracklist
+@onready var week_name_display = $Week_Name
+@onready var week_score_display = $Week_Score
+@onready var week_tracklist_display = $Tracklist
 
-onready var week_difficulty_display = $Cur_Difficulty
-onready var week_difficulty_tween = $Cur_Difficulty/Tween
-onready var prev_difficulty_btn = $Prev_Difficulty
-onready var next_difficulty_btn = $Next_Difficulty
+@onready var week_difficulty_display = $Cur_Difficulty
+@onready var week_difficulty_tween = $Cur_Difficulty/Tween
+@onready var prev_difficulty_btn = $Prev_Difficulty
+@onready var next_difficulty_btn = $Next_Difficulty
 
 # TODO: softcode this
-onready var player = $BG/ClipRect/Characters/BF_StoryMode
-onready var metronome = $BG/ClipRect/Characters/GF_StoryMode
-onready var opponent_list = $BG/ClipRect/Characters/Opponents
+@onready var player = $BG/ClipRect/Characters/BF_StoryMode
+@onready var metronome = $BG/ClipRect/Characters/GF_StoryMode
+@onready var opponent_list = $BG/ClipRect/Characters/Opponents
 
 var week_idx = 0
 var difficulty_idx = 1
@@ -61,7 +61,7 @@ func _ready():
 		week_difficulties.append(week.week_difficulties)
 		
 		# 2) Get this week's list of tracks and its scores at each difficulty
-		var tracklist = PoolStringArray()
+		var tracklist = PackedStringArray()
 		var scores = []
 		
 		# Clear the array with the correct number of scores
@@ -98,7 +98,7 @@ func _ready():
 		# ----------------------------------
 		# Add this week's characters
 		if week.has("story_opponent_path"):
-			var week_opp = load(week.story_opponent_path).instance()
+			var week_opp = load(week.story_opponent_path).instantiate()
 			
 			week_opp.hide()
 			opponent_list.add_child(week_opp)
@@ -112,7 +112,7 @@ func _ready():
 	change_week_info()
 	
 	if !Conductor.playing || Conductor.stream != FREAKY_MENU:
-		Conductor.volume_db = linear2db(0.8)
+		Conductor.volume_db = linear_to_db(0.8)
 		Conductor.play_music(FREAKY_MENU, 102)
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_IN)
@@ -147,7 +147,7 @@ func _input(event):
 		cancel_sound.play()
 		
 		TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-		TransitionSystem.connect("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_main_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 	else:
 		week_select_menu.on_input(event)
 
@@ -205,15 +205,15 @@ func _on_option_selected(_option_idx, _option):
 	
 	var timer = get_tree().create_timer(1)
 	
-	timer.connect("timeout", TransitionSystem, "play_transition", [TransitionSystem.Transitions.BASIC_FADE_OUT], CONNECT_DEFERRED | CONNECT_ONESHOT)
-	timer.connect("timeout", TransitionSystem, "connect", ["transition_finished", self, "_switch_to_level", [], CONNECT_DEFERRED | CONNECT_ONESHOT], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	timer.connect("timeout", Callable(TransitionSystem, "play_transition").bind(TransitionSystem.Transitions.BASIC_FADE_OUT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
+	timer.connect("timeout", Callable(TransitionSystem, "connect").bind("transition_finished", self, "_switch_to_level", [], CONNECT_DEFERRED | CONNECT_ONE_SHOT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _disable_input():
 	set_process(false)
 	set_process_input(false)
 	
 	week_select_menu.disable_input()
-	week_select_menu.disconnect("option_changed", self, "_on_option_changed")
+	week_select_menu.disconnect("option_changed", Callable(self, "_on_option_changed"))
 
 func _switch_to_level(_trans_name):
 #	get_parent().switch_state(load(level_manager_paths[week_idx]), { "difficulty": difficulty_idx })

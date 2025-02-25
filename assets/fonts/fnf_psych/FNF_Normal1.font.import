@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://djd1jt7t3at8d"
+path="res://.godot/imported/FNF_Normal1.font-643bf901b455bd57aef48f8cf9031d03.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/fnf_psych/FNF_Normal1.font"
+dest_files=["res://.godot/imported/FNF_Normal1.font-643bf901b455bd57aef48f8cf9031d03.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

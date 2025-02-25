@@ -21,7 +21,7 @@ func get_lerp_val():
 	return GodotX.get_haxeflixel_lerp(0.17)
 
 func _create_week_option(idx):
-	var week_option = WEEK_OPTION.instance()
+	var week_option = WEEK_OPTION.instantiate()
 	
 	week_option.texture = options[idx]
 	week_option.global_position = get_option_position(idx)

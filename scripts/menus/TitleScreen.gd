@@ -4,15 +4,15 @@ const MAIN_MENU = preload("res://scenes/shared/menus/default_menus/MainMenu.tscn
 const FREAKY_MENU = preload("res://assets/music/freakyMenu.ogg")
 const INTRO_SEQUENCE_QUARTERS = [3, 4, 5, 7, 8, 9, 11, 12, 13, 14, 15, 16]
 
-onready var intro_sequence = $Intro_Sequence
-onready var gf = $GF
-onready var logo = $BenjineLogo
-onready var press_enter = $Press_Enter
-onready var flash = $Flash
-onready var confirm_sound = $Confirm_Sound
+@onready var intro_sequence = $Intro_Sequence
+@onready var gf = $GF
+@onready var logo = $BenjineLogo
+@onready var press_enter = $Press_Enter
+@onready var flash = $Flash
+@onready var confirm_sound = $Confirm_Sound
 
-onready var funny_text1 = $Intro_Part3/Text
-onready var funny_text2 = $Intro_Part3/Text2
+@onready var funny_text1 = $Intro_Part3/Text
+@onready var funny_text2 = $Intro_Part3/Text2
 
 var intro_skipped = false
 var cur_intro_part = 2
@@ -20,7 +20,7 @@ var cur_intro_part = 2
 func _ready():
 	if intro_skipped:
 		if !Conductor.playing || Conductor.stream != FREAKY_MENU:
-			Conductor.volume_db = linear2db(0.7)
+			Conductor.volume_db = linear_to_db(0.7)
 			Conductor.play_music(FREAKY_MENU, 102)
 		
 		_skip_intro()
@@ -36,9 +36,9 @@ func _ready():
 		logo.hide()
 		press_enter.hide()
 		
-		Conductor.volume_db = linear2db(0.7)
+		Conductor.volume_db = linear_to_db(0.7)
 		Conductor.play_music(FREAKY_MENU, 102)
-		Conductor.connect("quarter_hit", self, "_on_quarter_hit")
+		Conductor.connect("quarter_hit", Callable(self, "_on_quarter_hit"))
 		
 		intro_sequence.play("Part1")
 	
@@ -53,8 +53,8 @@ func _input(event):
 			confirm_sound.play()
 			
 			var timer = get_tree().create_timer(1)
-			timer.connect("timeout", TransitionSystem, "play_transition", [TransitionSystem.Transitions.BASIC_FADE_OUT], CONNECT_DEFERRED | CONNECT_ONESHOT)
-			timer.connect("timeout", TransitionSystem, "connect", ["transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT], CONNECT_DEFERRED | CONNECT_ONESHOT)
+			timer.connect("timeout", Callable(TransitionSystem, "play_transition").bind(TransitionSystem.Transitions.BASIC_FADE_OUT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
+			timer.connect("timeout", Callable(TransitionSystem, "connect").bind("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONE_SHOT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 		else:
 			_skip_intro()
 
@@ -68,8 +68,8 @@ func _on_quarter_hit(quarter):
 			cur_intro_part += 1
 
 func _skip_intro():
-	if Conductor.is_connected("quarter_hit", self, "_on_quarter_hit"):
-		Conductor.disconnect("quarter_hit", self, "_on_quarter_hit")
+	if Conductor.is_connected("quarter_hit", Callable(self, "_on_quarter_hit")):
+		Conductor.disconnect("quarter_hit", Callable(self, "_on_quarter_hit"))
 	intro_sequence.play("RESET")
 	
 	gf.show()

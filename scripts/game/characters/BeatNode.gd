@@ -1,12 +1,12 @@
 extends Node
 
-export(NodePath) var anim_player_path = NodePath("AnimationPlayer")
+@export var anim_player_path: NodePath = NodePath("AnimationPlayer")
 
-export(String) var idle_anim_name = "Idle"
-export(int) var idle_frequency = 1
-export(int) var idle_offset = 0
+@export var idle_anim_name: String = "Idle"
+@export var idle_frequency: int = 1
+@export var idle_offset: int = 0
 
-onready var anim_player = get_node(anim_player_path)
+@onready var anim_player = get_node(anim_player_path)
 
 var anim_timer = 0
 var uninterrupted_anim = false
@@ -15,8 +15,8 @@ func _ready():
 	on_ready()
 
 func on_ready():
-	if !Conductor.is_connected("quarter_hit", self, "on_quarter_hit"):
-		Conductor.connect("quarter_hit", self, "on_quarter_hit")
+	if !Conductor.is_connected("quarter_hit", Callable(self, "on_quarter_hit")):
+		Conductor.connect("quarter_hit", Callable(self, "on_quarter_hit"))
 
 func on_update(delta):
 	if anim_timer > 0:

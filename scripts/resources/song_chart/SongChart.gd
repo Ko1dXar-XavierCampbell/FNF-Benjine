@@ -3,15 +3,15 @@ class_name SongChart, "res://scripts/resources/song_chart/song_chart_icon.svg"
 
 enum ChartType {SNIFF, FNFVR, KADE_V6PLUS, PSYCH}
 
-export(AudioStream) var instrumental = null
-export(AudioStream) var vocals = null
+@export var instrumental: AudioStream = null
+@export var vocals: AudioStream = null
 
-export(float) var initial_bpm = 100
-export(Array, Resource) var bpm_maps = []
+@export var initial_bpm: float = 100
+@export var bpm_maps = [] # (Array, Resource)
 
-export(float) var scroll_speed = 1
+@export var scroll_speed: float = 1
 
-export(Dictionary) var lanes = {
+@export var lanes: Dictionary = {
 	player = [],
 	opponent = []
 }

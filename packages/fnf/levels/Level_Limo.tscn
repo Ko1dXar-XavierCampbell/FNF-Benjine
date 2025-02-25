@@ -5,12 +5,12 @@
 [ext_resource path="res://scenes/shared/game/characters/Boyfriend_Car.tscn" type="PackedScene" id=3]
 [ext_resource path="res://packages/fnf/scripts/game/levels/Level_Limo.gd" type="Script" id=4]
 [ext_resource path="res://packages/fnf/characters/mommy_mearest/Mommy_Mearest.tscn" type="PackedScene" id=5]
-[ext_resource path="res://packages/fnf/resources/graphics/week4/limoSunset.png" type="Texture" id=6]
+[ext_resource path="res://packages/fnf/resources/graphics/week4/limoSunset.png" type="Texture2D" id=6]
 [ext_resource path="res://packages/fnf/resources/graphics/week4/BG_Limo.res" type="SpriteFrames" id=7]
 [ext_resource path="res://packages/fnf/resources/scenes/week4/Dancing_Demon.tscn" type="PackedScene" id=8]
 [ext_resource path="res://packages/fnf/resources/graphics/week4/FG_Limo.res" type="SpriteFrames" id=9]
-[ext_resource path="res://packages/fnf/resources/graphics/week4/fastCarLol.png" type="Texture" id=10]
-[ext_resource path="res://packages/fnf/resources/graphics/week4/limoOverlay.png" type="Texture" id=11]
+[ext_resource path="res://packages/fnf/resources/graphics/week4/fastCarLol.png" type="Texture2D" id=10]
+[ext_resource path="res://packages/fnf/resources/graphics/week4/limoOverlay.png" type="Texture2D" id=11]
 [ext_resource path="res://packages/fnf/scripts/Screen_Overlay.tres" type="Shader" id=12]
 [ext_resource path="res://scripts/general/PitchScaledAnimSprite.gd" type="Script" id=13]
 [ext_resource path="res://scripts/general/PitchScaledAudioStreamPlayer.gd" type="Script" id=14]
@@ -19,7 +19,7 @@
 shader = ExtResource( 12 )
 shader_param/region_start = Vector2( 500, 600 )
 shader_param/region_end = Vector2( 1780, 1320 )
-shader_param/rect_size = Vector2( 3262, 1659 )
+shader_param/size = Vector2( 3262, 1659 )
 shader_param/overlay_tex = ExtResource( 11 )
 
 [node name="Level" type="Node"]
@@ -46,7 +46,7 @@ hud_path = NodePath("HUDPackage2D/HUD")
 motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( -600, -320 )
 
-[node name="LimoSunset" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="LimoSunset" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -120, -50 )
 texture = ExtResource( 6 )
 centered = false
@@ -55,7 +55,7 @@ centered = false
 motion_scale = Vector2( 0.4, 0.4 )
 motion_offset = Vector2( -380, -220 )
 
-[node name="BG_Limo" type="AnimatedSprite" parent="ParallaxBackground/Dancing_Demons"]
+[node name="BG_Limo" type="AnimatedSprite2D" parent="ParallaxBackground/Dancing_Demons"]
 position = Vector2( -200, 480 )
 frames = ExtResource( 7 )
 animation = "background limo pink"
@@ -76,7 +76,7 @@ position = Vector2( 1240, 80 )
 
 [node name="Fast_Car" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="FastCarLol" type="Sprite" parent="ParallaxBackground/Fast_Car"]
+[node name="FastCarLol" type="Sprite2D" parent="ParallaxBackground/Fast_Car"]
 position = Vector2( -12600, 160 )
 texture = ExtResource( 10 )
 centered = false
@@ -90,7 +90,7 @@ motion_scale = Vector2( 0.95, 0.95 )
 first_idle = "W4_Dance_Left"
 second_idle = "W4_Dance_Right"
 
-[node name="FG_Limo" type="AnimatedSprite" parent="."]
+[node name="FG_Limo" type="AnimatedSprite2D" parent="."]
 position = Vector2( -120, 550 )
 frames = ExtResource( 9 )
 animation = "Limo stage"
@@ -103,7 +103,7 @@ idle_frequency = 2
 [node name="Mommy_Mearest" parent="." instance=ExtResource( 5 )]
 idle_frequency = 2
 
-[node name="Camera_Point2" type="Position2D" parent="Mommy_Mearest"]
+[node name="Camera_Point2" type="Marker2D" parent="Mommy_Mearest"]
 position = Vector2( 841, 236 )
 
 [node name="Car_Pass_Sound" type="AudioStreamPlayer" parent="."]
@@ -118,7 +118,7 @@ layer = 0
 self_modulate = Color( 1, 1, 1, 0.501961 )
 material = SubResource( 1 )
 position = Vector2( -500, -600 )
-polygon = PoolVector2Array( 0, 0, 3262, 0, 3262, 1659, 0, 1659 )
+polygon = PackedVector2Array( 0, 0, 3262, 0, 3262, 1659, 0, 1659 )
 
 [node name="HUDPackage2D" parent="." instance=ExtResource( 2 )]
 

@@ -1,9 +1,9 @@
 extends GameEventInfo
 class_name RandRepeatGameEventInfo
 
-export(Array) var time_increment = [1, 2]
-export(bool) var generate_with_ints = false
-export(bool) var inclusive_int_range = true
+@export var time_increment: Array = [1, 2]
+@export var generate_with_ints: bool = false
+@export var inclusive_int_range: bool = true
 
 func _init(occurrence_time_: float = 0,
 		time_units_ = -1,
@@ -15,7 +15,7 @@ func _init(occurrence_time_: float = 0,
 		time_increment_ : Array = [1, 2],
 		generate_with_ints_ : bool = false,
 		inclusive_int_range_ : bool = true):
-	._init(
+	super._init(
 		occurrence_time_,
 		time_units_,
 		check_floored_time_,

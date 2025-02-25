@@ -1,6 +1,6 @@
 extends "res://scripts/game/Level.gd"
 
-onready var parents = $Parents_Christmas
+@onready var parents = $Parents_Christmas
 
 func do_level_specific_prep():
 	match song_data.name:

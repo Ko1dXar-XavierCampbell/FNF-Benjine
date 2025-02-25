@@ -1,10 +1,10 @@
 extends "res://scripts/general/StateManager.gd"
 
-export(Array, Resource) var state_stack = []
-export(Array, Dictionary) var state_args = []
-export(int) var difficulty = 2
+@export var state_stack = [] # (Array, Resource)
+@export var state_args = [] # (Array, Dictionary)
+@export var difficulty: int = 2
 
-onready var main = get_parent()
+@onready var main = get_parent()
 
 var story_mode_path = "res://scenes/shared/menus/default_menus/StoryModeMenu.tscn"
 var freeplay_path = "res://scenes/shared/menus/default_menus/FreeplayMenu.tscn"
@@ -28,7 +28,7 @@ func on_ready():
 	
 	var result = _load_level_infos()
 	while result is GDScriptFunctionState:
-		result = yield(result, "completed")
+		result = await result.completed
 	
 	call_deferred("advance_state_stack")
 
@@ -47,7 +47,7 @@ func advance_state_stack():
 			
 			scene = level_info.level
 			
-			if state_args[cur_state_idx] != null && !state_args[cur_state_idx].empty():
+			if state_args[cur_state_idx] != null && !state_args[cur_state_idx].is_empty():
 				scene_variables = state_args[cur_state_idx]
 				scene_variables["song_data"] = cur_state
 				scene_variables["song_chart"] = song_chart
@@ -128,4 +128,4 @@ func _load_level_infos():
 			paths.push_back(state.level_info_paths[difficulty])
 	
 	Loader.load_objects(paths)
-	level_infos = yield(Loader, "loaded")
+	level_infos = await Loader.loaded

@@ -76,8 +76,8 @@ The Benjine assumes you have some sort of experience working with the Godot game
 In order to be a valid Benjine mod, your mod MUST have:
 - A folder with a unique name (ex. whitty, bogus, sonic_exe, etc.)
 - A **ModDescription** resource called **mod_desc.tres** in (your mod name)/desc
-    - Your mod description and any resources it uses MUST be contained in (your mod name)/desc
-    - Make sure to add the package name
+	- Your mod description and any resources it uses MUST be contained in (your mod name)/desc
+	- Make sure to add the package name
 - A **ModCredits** resource called **credits.tres**
 - A **SongList** resource called **song_list.tres** in (your mod name)/songs
 

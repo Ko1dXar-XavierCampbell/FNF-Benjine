@@ -2,24 +2,24 @@ extends Node
 
 enum DeathState {START, LOOP, END, QUIT}
 
-export(NodePath) var hud_path
-export(NodePath) var camera_path
-export(NodePath) var player_character_path
-export(NodePath) var fade_screen_path
-export(NodePath) var loss_sfx_path
-export(NodePath) var end_sfx_path
-export(NodePath) var cancel_sfx_path
+@export var hud_path: NodePath
+@export var camera_path: NodePath
+@export var player_character_path: NodePath
+@export var fade_screen_path: NodePath
+@export var loss_sfx_path: NodePath
+@export var end_sfx_path: NodePath
+@export var cancel_sfx_path: NodePath
 
-export(AudioStream) var death_music = preload("res://assets/music/gameOver.ogg")
-export(float) var death_music_bpm = 100
+@export var death_music: AudioStream = preload("res://assets/music/gameOver.ogg")
+@export var death_music_bpm: float = 100
 
-onready var hud = get_node(hud_path)
-onready var camera = get_node(camera_path)
-onready var player_character = get_node(player_character_path)
-onready var fade_screen = get_node(fade_screen_path)
-onready var loss_sfx = get_node(loss_sfx_path)
-onready var end_sfx = get_node(end_sfx_path)
-onready var cancel_sfx = get_node(cancel_sfx_path)
+@onready var hud = get_node(hud_path)
+@onready var camera = get_node(camera_path)
+@onready var player_character = get_node(player_character_path)
+@onready var fade_screen = get_node(fade_screen_path)
+@onready var loss_sfx = get_node(loss_sfx_path)
+@onready var end_sfx = get_node(end_sfx_path)
+@onready var cancel_sfx = get_node(cancel_sfx_path)
 
 var cam_pos_from_level = Vector2(770, 450)
 var zoom_from_level = Vector2(1 / 0.7, 1 / 0.7)
@@ -43,7 +43,7 @@ func advance_death_state(state):
 			camera.zoom = zoom_from_level
 			
 			player_character.play_anim("Death_Start")
-			player_character.anim_player.connect("animation_finished", self, "_advance_after_start", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+			player_character.anim_player.connect("animation_finished", Callable(self, "_advance_after_start").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 			
 			loss_sfx.play()
 			
@@ -54,26 +54,26 @@ func advance_death_state(state):
 			loss_sfx.stop()
 			end_sfx.play()
 			
-			if player_character.anim_player.is_connected("animation_finished", self, "_advance_after_start"):
-				player_character.anim_player.disconnect("animation_finished", self, "_advance_after_start")
+			if player_character.anim_player.is_connected("animation_finished", Callable(self, "_advance_after_start")):
+				player_character.anim_player.disconnect("animation_finished", Callable(self, "_advance_after_start"))
 			
 			player_character.play_anim("Death_Confirm")
 			Conductor.stop_song()
 			
-			get_tree().create_timer(0.7).connect("timeout", fade_screen.get_node("AnimationPlayer"), "play", ["Fade"], CONNECT_ONESHOT)
-			get_tree().create_timer(2.7).connect("timeout", TransitionSystem, "start_transition", ["Instant_Fade_Out"], CONNECT_ONESHOT)
-			get_tree().create_timer(2.7).connect("timeout", get_parent(), "restart", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+			get_tree().create_timer(0.7).connect("timeout", Callable(fade_screen.get_node("AnimationPlayer"), "play").bind("Fade"), CONNECT_ONE_SHOT)
+			get_tree().create_timer(2.7).connect("timeout", Callable(TransitionSystem, "start_transition").bind("Instant_Fade_Out"), CONNECT_ONE_SHOT)
+			get_tree().create_timer(2.7).connect("timeout", Callable(get_parent(), "restart").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 		
 		DeathState.QUIT:
 			loss_sfx.stop()
 			cancel_sfx.play()
 			
-			if player_character.anim_player.is_connected("animation_finished", self, "_advance_after_start"):
-				player_character.anim_player.disconnect("animation_finished", self, "_advance_after_start")
+			if player_character.anim_player.is_connected("animation_finished", Callable(self, "_advance_after_start")):
+				player_character.anim_player.disconnect("animation_finished", Callable(self, "_advance_after_start"))
 			
 			Conductor.stop_song()
 			
-			TransitionSystem.connect("transition_finished", self, "_quit",  [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+			TransitionSystem.connect("transition_finished", Callable(self, "_quit").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 			TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
 
 func _advance_after_start(_anim_name):
@@ -86,8 +86,8 @@ func on_update():
 	var action_pressed = GodotX.xor(Input.is_action_just_pressed("ui_accept"), Input.is_action_just_pressed("ui_cancel"))
 	
 	if action_pressed:
-		if player_character.anim_player.is_connected("animation_finished", self, "_advance_after_start"):
-			player_character.anim_player.disconnect("animation_finished", self, "_advance_after_start")
+		if player_character.anim_player.is_connected("animation_finished", Callable(self, "_advance_after_start")):
+			player_character.anim_player.disconnect("animation_finished", Callable(self, "_advance_after_start"))
 		
 		camera.reset_position()
 		

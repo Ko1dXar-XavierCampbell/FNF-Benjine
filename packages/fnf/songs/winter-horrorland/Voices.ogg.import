@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Voices.ogg-b60fe044fb3a55d4167f90a6a8b731f1.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmf1vsfxnip3i"
+path="res://.godot/imported/Voices.ogg-b60fe044fb3a55d4167f90a6a8b731f1.oggvorbisstr"
 
 [deps]
 
 source_file="res://packages/fnf/songs/winter-horrorland/Voices.ogg"
-dest_files=[ "res://.import/Voices.ogg-b60fe044fb3a55d4167f90a6a8b731f1.oggstr" ]
+dest_files=["res://.godot/imported/Voices.ogg-b60fe044fb3a55d4167f90a6a8b731f1.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

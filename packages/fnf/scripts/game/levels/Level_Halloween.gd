@@ -5,8 +5,8 @@ const THUNDER_SOUNDS = [
 	preload("res://packages/fnf/resources/sounds/thunder_2.ogg")
 ]
 
-onready var thunder = $Thunder
-onready var lightning_anim = $BG/AnimationPlayer
+@onready var thunder = $Thunder
+@onready var lightning_anim = $BG/AnimationPlayer
 
 func do_level_specific_prep():
 	match song_data.name:

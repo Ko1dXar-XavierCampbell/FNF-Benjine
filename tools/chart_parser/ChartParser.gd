@@ -1,4 +1,4 @@
-tool
+@tool
 extends Node
 
 const PSYCH_GF_SING = "GF Sing"
@@ -12,7 +12,7 @@ var vocals_name_and_ext = "Voices.ogg"
 var result_suffixes = ["_easy", "_normal", "_hard"]
 
 var chart_type = SongChart.ChartType.SNIFF
-var difficulties = PoolIntArray([0, 1, 2])
+var difficulties = PackedInt32Array([0, 1, 2])
 var fnf_chart_naming = false
 var num_lanes = 4
 
@@ -66,11 +66,11 @@ func _get_property_list():
 		name = "chart_type",
 		type = TYPE_INT,
 		hint = PROPERTY_HINT_ENUM,
-		hint_string = PoolStringArray(SongChart.ChartType.keys()).join(",")
+		hint_string = PackedStringArray(SongChart.ChartType.",".join(keys()))
 	})
 	properties.append({
 		name = "difficulties",
-		type = TYPE_INT_ARRAY
+		type = TYPE_PACKED_INT32_ARRAY
 	})
 	properties.append({
 		name = "fnf_chart_naming",
@@ -98,7 +98,7 @@ func _get_property_list():
 	return properties
 
 func _ready():
-	if Engine.editor_hint: return
+	if Engine.is_editor_hint(): return
 	
 	for difficulty_idx in range(difficulties.size()):
 		############
@@ -106,19 +106,19 @@ func _ready():
 		
 		_song_chart = SongChart.new()
 		print("Song chart resource created")
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		extract_data_from_json(difficulties[difficulty_idx])
 		print("Data extracted from JSON")
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		generate_bpm_maps()
 		print("BPMs mapped")
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		generate_notes()
 		print("Notes generated")
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		_song_chart.instrumental = inst
 		_song_chart.vocals = vocals
@@ -131,7 +131,7 @@ func _ready():
 			print("Chart saved")
 		else:
 			push_error("Error on chart save: " + str(err))
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		############
 		# Level Stuff
@@ -139,27 +139,27 @@ func _ready():
 		_lvl_info = LevelInfo.new()
 		_lvl_info.camera_pan_events = ResourceList.new()
 		print("Level info resource created")
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		generate_events()
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		generate_camera_pan_events()
-		print("Camera panning events generated")
-		yield(get_tree().create_timer(0.01), "timeout")
+		print("Camera3D panning events generated")
+		await get_tree().create_timer(0.01).timeout
 		
 		err = ResourceSaver.save("res://packages/" + mod_name + "/songs/" + json_name + "/" + json_name + result_suffixes[difficulty_idx] + ".lvl_info.res", _lvl_info, ResourceSaver.FLAG_COMPRESS)
 		if err == OK:
 			print("Level info saved, be sure to add the chart + level from the FileSystem")
 		else:
 			push_error("Error on level info save: " + str(err))
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		
 		############
 		
 		print("Done: " + json_name + result_suffixes[difficulty_idx])
 		print()
-		yield(get_tree().create_timer(0.1), "timeout")
+		await get_tree().create_timer(0.1).timeout
 
 func extract_data_from_json(difficulty):
 	var path_prefix = "res://packages/" + mod_name + "/songs/" + json_name
@@ -177,7 +177,9 @@ func extract_data_from_json(difficulty):
 		file.open(path_prefix + "/" + json_name + suffix + ".json", File.READ)
 	else:
 		file.open(path_prefix + "/difficulty" + str(difficulty) + ".json", File.READ)
-	parsed_song = JSON.parse(file.get_as_text()).result
+	var test_json_conv = JSON.new()
+	test_json_conv.parse(file.get_as_text()).result
+	parsed_song = test_json_conv.get_data()
 	
 	match chart_type:
 		SongChart.ChartType.FNFVR:
@@ -194,7 +196,7 @@ func extract_data_from_json(difficulty):
 	
 	inst = load(path_prefix + "/" + inst_name_and_ext)
 
-	if !vocals_name_and_ext.empty():
+	if !vocals_name_and_ext.is_empty():
 		vocals = load(path_prefix + "/" + vocals_name_and_ext)
 	
 #	name = "",
@@ -375,7 +377,7 @@ func generate_notes():
 		_song_chart.lanes.opponent2 = psych_gf_notes_arrays
 
 func _sort_notes(lane):
-	lane.sort_custom(NoteSort, "sort_ascending_by_strum_time")
+	lane.sort_custom(Callable(NoteSort, "sort_ascending_by_strum_time"))
 
 func _delete_duplicate_notes(lane):
 	var duplicates = []

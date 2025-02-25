@@ -1,12 +1,12 @@
 extends Resource
 class_name ModCredits
 
-export(Texture) var mod_icon
-export(String) var mod_name
-export(Array, Resource) var credits
+@export var mod_icon: Texture2D
+@export var mod_name: String
+@export var credits # (Array, Resource)
 
 func _init(
-	mod_icon_: Texture = null,
+	mod_icon_: Texture2D = null,
 	mod_name_: String = "",
 	credits_: Array = []
 ):

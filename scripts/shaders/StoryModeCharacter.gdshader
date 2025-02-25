@@ -1,7 +1,7 @@
 shader_type canvas_item;
 
 uniform float threshold : hint_range(0.0, 1.0) = 0.75;
-uniform vec4 replacement_color : hint_color = vec4(0.98, 0.81, 0.32, 1.0);
+uniform vec4 replacement_color : source_color = vec4(0.98, 0.81, 0.32, 1.0);
 
 void fragment()
 {

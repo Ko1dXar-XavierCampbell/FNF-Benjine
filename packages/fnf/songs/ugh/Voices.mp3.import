@@ -2,14 +2,18 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/Voices.mp3-600433dd3e99f03d937d0b895109b3b4.mp3str"
+uid="uid://u8ux7dcryfg5"
+path="res://.godot/imported/Voices.mp3-600433dd3e99f03d937d0b895109b3b4.mp3str"
 
 [deps]
 
 source_file="res://packages/fnf/songs/ugh/Voices.mp3"
-dest_files=[ "res://.import/Voices.mp3-600433dd3e99f03d937d0b895109b3b4.mp3str" ]
+dest_files=["res://.godot/imported/Voices.mp3-600433dd3e99f03d937d0b895109b3b4.mp3str"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

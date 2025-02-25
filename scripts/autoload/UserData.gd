@@ -7,7 +7,7 @@ const SAVE_DATA_PATH: String = "user://FNF_Benjine_Save.data"
 const IMPORTED_PACKAGES_PATH: String = "res://packages"
 const DEFAULT_SETTINGS_PATH: String = "res://assets/data/default_settings.data"
 
-func get_modpacks_path():
+"func get_modpacks_path():
 	return "res://testing/mods" if OS.has_feature("editor") else OS.get_executable_path().get_base_dir().plus_file("mods")
 
 func get_mod_desc_path(package: String):
@@ -23,14 +23,14 @@ func get_keybinds_path(package: String):
 	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("keybinds.tres")
 
 func get_song_list_path(package: String):
-	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("songs/song_list.tres")
+	return IMPORTED_PACKAGES_PATH.plus_file(package).plus_file("songs/song_list.tres")"
 
 func _ready():
 	_attempt_first_time_setup()
 	_set_immediate_priority_settings()
 
 func _attempt_first_time_setup():
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	
 	var default_settings = load_data(DEFAULT_SETTINGS_PATH)
 	
@@ -56,7 +56,7 @@ func _attempt_first_time_setup():
 func save_data(path: String, dict: Dictionary):
 	var file = File.new()
 	file.open(path, File.WRITE)
-	file.store_string(var2str(dict))
+	file.store_string(var_to_str(dict))
 	file.close()
 
 func load_data(path: String):
@@ -64,7 +64,7 @@ func load_data(path: String):
 	var dict: Dictionary
 	
 	file.open(path, File.READ)
-	dict = str2var(file.get_as_text())
+	dict = str_to_var(file.get_as_text())
 	file.close()
 	
 	return dict
@@ -73,12 +73,12 @@ func _set_immediate_priority_settings():
 	# TODO: Abstract this
 	
 	# Set audio
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear2db(float(UserData.get_setting("Master", 10, "audio")) / 10.0))
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear2db(float(UserData.get_setting("Music", 10, "audio")) / 10.0))
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear2db(float(UserData.get_setting("SFX", 10, "audio")) / 10.0))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(float(UserData.get_setting("Master", 10, "audio")) / 10.0))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(float(UserData.get_setting("Music", 10, "audio")) / 10.0))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(float(UserData.get_setting("SFX", 10, "audio")) / 10.0))
 	
 	# Set fullscreen
-	OS.window_fullscreen = bool(UserData.get_setting("fullscreen", 0, "gameplay"))
+	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (bool(UserData.get_setting("fullscreen", 0, "gameplay"))) else Window.MODE_WINDOWED
 	
 	# Set inputs
 	var settings = load_data(SETTINGS_DATA_PATH)
@@ -101,7 +101,7 @@ func is_valid_mod(package: String):
 	if package == "fnf":
 		return true
 	
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	var has_mod_desc = directory.file_exists(get_mod_desc_path(package))
 #	var has_credits = directory.file_exists(get_credits_path(package))
 	
@@ -131,7 +131,7 @@ func get_song_list(package: String):
 func get_setting(setting: String, default_val = null, category: String = "", package: String = "general"):
 	var cur_settings = load_data(SETTINGS_DATA_PATH)
 	
-	if !category.empty():
+	if !category.is_empty():
 		if !(cur_settings.has(package) && cur_settings[package].has(category) && cur_settings[package][category].has(setting)):
 			set_setting(setting, default_val, category, package)
 			return default_val
@@ -153,11 +153,11 @@ func get_settings_in_category(category: String, package: String = "general"):
 	return cur_settings[package][category]
 
 func get_package_names():
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	var package_names = []
 	
 	directory.open(IMPORTED_PACKAGES_PATH)
-	directory.list_dir_begin()
+	directory.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	
 	var file_name = directory.get_next()
 	
@@ -176,7 +176,7 @@ func set_setting(setting: String, variant, category: String = "", package: Strin
 	if !cur_settings.has(package):
 		cur_settings[package] = {}
 	
-	if !category.empty():
+	if !category.is_empty():
 		if !cur_settings[package].has(category):
 			cur_settings[package][category] = {}
 		
@@ -224,7 +224,7 @@ func get_entire_basic_mod_freeplay_list():
 	return basic_mod_freeplay_list
 
 func get_freeplay_list(package: String):
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	var path = IMPORTED_PACKAGES_PATH
 	path = path.plus_file(package).plus_file("songs")
 	
@@ -257,7 +257,7 @@ func get_entire_basic_mod_weeks_list():
 	return basic_mod_weeks_list
 
 func _get_basic_mod_week_list(package: String):
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	var path = IMPORTED_PACKAGES_PATH
 	path = path.plus_file(package).plus_file("songs")
 	
@@ -289,7 +289,7 @@ func get_package_based_on_song_data(song_data: SongData):
 func load_keybinds(package):
 	var actions = get_settings_in_category("input", package)
 	
-	if actions && !actions.empty():
+	if actions && !actions.is_empty():
 		for action_name in actions.keys():
 			var evs = actions[action_name]
 			
@@ -302,7 +302,7 @@ func load_keybinds(package):
 		
 		return
 	
-	var directory = Directory.new()
+	var directory = DirAccess.new()
 	var keybinds_path = get_keybinds_path(package)
 	
 	if !directory.file_exists(keybinds_path):

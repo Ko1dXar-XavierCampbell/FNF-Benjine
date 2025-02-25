@@ -1,9 +1,9 @@
-tool
+@tool
 extends Node2D
 
-export(StyleBoxTexture) var sustain_line: StyleBoxTexture setget set_sus_line
-export(float, 0, 1) var percent_length: float = 1 setget set_percent
-export(float) var total_length: float setget set_total_length
+@export var sustain_line: StyleBoxTexture: set = set_sus_line
+@export var percent_length: float = 1: set = set_percent
+@export var total_length: float: set = set_total_length
 
 func set_sus_line(val):
 	sustain_line = val

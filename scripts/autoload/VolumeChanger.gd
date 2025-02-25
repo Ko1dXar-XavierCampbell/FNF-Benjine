@@ -2,7 +2,7 @@ extends CanvasLayer
 
 const MASTER_IDX = 0
 
-onready var bars = [
+@onready var bars = [
 	$BG/Bar1,
 	$BG/Bar2,
 	$BG/Bar3,
@@ -14,7 +14,7 @@ onready var bars = [
 	$BG/Bar9,
 	$BG/Bar10,
 ]
-onready var anim_player = $AnimationPlayer
+@onready var anim_player = $AnimationPlayer
 
 var disabled = false
 var muted = false
@@ -31,7 +31,7 @@ func _input(event):
 		
 		muted = false
 		AudioServer.set_bus_mute(MASTER_IDX, muted)
-		AudioServer.set_bus_volume_db(MASTER_IDX, linear2db(float(new_vol) / 10.0))
+		AudioServer.set_bus_volume_db(MASTER_IDX, linear_to_db(float(new_vol) / 10.0))
 		
 		display_new_volume(new_vol)
 		

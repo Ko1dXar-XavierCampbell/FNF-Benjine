@@ -5,12 +5,12 @@ extends "res://scripts/game/Level.gd"
 
 const STRESS_P_GOOD_TIME = 62022.4727
 
-onready var partners = $Partners
-onready var w7_gf = $ParallaxBackground/Metronomes/W7_GF
-onready var pico_speaker = $ParallaxBackground/Metronomes/Pico_Speaker
+@onready var partners = $Partners
+@onready var w7_gf = $ParallaxBackground/Metronomes/W7_GF
+@onready var pico_speaker = $ParallaxBackground/Metronomes/Pico_Speaker
 
-onready var tank_pathfollow = $ParallaxBackground/Behind_Ground/Tank_Path/Tank_PathFollow
-onready var tank_tween = $ParallaxBackground/Behind_Ground/Tank_Path/Tank_PathFollow/Tween
+@onready var tank_pathfollow = $ParallaxBackground/Behind_Ground/Tank_Path/Tank_PathFollow
+@onready var tank_tween = $ParallaxBackground/Behind_Ground/Tank_Path/Tank_PathFollow/Tween
 
 func do_level_specific_prep():
 	match song_data.name:
@@ -33,7 +33,7 @@ func hit_note_pretty_good_opponent(_dir, _strum_time):
 func roll_tank():
 	tank_tween.interpolate_property(
 		tank_pathfollow,
-		"unit_offset",
+		"progress_ratio",
 		0,
 		1,
 		Conductor.get_seconds_per_beat() * 8 * 4 / Conductor.pitch_scale

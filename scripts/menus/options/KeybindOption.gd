@@ -2,13 +2,13 @@ extends Label
 
 const BINDING_TEXT = "..."
 
-onready var input1_key = $HBoxContainer/Input1_Key
-onready var input1_btn = $HBoxContainer/Input1_Btn
-onready var input1_btn_frames = $HBoxContainer/Input1_Btn/BtnFrames
+@onready var input1_key = $HBoxContainer/Input1_Key
+@onready var input1_btn = $HBoxContainer/Input1_Btn
+@onready var input1_btn_frames = $HBoxContainer/Input1_Btn/BtnFrames
 
-onready var input2_key = $HBoxContainer/Input2_Key
-onready var input2_btn = $HBoxContainer/Input2_Btn
-onready var input2_btn_frames = $HBoxContainer/Input2_Btn/BtnFrames
+@onready var input2_key = $HBoxContainer/Input2_Key
+@onready var input2_btn = $HBoxContainer/Input2_Btn
+@onready var input2_btn_frames = $HBoxContainer/Input2_Btn/BtnFrames
 
 var action_package: String
 var action_name: String

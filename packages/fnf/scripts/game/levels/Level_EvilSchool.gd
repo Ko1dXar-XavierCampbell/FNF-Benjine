@@ -18,7 +18,7 @@ func set_preload_variables():
 		preload("res://assets/sounds/missnote3.ogg")
 	]
 
-onready var evil_school = $ParallaxBackground/Evil_School/Evil_School
+@onready var evil_school = $ParallaxBackground/Evil_School/Evil_School
 
 func do_level_specific_prep():
 	evil_school.play("background 2 instance 1")
@@ -31,7 +31,7 @@ func do_pre_level_story_event():
 			new_dialogue = Dialogic.start("FNF_Thorns")
 	
 	if new_dialogue:
-		new_dialogue.connect("timeline_end", self, "_after_textbox", [], CONNECT_ONESHOT | CONNECT_DEFERRED)
+		new_dialogue.connect("timeline_end", Callable(self, "_after_textbox").bind(), CONNECT_ONE_SHOT | CONNECT_DEFERRED)
 		add_child(new_dialogue)
 	else:
 		start_level_part_2()

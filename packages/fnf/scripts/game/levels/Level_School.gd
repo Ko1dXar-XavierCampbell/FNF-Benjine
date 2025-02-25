@@ -1,8 +1,8 @@
 extends "res://scripts/game/Level.gd"
 
-onready var foliage = $ParallaxBackground/Tree_Tops/Foliage
-onready var petals = $ParallaxBackground/Tree_Tops/Petals
-onready var fangirls = $ParallaxBackground/Fangirls/Fangirls
+@onready var foliage = $ParallaxBackground/Tree_Tops/Foliage
+@onready var petals = $ParallaxBackground/Tree_Tops/Petals
+@onready var fangirls = $ParallaxBackground/Fangirls/Fangirls
 
 # Man fuck this level
 # It's cool as shit but idk what kinda devil magic NM put in it
@@ -48,7 +48,7 @@ func do_pre_level_story_event():
 			fangirls.idle()
 	
 	if new_dialogue:
-		new_dialogue.connect("timeline_end", self, "_after_textbox", [], CONNECT_ONESHOT | CONNECT_DEFERRED)
+		new_dialogue.connect("timeline_end", Callable(self, "_after_textbox").bind(), CONNECT_ONE_SHOT | CONNECT_DEFERRED)
 		add_child(new_dialogue)
 	else:
 		start_level_part_2()

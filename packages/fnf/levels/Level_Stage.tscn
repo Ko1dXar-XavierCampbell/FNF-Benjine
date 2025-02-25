@@ -4,9 +4,9 @@
 [ext_resource path="res://scenes/shared/game/HUDPackage2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/shared/game/characters/Boyfriend.tscn" type="PackedScene" id=3]
 [ext_resource path="res://packages/fnf/scripts/game/levels/Level_Stage.gd" type="Script" id=4]
-[ext_resource path="res://packages/fnf/resources/graphics/week1/stageback.png" type="Texture" id=5]
-[ext_resource path="res://packages/fnf/resources/graphics/week1/stagecurtains.png" type="Texture" id=6]
-[ext_resource path="res://packages/fnf/resources/graphics/week1/stagefront.png" type="Texture" id=7]
+[ext_resource path="res://packages/fnf/resources/graphics/week1/stageback.png" type="Texture2D" id=5]
+[ext_resource path="res://packages/fnf/resources/graphics/week1/stagecurtains.png" type="Texture2D" id=6]
+[ext_resource path="res://packages/fnf/resources/graphics/week1/stagefront.png" type="Texture2D" id=7]
 [ext_resource path="res://packages/fnf/characters/daddy_dearest/DaddyDearest.tscn" type="PackedScene" id=8]
 
 [node name="Level" type="Node"]
@@ -32,13 +32,13 @@ hud_path = NodePath("HUDPackage2D/HUD")
 [node name="BG" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.9, 0.9 )
 
-[node name="Stageback" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="Stageback" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -600, -200 )
 z_index = -3
 texture = ExtResource( 5 )
 centered = false
 
-[node name="Stagefront" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="Stagefront" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -650, 600 )
 scale = Vector2( 1.1, 1.1 )
 z_index = -2
@@ -59,7 +59,7 @@ motion_scale = Vector2( 0.95, 0.95 )
 [node name="FG" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 1.3, 1.3 )
 
-[node name="Stagecurtains" type="Sprite" parent="ParallaxBackground/FG"]
+[node name="Stagecurtains" type="Sprite2D" parent="ParallaxBackground/FG"]
 position = Vector2( -350, -150 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 6 )

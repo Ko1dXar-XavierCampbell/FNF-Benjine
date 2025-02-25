@@ -3,12 +3,12 @@ class_name CreditEntry
 
 const DEFAULT_ICON = preload("res://assets/graphics/menus/credits/unknown_credit.tres")
 
-export(Array, Texture) var icons = [DEFAULT_ICON]
-export(String) var name
-export(String, MULTILINE) var roles_or_contributions
-export(Array, String) var links
-export(Array, String) var link_names
-export(Array, Color) var link_colors
+@export var icons = [DEFAULT_ICON] # (Array, Texture2D)
+@export var name: String
+@export var roles_or_contributions # (String, MULTILINE)
+@export var links # (Array, String)
+@export var link_names # (Array, String)
+@export var link_colors # (Array, Color)
 
 func _init(
 	icons_: Array = [DEFAULT_ICON],

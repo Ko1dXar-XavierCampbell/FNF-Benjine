@@ -2,11 +2,11 @@ extends "res://scripts/general/StateManager.gd"
 
 const FREEPLAY_MENU = preload("res://scenes/shared/menus/default_menus/FreeplayMenu.tscn")
 
-export(PackedScene) var alt_freeplay = null
-export(bool) var quit = true
-export(String) var package_name
-export(String, DIR) var prev_menu_path 
-export(bool) var immediate_load = true
+@export var alt_freeplay: PackedScene = null
+@export var quit: bool = true
+@export var package_name: String
+@export var prev_menu_path  # (String, DIR)
+@export var immediate_load: bool = true
 
 func _ready():
 	randomize()

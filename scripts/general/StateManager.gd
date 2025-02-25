@@ -6,11 +6,11 @@ func switch_state(scene, scene_variables: Dictionary = {}):
 	var new_state
 	
 	if scene is PackedScene:
-		new_state = scene.instance()
+		new_state = scene.instantiate()
 	else: # Assumed to be a String
 		Loader.load_objects([scene])
-		var scene_dict = yield(Loader, "loaded")
-		new_state = scene_dict[scene].instance()
+		var scene_dict = await Loader.loaded
+		new_state = scene_dict[scene].instantiate()
 	
 	for variable in scene_variables:
 		new_state.set(variable, scene_variables[variable])

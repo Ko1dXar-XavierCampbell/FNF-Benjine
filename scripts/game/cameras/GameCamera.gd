@@ -1,8 +1,8 @@
 extends "res://scripts/game/cameras/FollowerCamera.gd"
 
-export(float) var zoom_on_quarter_hit = 0.715 # 65 for 3D cams
+@export var zoom_on_quarter_hit: float = 0.715 # 65 for 3D cams
 
-onready var beat_anim = $Cam_Zoom_Beat
+@onready var beat_anim = $Cam_Zoom_Beat
 
 var cur_performer = ""
 

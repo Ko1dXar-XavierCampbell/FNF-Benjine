@@ -6,31 +6,31 @@ extends Node
 enum Type {PLAYER, OPPONENT, BOTPLAY, OTHER}
 
 # Lane properties
-export(int) var direction = 0
-export(Type) var lane_type = Type.PLAYER
-export(String) var other_type_name = ""
-export(bool) var light_on_strum = true
+@export var direction: int = 0
+@export var lane_type: Type = Type.PLAYER
+@export var other_type_name: String = ""
+@export var light_on_strum: bool = true
 
 # NodePaths for lane components
-export(NodePath) var strum_arrow_nodepath
-export(NodePath) var strum_arrow_anim_nodepath
-export(NodePath) var start_path_nodepath
-export(NodePath) var end_path_nodepath
+@export var strum_arrow_nodepath: NodePath
+@export var strum_arrow_anim_nodepath: NodePath
+@export var start_path_nodepath: NodePath
+@export var end_path_nodepath: NodePath
 
 # Animation names
-export(String) var neutral_anim = "Neutral"
-export(String) var lighted_anim = "Lighted"
-export(String) var pressed_anim = "Pressed"
+@export var neutral_anim: String = "Neutral"
+@export var lighted_anim: String = "Lighted"
+@export var pressed_anim: String = "Pressed"
 
 # Data from Godot resources
-export(String) var action # Name of InputEventAction to check for
-export(Array, PackedScene) var note_scenes := [] # Array of scenes that are notes
+@export var action: String # Name of InputEventAction to check for
+@export var note_scenes := [] # Array of scenes that are notes # (Array, PackedScene)
 
 # Lane components
-onready var strum_arrow = get_node(strum_arrow_nodepath)
-onready var strum_arrow_anim_player: AnimationPlayer = get_node(strum_arrow_anim_nodepath)
-onready var start_path = get_node(start_path_nodepath)
-onready var end_path = get_node(end_path_nodepath)
+@onready var strum_arrow = get_node(strum_arrow_nodepath)
+@onready var strum_arrow_anim_player: AnimationPlayer = get_node(strum_arrow_anim_nodepath)
+@onready var start_path = get_node(start_path_nodepath)
+@onready var end_path = get_node(end_path_nodepath)
 
 var lvl
 
@@ -49,7 +49,7 @@ func _ready():
 	on_ready()
 
 func on_ready():
-	get_node(strum_arrow_anim_nodepath).connect("animation_finished", self, "update_strum_anim")
+	get_node(strum_arrow_anim_nodepath).connect("animation_finished", Callable(self, "update_strum_anim"))
 	
 	_adjust_for_downscroll()
 	_adjust_for_ghost_tapping()
@@ -137,7 +137,7 @@ func _check_for_hit_notes():
 					regular_note_hit = true
 		
 		# If we didn't, play the lane press animation (and punish for non-ghost tapping if necessary)
-		if notes_to_delete.empty():
+		if notes_to_delete.is_empty():
 			if !strum_arrow_anim_player.is_playing():
 				strum_arrow_anim_player.play(pressed_anim)
 			
@@ -150,7 +150,7 @@ func _check_for_hit_notes():
 				notes_in_play.erase(note)
 
 func add_notes_from_data():
-	if note_data.empty():
+	if note_data.is_empty():
 		return
 	
 	var cur_note_data = note_data.pop_back()
@@ -230,7 +230,7 @@ func update_current_notes():
 			if note_in_start_path && (lane_type == Type.PLAYER || note.ai_miss):
 				start_path.remove_child(note)
 				end_path.add_child(note)
-				note.unit_offset = Conductor.get_relative_song_position(note.strum_time, false)
+				note.progress_ratio = Conductor.get_relative_song_position(note.strum_time, false)
 			else:
 				# If this is an AI note, hit the note so that it doesn't go beyond the strum line
 				if !(lane_type == Type.PLAYER || note.ai_miss):
@@ -241,7 +241,7 @@ func update_current_notes():
 				# Either way, it needs to be deleted
 				notes_to_delete.append(note)
 		else:
-			note.unit_offset = relative_song_pos
+			note.progress_ratio = relative_song_pos
 	
 	for note in notes_to_delete:
 		notes_spawned.erase(note)
@@ -308,7 +308,7 @@ func _adjust_for_downscroll():
 	
 	var this = get_parent().get_node(name)
 	
-	if this is Spatial:
+	if this is Node3D:
 		this.rotation_degrees.z += 180
 		strum_arrow.rotation_degrees.z += 180
 	else:

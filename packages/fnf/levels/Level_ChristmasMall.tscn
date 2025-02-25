@@ -5,10 +5,10 @@
 [ext_resource path="res://scenes/shared/game/characters/Boyfriend_Christmas.tscn" type="PackedScene" id=3]
 [ext_resource path="res://packages/fnf/scripts/game/levels/Level_ChristmasMall.gd" type="Script" id=4]
 [ext_resource path="res://packages/fnf/characters/parents_christmas/Parents_Christmas.tscn" type="PackedScene" id=5]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/bgWalls.png" type="Texture" id=6]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/bgEscalator.png" type="Texture" id=7]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/christmasTree.png" type="Texture" id=8]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/fgSnow.png" type="Texture" id=9]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/bgWalls.png" type="Texture2D" id=6]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/bgEscalator.png" type="Texture2D" id=7]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/christmasTree.png" type="Texture2D" id=8]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/fgSnow.png" type="Texture2D" id=9]
 [ext_resource path="res://packages/fnf/resources/scenes/week5/Upper_Boppers.tscn" type="PackedScene" id=10]
 [ext_resource path="res://packages/fnf/resources/scenes/week5/Bottom_Boppers.tscn" type="PackedScene" id=11]
 [ext_resource path="res://packages/fnf/resources/scenes/week5/Santa.tscn" type="PackedScene" id=12]
@@ -37,7 +37,7 @@ hud_path = NodePath("HUDPackage2D/HUD")
 motion_scale = Vector2( 0.2, 0.2 )
 motion_offset = Vector2( -512, -288 )
 
-[node name="BgWalls" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="BgWalls" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -1000, -500 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 6 )
@@ -53,7 +53,7 @@ motion_offset = Vector2( -428.8, -241.2 )
 motion_scale = Vector2( 0.3, 0.3 )
 motion_offset = Vector2( -448, -252 )
 
-[node name="BgEscalator" type="Sprite" parent="ParallaxBackground/Escalator"]
+[node name="BgEscalator" type="Sprite2D" parent="ParallaxBackground/Escalator"]
 position = Vector2( -1100, -600 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 7 )
@@ -63,7 +63,7 @@ centered = false
 motion_scale = Vector2( 0.4, 0.4 )
 motion_offset = Vector2( -384, -216 )
 
-[node name="ChristmasTree" type="Sprite" parent="ParallaxBackground/Tree"]
+[node name="ChristmasTree" type="Sprite2D" parent="ParallaxBackground/Tree"]
 position = Vector2( 370, -250 )
 texture = ExtResource( 8 )
 centered = false
@@ -76,7 +76,7 @@ motion_offset = Vector2( -64, -36 )
 
 [node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="FgSnow" type="Sprite" parent="ParallaxBackground/Snow"]
+[node name="FgSnow" type="Sprite2D" parent="ParallaxBackground/Snow"]
 position = Vector2( -600, 700 )
 texture = ExtResource( 9 )
 centered = false

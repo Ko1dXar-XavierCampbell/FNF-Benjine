@@ -1,8 +1,8 @@
 extends Node
 
-export(NodePath) var progress_bar_path
+@export var progress_bar_path: NodePath
 
-onready var progress_bar = get_node_or_null(progress_bar_path)
+@onready var progress_bar = get_node_or_null(progress_bar_path)
 
 func update_progress(progress_val):
 	if progress_bar:

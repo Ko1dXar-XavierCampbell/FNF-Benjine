@@ -9,7 +9,7 @@ const SEPARATION = 10
 const NO_MODS = "No modded options found."
 
 func _ready():
-	var dir = Directory.new()
+	var dir = DirAccess.new()
 	var packages = UserData.get_package_names()
 	packages.erase("fnf")
 	
@@ -24,17 +24,17 @@ func _ready():
 		if get_child_count() > 0:
 			var separator = HSeparator.new()
 			
-			separator.add_stylebox_override("separator", SB_EMPTY)
-			separator.add_constant_override("separation", SEPARATION)
+			separator.add_theme_stylebox_override("separator", SB_EMPTY)
+			separator.add_theme_constant_override("separation", SEPARATION)
 			
 			add_child(separator)
 		
-		var title = PACKAGE_TITLE.instance()
+		var title = PACKAGE_TITLE.instantiate()
 		title.text = UserData.get_mod_desc(package).mod_name
 		add_child(title)
 		
 		for option_entry in default_options.list:
-			var spin_option = SPIN_OPTION.instance()
+			var spin_option = SPIN_OPTION.instantiate()
 			
 			spin_option.option_name = option_entry.option_name
 			spin_option.option_package = package
@@ -44,7 +44,7 @@ func _ready():
 			spin_option.num_range_max = option_entry.num_range_max
 			spin_option.default_option = option_entry.default_option
 			
-			if !option_entry.option_display_name.empty():
+			if !option_entry.option_display_name.is_empty():
 				spin_option.text = option_entry.option_display_name
 			
 			options.append(spin_option)
@@ -54,7 +54,7 @@ func _ready():
 		option.reload()
 	
 	if get_child_count() == 0:
-		var msg = PACKAGE_TITLE.instance()
+		var msg = PACKAGE_TITLE.instantiate()
 		msg.text = NO_MODS
 		add_child(msg)
 

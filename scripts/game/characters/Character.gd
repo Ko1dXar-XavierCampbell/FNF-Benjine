@@ -1,20 +1,20 @@
 extends "res://scripts/game/characters/BeatNode.gd"
 
-export(Array) var direction_anims: Array = ["Left", "Down", "Up", "Right"]
+@export var direction_anims: Array = ["Left", "Down", "Up", "Right"]
 
-export(Array) var anim_pairs_if_flipped: Array = [
+@export var anim_pairs_if_flipped: Array = [
 	["Left", "Right"],
 	["Left_Miss", "Right_Miss"],
 ]
 
-export(NodePath) var camera_follow_point_path = NodePath("Camera_Point")
+@export var camera_follow_point_path: NodePath = NodePath("Camera_Point")
 
-export(PackedScene) var icon = preload("res://scenes/shared/game/icons/BF_Icon.tscn")
+@export var icon: PackedScene = preload("res://scenes/shared/game/icons/BF_Icon.tscn")
 
-onready var camera_follow_point = get_node(camera_follow_point_path)
+@onready var camera_follow_point = get_node(camera_follow_point_path)
 
 func play_anim(anim_data, anim_length = 0, forced = true, uninterruptable = false):
-	.play_anim(get_anim_name(anim_data), anim_length, forced, uninterruptable)
+	super.play_anim(get_anim_name(anim_data), anim_length, forced, uninterruptable)
 
 func play_anim_for_quarters(anim_data, quarters = 0, seconds = 0, forced = true, uninterruptable = false):
 	play_anim(anim_data, Conductor.get_seconds_per_beat() * quarters + seconds, forced, uninterruptable)
@@ -43,7 +43,7 @@ func _swap_name_if_flipped(anim_name):
 func _flipped():
 	var this = get_parent().get_node(name)
 
-	if this is Spatial:
+	if this is Node3D:
 		return false
 	return sign(this.scale.x) == -1 || \
 		   (abs(this.rotation_degrees) == 180 && sign(this.scale.y) == -1)

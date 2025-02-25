@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Voices.ogg-4766198c9b87cbff9bfec35e8f37a822.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://rfm3ald40k2b"
+path="res://.godot/imported/Voices.ogg-4766198c9b87cbff9bfec35e8f37a822.oggvorbisstr"
 
 [deps]
 
 source_file="res://packages/fnf/songs/thorns/Voices.ogg"
-dest_files=[ "res://.import/Voices.ogg-4766198c9b87cbff9bfec35e8f37a822.oggstr" ]
+dest_files=["res://.godot/imported/Voices.ogg-4766198c9b87cbff9bfec35e8f37a822.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

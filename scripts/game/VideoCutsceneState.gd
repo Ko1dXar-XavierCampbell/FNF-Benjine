@@ -1,17 +1,17 @@
-extends VideoPlayer
+extends VideoStreamPlayer
 
-export(String) var package_name
-export(String) var video_name
+@export var package_name: String
+@export var video_name: String
 
-onready var lvl_manager = get_parent()
-onready var html5_err = $HTML5_Error
+@onready var lvl_manager = get_parent()
+@onready var html5_err = $HTML5_Error
 
 func _ready():
 	TransitionSystem.reset()
 	
 	if OS.get_name() == "HTML5":
 		html5_err.show()
-		get_tree().create_timer(3).connect("timeout", self, "_on_cutscene_finished", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		get_tree().create_timer(3).connect("timeout", Callable(self, "_on_cutscene_finished").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 		return
 	
 	stream = load("res://packages/" + package_name + "/resources/videos/" + video_name + ".webm")

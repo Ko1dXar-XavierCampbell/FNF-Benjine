@@ -12,8 +12,8 @@ const DEFAULT_WEEK_LIST = [
 	}
 ]
 
-export(Array, Dictionary) var weeks = DEFAULT_WEEK_LIST
-export(Array, Resource) var freeplay_songs = []
+@export var weeks = DEFAULT_WEEK_LIST # (Array, Dictionary)
+@export var freeplay_songs = [] # (Array, Resource)
 
 func _init(weeks_ = DEFAULT_WEEK_LIST, freeplay_songs_ = []):
 	weeks = weeks_

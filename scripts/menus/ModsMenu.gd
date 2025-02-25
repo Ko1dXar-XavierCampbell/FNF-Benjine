@@ -6,18 +6,18 @@ const DEFAULT_BANNER = preload("res://assets/graphics/menus/mods/benjine_mod_ban
 const MAIN_MENU = preload("res://scenes/shared/menus/default_menus/MainMenu.tscn")
 const CANCEL_SOUND = preload("res://assets/sounds/cancelMenu.ogg")
 
-onready var title = $Title
+@onready var title = $Title
 
-onready var button_container = $BG_Options/ScrollContainer/VBoxContainer
-onready var button_template = $Button_Template
+@onready var button_container = $BG_Options/ScrollContainer/VBoxContainer
+@onready var button_template = $Button_Template
 
-onready var banner = $Banner
-onready var author_info = $Author_Info
-onready var description = $Description
-onready var launch_button = $Launch
+@onready var banner = $Banner
+@onready var author_info = $Author_Info
+@onready var description = $Description
+@onready var launch_button = $Launch
 
-onready var select_sound = $Select_Sound
-onready var music = $Music
+@onready var select_sound = $Select_Sound
+@onready var music = $Music
 
 var advanced_mods = true
 
@@ -47,7 +47,7 @@ func _ready():
 		button.text = mod_desc.mod_name
 		button.group = button_group
 		
-		button.connect("focus_entered", self, "_on_mod_name_pressed", [mod_desc.mod_name])
+		button.connect("focus_entered", Callable(self, "_on_mod_name_pressed").bind(mod_desc.mod_name))
 		
 		button_container.add_child(button)
 		
@@ -59,7 +59,7 @@ func _ready():
 	if !advanced_mods:
 		title.text = "Basic Mods"
 		launch_button.hide()
-		description.rect_size.y += 85
+		description.size.y += 85
 	
 	music.play()
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_IN)
@@ -82,15 +82,15 @@ func on_input(event):
 		music.stop()
 		
 		TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-		TransitionSystem.connect("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_main_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _on_mod_name_pressed(mod_name: String, play_sound: bool = true):
 	var mod_desc: ModDescription = mod_desc_map[mod_name]
 	
 	if mod_desc.banner:
-		banner.material.set_shader_param("img", mod_desc.banner)
+		banner.material.set_shader_parameter("img", mod_desc.banner)
 	else:
-		banner.material.set_shader_param("img", DEFAULT_BANNER)
+		banner.material.set_shader_parameter("img", DEFAULT_BANNER)
 	
 	author_info.text = mod_desc.mod_version + "\n" + mod_desc.mod_author
 	description.parse_bbcode(mod_desc.description)
@@ -109,7 +109,7 @@ func _on_launch_pressed():
 	music.get_node("AnimationPlayer").play("Fade_Out")
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-	yield(TransitionSystem, "transition_finished")
+	await TransitionSystem.transition_finished
 	
 	var mod_desc: ModDescription = mod_desc_map[cur_option]
 	
@@ -123,7 +123,7 @@ func _on_launch_pressed():
 		if success:
 			UserData.load_keybinds(package_name_map[cur_option])
 	
-	get_tree().change_scene(mod_desc.main_path)
+	get_tree().change_scene_to_file(mod_desc.main_path)
 
 func _switch_to_main_menu(_trans_name):
 	get_parent().switch_state(MAIN_MENU)

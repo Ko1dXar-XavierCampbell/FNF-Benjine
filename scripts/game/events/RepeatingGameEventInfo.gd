@@ -1,7 +1,7 @@
 extends GameEventInfo
 class_name RepeatingGameEventInfo
 
-export(float) var time_increment : float = 0
+@export var time_increment: float = 0
 
 func _init(occurrence_time_: float = 0,
 		time_units_ = -1,
@@ -11,7 +11,7 @@ func _init(occurrence_time_: float = 0,
 		func_ref_func_name_ : String = "",
 		func_ref_args_ : Array = [],
 		time_increment_ : float = 0):
-	._init(
+	super._init(
 		occurrence_time_,
 		time_units_,
 		check_floored_time_,

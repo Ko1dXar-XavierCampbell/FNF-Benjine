@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 class_name GameEvent
 
 var occurrence_time = 0
@@ -24,7 +24,7 @@ func deserialize(level: Node, event_info) -> void:
 	occurrence_time = event_info.occurrence_time
 	time_units = event_info.time_units
 	
-	if !event_info.func_ref_property_path.empty() && GodotX.is_property_path(event_info.func_ref_property_path):
+	if !event_info.func_ref_property_path.is_empty() && GodotX.is_property_path(event_info.func_ref_property_path):
 		var node = level.get_node(event_info.func_ref_nodepath)
 		var property = node.get_indexed(event_info.func_ref_property_path)
 		func_ref = funcref(property, event_info.func_ref_func_name)

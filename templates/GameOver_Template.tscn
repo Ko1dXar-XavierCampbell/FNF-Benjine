@@ -16,8 +16,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
@@ -31,8 +31,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 0 ) ]
 }
@@ -47,7 +47,7 @@ end_sfx_path = NodePath("End_SFX")
 cancel_sfx_path = NodePath("Cancel_SFX")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_enable = true
+follow_viewport_enabled = true
 follow_viewport_scale = 1.429
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
@@ -59,7 +59,7 @@ script = ExtResource( 4 )
 
 [node name="FadeScreen" type="Polygon2D" parent="CanvasLayer/Camera2D"]
 color = Color( 0, 0, 0, 0 )
-polygon = PoolVector2Array( -997, -558, -981, 596, 971, 591, 954, -551 )
+polygon = PackedVector2Array( -997, -558, -981, 596, 971, 591, 954, -551 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Camera2D/FadeScreen"]
 anims/Fade = SubResource( 1 )

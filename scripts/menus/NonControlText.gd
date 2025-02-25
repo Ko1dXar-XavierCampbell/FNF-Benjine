@@ -1,14 +1,14 @@
-tool
+@tool
 extends Node2D
 
 enum HorizAlign { LEFT, CENTER, RIGHT }
 enum VertAlign { TOP, MIDDLE }
 
-export(String) var text setget on_text_changed
-export(Font) var font setget on_font_changed
-export(Color) var color = Color.white setget on_color_changed
-export(HorizAlign) var h_align setget on_h_align_changed
-export(VertAlign) var v_align setget on_v_align_changed
+@export var text: String: set = on_text_changed
+@export var font: Font: set = on_font_changed
+@export var color: Color = Color.WHITE: set = on_color_changed
+@export var h_align: HorizAlign: set = on_h_align_changed
+@export var v_align: VertAlign: set = on_v_align_changed
 
 func on_text_changed(new_text):
 	text = new_text

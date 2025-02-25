@@ -15,8 +15,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 0.5, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 0.5, 1 ),
 "update": 0,
 "values": [ Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
 }
@@ -30,8 +30,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
@@ -39,7 +39,7 @@ tracks/0/keys = {
 [node name="HealthIcon" type="Node2D"]
 script = ExtResource( 3 )
 
-[node name="Icon" type="AnimatedSprite" parent="."]
+[node name="Icon" type="AnimatedSprite2D" parent="."]
 position = Vector2( 26, -75 )
 frames = ExtResource( 2 )
 centered = false

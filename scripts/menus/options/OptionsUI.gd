@@ -1,7 +1,7 @@
 extends Node
 
-onready var cur_menu = $Menus/Category_Select
-onready var menus = [
+@onready var cur_menu = $Menus/Category_Select
+@onready var menus = [
 	$Menus/Category_Select,
 	$Menus/Gameplay,
 	$Menus/Audio,
@@ -10,8 +10,8 @@ onready var menus = [
 	$Menus/Reset
 ]
 
-onready var submenu_desc = $Submenu_Desc
-onready var anim_player = $AnimationPlayer
+@onready var submenu_desc = $Submenu_Desc
+@onready var anim_player = $AnimationPlayer
 
 func _enter_tree():
 	VolumeChanger.disabled = true
@@ -21,7 +21,7 @@ func _exit_tree():
 
 func _on_anim_finished(anim_name):
 	if anim_name == "Move_Out":
-		anim_player.disconnect("animation_finished", self, "_on_anim_finished")
+		anim_player.disconnect("animation_finished", Callable(self, "_on_anim_finished"))
 		queue_free()
 
 func on_input(event: InputEvent):

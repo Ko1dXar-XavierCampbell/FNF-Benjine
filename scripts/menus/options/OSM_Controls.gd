@@ -21,7 +21,7 @@ func _ready():
 		var default_actions = BENJINE_KEYBINDS
 		
 		if package != "general":
-			var dir = Directory.new()
+			var dir = DirAccess.new()
 			var keybinds_path = UserData.get_keybinds_path(package)
 			
 			if !dir.file_exists(keybinds_path):
@@ -32,7 +32,7 @@ func _ready():
 		##################################################
 		
 		var actions = UserData.get_settings_in_category("input", package)
-		var title = PACKAGE_TITLE.instance()
+		var title = PACKAGE_TITLE.instantiate()
 		
 		if package == "general":
 			title.text = "Base Controls"
@@ -41,8 +41,8 @@ func _ready():
 			
 			var separator = HSeparator.new()
 			
-			separator.add_stylebox_override("separator", SB_EMPTY)
-			separator.add_constant_override("separation", SEPARATION)
+			separator.add_theme_stylebox_override("separator", SB_EMPTY)
+			separator.add_theme_constant_override("separation", SEPARATION)
 			
 			add_child(separator)
 		
@@ -50,7 +50,7 @@ func _ready():
 		
 		for keybind_entry in default_actions.list:
 			var evs = actions[keybind_entry.action_name]
-			var keybinder = KEYBIND_OPTION.instance()
+			var keybinder = KEYBIND_OPTION.instantiate()
 
 			keybinder.action_package = package
 			keybinder.action_name = keybind_entry.action_name

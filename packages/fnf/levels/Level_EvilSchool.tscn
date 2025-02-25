@@ -39,7 +39,7 @@ hud_path = NodePath("HUDPackage2D/HUD")
 motion_scale = Vector2( 0.8, 0.9 )
 motion_offset = Vector2( -128, -36 )
 
-[node name="Evil_School" type="AnimatedSprite" parent="ParallaxBackground/Evil_School"]
+[node name="Evil_School" type="AnimatedSprite2D" parent="ParallaxBackground/Evil_School"]
 position = Vector2( -817, -1094 )
 scale = Vector2( 6, 6 )
 frames = ExtResource( 10 )

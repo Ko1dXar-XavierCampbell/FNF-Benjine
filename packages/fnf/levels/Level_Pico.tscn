@@ -5,16 +5,16 @@
 [ext_resource path="res://scenes/shared/game/characters/Boyfriend.tscn" type="PackedScene" id=3]
 [ext_resource path="res://packages/fnf/scripts/game/levels/Level_Pico.gd" type="Script" id=4]
 [ext_resource path="res://packages/fnf/characters/pico/Pico.tscn" type="PackedScene" id=5]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/sky.png" type="Texture" id=6]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/city.png" type="Texture" id=7]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/win1.png" type="Texture" id=8]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/win3.png" type="Texture" id=9]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/win0.png" type="Texture" id=10]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/win2.png" type="Texture" id=11]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/win4.png" type="Texture" id=12]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/behindTrain.png" type="Texture" id=13]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/train.png" type="Texture" id=14]
-[ext_resource path="res://packages/fnf/resources/graphics/week3/street.png" type="Texture" id=15]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/sky.png" type="Texture2D" id=6]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/city.png" type="Texture2D" id=7]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/win1.png" type="Texture2D" id=8]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/win3.png" type="Texture2D" id=9]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/win0.png" type="Texture2D" id=10]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/win2.png" type="Texture2D" id=11]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/win4.png" type="Texture2D" id=12]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/behindTrain.png" type="Texture2D" id=13]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/train.png" type="Texture2D" id=14]
+[ext_resource path="res://packages/fnf/resources/graphics/week3/street.png" type="Texture2D" id=15]
 [ext_resource path="res://packages/fnf/resources/sounds/train_passes.ogg" type="AudioStream" id=16]
 [ext_resource path="res://scripts/general/PitchScaledAudioStreamPlayer.gd" type="Script" id=17]
 
@@ -27,8 +27,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1480, 360 ) ]
 }
@@ -43,8 +43,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.8 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1.8 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1480, 360 ), Vector2( -10292, 360 ) ]
 }
@@ -73,7 +73,7 @@ hud_path = NodePath("HUDPackage2D/HUD")
 motion_scale = Vector2( 0.1, 0.1 )
 motion_offset = Vector2( -530, -315 )
 
-[node name="Sky" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -100, 0 )
 texture = ExtResource( 6 )
 centered = false
@@ -82,35 +82,35 @@ centered = false
 motion_scale = Vector2( 0.3, 0.3 )
 motion_offset = Vector2( -572, -270 )
 
-[node name="City" type="Sprite" parent="ParallaxBackground/City"]
+[node name="City" type="Sprite2D" parent="ParallaxBackground/City"]
 position = Vector2( -10, 0 )
 texture = ExtResource( 7 )
 centered = false
 
-[node name="Win0" type="Sprite" parent="ParallaxBackground/City"]
+[node name="Win0" type="Sprite2D" parent="ParallaxBackground/City"]
 position = Vector2( -10, 0 )
 texture = ExtResource( 10 )
 centered = false
 
-[node name="Win1" type="Sprite" parent="ParallaxBackground/City"]
+[node name="Win1" type="Sprite2D" parent="ParallaxBackground/City"]
 visible = false
 position = Vector2( -10, 0 )
 texture = ExtResource( 8 )
 centered = false
 
-[node name="Win2" type="Sprite" parent="ParallaxBackground/City"]
+[node name="Win2" type="Sprite2D" parent="ParallaxBackground/City"]
 visible = false
 position = Vector2( -10, 0 )
 texture = ExtResource( 11 )
 centered = false
 
-[node name="Win3" type="Sprite" parent="ParallaxBackground/City"]
+[node name="Win3" type="Sprite2D" parent="ParallaxBackground/City"]
 visible = false
 position = Vector2( -10, 0 )
 texture = ExtResource( 9 )
 centered = false
 
-[node name="Win4" type="Sprite" parent="ParallaxBackground/City"]
+[node name="Win4" type="Sprite2D" parent="ParallaxBackground/City"]
 visible = false
 position = Vector2( -10, 0 )
 texture = ExtResource( 12 )
@@ -118,7 +118,7 @@ centered = false
 
 [node name="Behind_Street" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="BehindTrain" type="Sprite" parent="ParallaxBackground/Behind_Street"]
+[node name="BehindTrain" type="Sprite2D" parent="ParallaxBackground/Behind_Street"]
 position = Vector2( -40, 50 )
 texture = ExtResource( 13 )
 centered = false
@@ -126,11 +126,11 @@ centered = false
 [node name="Train" type="Node2D" parent="ParallaxBackground/Behind_Street"]
 position = Vector2( 1480, 360 )
 
-[node name="Cars1_3" type="Sprite" parent="ParallaxBackground/Behind_Street/Train"]
+[node name="Cars1_3" type="Sprite2D" parent="ParallaxBackground/Behind_Street/Train"]
 texture = ExtResource( 14 )
 centered = false
 
-[node name="Cars4_6" type="Sprite" parent="ParallaxBackground/Behind_Street/Train"]
+[node name="Cars4_6" type="Sprite2D" parent="ParallaxBackground/Behind_Street/Train"]
 position = Vector2( 3146, 0 )
 texture = ExtResource( 14 )
 centered = false
@@ -138,13 +138,13 @@ centered = false
 [node name="Cars7_8" type="Polygon2D" parent="ParallaxBackground/Behind_Street/Train"]
 position = Vector2( 6292, 0 )
 texture = ExtResource( 14 )
-polygon = PoolVector2Array( 0, 0, 2140, 0, 2140, 512, 0, 512 )
+polygon = PackedVector2Array( 0, 0, 2140, 0, 2140, 512, 0, 512 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Behind_Street/Train"]
 anims/RESET = SubResource( 1 )
 anims/Train_Pass = SubResource( 2 )
 
-[node name="Street" type="Sprite" parent="ParallaxBackground/Behind_Street"]
+[node name="Street" type="Sprite2D" parent="ParallaxBackground/Behind_Street"]
 position = Vector2( -40, 50 )
 texture = ExtResource( 15 )
 centered = false

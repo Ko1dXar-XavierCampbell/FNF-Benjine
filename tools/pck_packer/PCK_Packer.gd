@@ -2,10 +2,10 @@ extends Node
 
 signal finished_packing
 
-export(String) var package_name = "my_fnf_mod"
-export(Array, String, DIR) var folders_excluded = []
+@export var package_name: String = "my_fnf_mod"
+@export var folders_excluded = [] # (Array, String, DIR)
 #export(Array, String) var files_excluded = []
-export(Array, String) var extensions_excluded = ["json"]
+@export var extensions_excluded = ["json"] # (Array, String)
 
 var package_path = "res://packages"
 var desc_folder = ""
@@ -27,7 +27,7 @@ func pack_package():
 	print("Starting pack")
 	
 	pack_all_in_folder(pck_packer, package_path)
-	yield(self, "finished_packing")
+	await self.finished_packing
 	
 	print("Attempting flush")
 	pck_packer.flush(true)
@@ -40,7 +40,7 @@ func pack_package():
 	print("Starting description pack")
 	
 	pack_all_in_folder(pck_packer, package_path)
-	yield(self, "finished_packing")
+	await self.finished_packing
 	
 	print("Attempting flush")
 	pck_packer.flush(true)
@@ -50,10 +50,10 @@ func pack_all_in_folder(pck_packer: PCKPacker, path: String):
 	if !_directory_exists(path):
 		return
 	
-	var directory := Directory.new()
+	var directory := DirAccess.new()
 	var open_err = directory.open(path)
 	
-	directory.list_dir_begin()
+	directory.list_dir_begin() # TODOConverter3To4 fill missing arguments https://github.com/godotengine/godot/pull/40547
 	var file_name = directory.get_next()
 	
 	while file_name != "":
@@ -62,7 +62,7 @@ func pack_all_in_folder(pck_packer: PCKPacker, path: String):
 			if !(file_name.begins_with(".") || (directory.get_current_dir() in folders_excluded) || directory.get_current_dir() == desc_folder):
 				var result = pack_all_in_folder(pck_packer, path.plus_file(file_name))
 				while result is GDScriptFunctionState:
-					result = yield(result, "completed")
+					result = await result.completed
 		
 		else:
 			# Pack the file (unless it's extension is excluded)
@@ -82,13 +82,13 @@ func pack_all_in_folder(pck_packer: PCKPacker, path: String):
 						
 						var import_data_path = import_file.get_value("remap", key)
 						file_err = pck_packer.add_file(import_data_path, import_data_path)
-						print("Attempted to pack .import file of " + file_name + " at " + import_data_path + ": " + str(file_err))
+						print("Attempted to pack super.import file of " + file_name + " at " + import_data_path + ": " + str(file_err))
 		
-		yield(get_tree().create_timer(0.1), "timeout")
+		await get_tree().create_timer(0.1).timeout
 		file_name = directory.get_next()
 	
 	if path == package_path:
 		emit_signal("finished_packing")
 
 func _directory_exists(path: String):
-	return Directory.new().open(path) == OK
+	return DirAccess.new().open(path) == OK

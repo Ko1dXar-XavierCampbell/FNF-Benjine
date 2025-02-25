@@ -4,7 +4,7 @@ extends "res://scripts/menus/options/OptionsSubmenu.gd"
 # GAMEPLAY SPECIFIC CODE
 ##############################
 
-onready var combo_adjustment = $"../../Combo_Adjustment"
+@onready var combo_adjustment = $"../../Combo_Adjustment"
 
 ##############################
 
@@ -48,7 +48,7 @@ func on_select(_event):
 	
 	match options[cur_option].name:
 		"Fullscreen":
-			OS.window_fullscreen = bool(UserData.get_setting("fullscreen", 0, "gameplay"))
+			get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (bool(UserData.get_setting("fullscreen", 0, "gameplay"))) else Window.MODE_WINDOWED
 	
 	##############################
 	

@@ -32,14 +32,14 @@ func on_select(_event):
 	options[cur_option].get_node("Audio_Level_Indicator").play()
 
 func reset():
-	.reset()
+	super.reset()
 	
 	for option_idx in len(options):
 		_reset_audio_level(option_idx)
 		_reset_bars(option_idx)
 
 func _reset_audio_level(idx):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(AUDIO_BUSES[idx]), linear2db(float(UserData.get_setting(AUDIO_BUSES[idx], 10, "audio")) / 10.0))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index(AUDIO_BUSES[idx]), linear_to_db(float(UserData.get_setting(AUDIO_BUSES[idx], 10, "audio")) / 10.0))
 
 func _reset_bars(idx):
 	var lvl = UserData.get_setting(options[idx].name, 10, "audio")

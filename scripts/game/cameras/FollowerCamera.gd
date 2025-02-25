@@ -1,10 +1,10 @@
 extends Node
 
-export(NodePath) var tween_path = NodePath("Tween")
-export(float) var resting_zoom = 0.7 # 70 for 3D cams
+@export var tween_path: NodePath = NodePath("Tween")
+@export var resting_zoom: float = 0.7 # 70 for 3D cams
 
-onready var tween = get_node(tween_path)
-onready var this = get_parent().get_node(name)
+@onready var tween = get_node(tween_path)
+@onready var this = get_parent().get_node(name)
 
 var follow_point
 var tweening_properties = []
@@ -14,8 +14,8 @@ func _ready():
 	on_ready()
 
 func on_ready():
-	get_node(tween_path).connect("tween_started", self, "_on_cam_tween_started")
-	get_node(tween_path).connect("tween_completed", self, "_on_cam_tween_completed")
+	get_node(tween_path).connect("tween_started", Callable(self, "_on_cam_tween_started"))
+	get_node(tween_path).connect("tween_completed", Callable(self, "_on_cam_tween_completed"))
 
 func on_update():
 	update_movement()
@@ -23,14 +23,14 @@ func on_update():
 
 func update_movement():
 	if !movement_overriden():
-		if this is Camera:
+		if this is Camera3D:
 			this.global_transform.origin = lerp(this.global_transform.origin, get_position_to_follow(), GodotX.get_haxeflixel_lerp(get_movement_lerp()))
 		else:
 			this.global_position = lerp(this.global_position, get_position_to_follow(), GodotX.get_haxeflixel_lerp(get_movement_lerp()))
 	
 	if !rotation_overriden():
-		if this is Camera:
-			var new_quat = this.global_transform.basis.get_rotation_quat().slerp(get_rotation_to_follow(), GodotX.get_haxeflixel_lerp(get_movement_lerp()))
+		if this is Camera3D:
+			var new_quat = this.global_transform.basis.get_rotation_quaternion().slerp(get_rotation_to_follow(), GodotX.get_haxeflixel_lerp(get_movement_lerp()))
 			this.global_transform.basis = Basis(new_quat)
 
 func get_movement_lerp():
@@ -41,22 +41,22 @@ func get_default_movement_lerp():
 
 func get_position_to_follow():
 	if custom_position:
-		return custom_position.global_position if custom_position is Position2D else custom_position.global_transform.origin
-	return follow_point.global_position if follow_point is Position2D else follow_point.global_transform.origin
+		return custom_position.global_position if custom_position is Marker2D else custom_position.global_transform.origin
+	return follow_point.global_position if follow_point is Marker2D else follow_point.global_transform.origin
 
 func get_rotation_to_follow():
 	if custom_position:
-		return custom_position.global_rotation if custom_position is Position2D else custom_position.global_transform.basis.get_rotation_quat()
-	return follow_point.global_rotation if follow_point is Position2D else follow_point.global_transform.basis.get_rotation_quat()
+		return custom_position.global_rotation if custom_position is Marker2D else custom_position.global_transform.basis.get_rotation_quaternion()
+	return follow_point.global_rotation if follow_point is Marker2D else follow_point.global_transform.basis.get_rotation_quaternion()
 
 func reset_position(different_pos = null):
 	if different_pos is Vector2 || different_pos is Vector3:
-		if this is Camera:
+		if this is Camera3D:
 			this.global_transform.origin = different_pos
 		else:
 			this.global_position = different_pos
 	else:
-		if this is Camera:
+		if this is Camera3D:
 			this.global_transform.origin = get_position_to_follow()
 		else:
 			this.global_position = get_position_to_follow()
@@ -74,7 +74,7 @@ func rotation_overriden():
 	return NodePath(":rotation") in tweening_properties
 
 func zoom_axis(val, axis = 0, fnf_val = true):
-	if this is Camera:
+	if this is Camera3D:
 		this.fov = val
 		return
 	

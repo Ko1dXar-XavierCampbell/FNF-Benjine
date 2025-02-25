@@ -3,16 +3,16 @@ extends Node2D
 # ASSUMPTIONS:
 # - Sheet and image have the same path
 # - Sheet is an Adobe Animate XML and image is a PNG
-export(String) var load_path = "res://"
-export(String) var packer_path = ""
-export(String) var save_path = "res://"
-export(bool) var optimize = false
+@export var load_path: String = "res://"
+@export var packer_path: String = ""
+@export var save_path: String = "res://"
+@export var optimize: bool = false
 
-onready var anim_sprite = $AnimatedSprite
+@onready var anim_sprite = $AnimatedSprite2D
 
 func _ready():
 	set_process(false)
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	
 	var anim_dict: Dictionary
 	
@@ -24,7 +24,7 @@ func _ready():
 	var frames = anim_sprite.frames
 	var texture = load(load_path + ".png")
 	
-	print(ResourceSaver.get_recognized_extensions(frames))
+	print(ResourceSaver._get_recognized_extensions(frames))
 	
 	for anim_name in anim_dict.keys():
 		print("loaded name: " + anim_name)
@@ -52,11 +52,11 @@ func _ready():
 				
 				frames.add_frame(anim_name, new_frame)
 		
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 	
 	print("done")
 	
-	frames.remove_animation("default")
+	frames.remove_animation_library("default")
 	ResourceSaver.save(save_path + ".res", frames, ResourceSaver.FLAG_COMPRESS)
 	
 	print("saved, restart the project to unfuck up the sheet")

@@ -1,4 +1,4 @@
-extends Reference
+extends RefCounted
 
 const GameEvent = preload("res://scripts/game/events/GameEvent.gd")
 
@@ -33,7 +33,7 @@ func update_events():
 	_check_all_events()
 
 func deserialize(level: Node, event_info_list: ResourceList):
-	if !event_info_list || event_info_list.list.empty():
+	if !event_info_list || event_info_list.list.is_empty():
 		return
 	
 	for event_info in event_info_list.list:

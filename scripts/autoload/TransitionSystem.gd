@@ -9,10 +9,10 @@ enum Transitions {
 	SCREEN_CAP_OUT
 }
 
-export(NodePath) var anim_player_path
+@export var anim_player_path: NodePath
 
-onready var anim_player = get_node(anim_player_path)
-onready var screen_capture = $Screen_Capture
+@onready var anim_player = get_node(anim_player_path)
+@onready var screen_capture = $Screen_Capture
 
 func start_transition(transition_name):
 	# TODO: Separate this into separate func
@@ -28,13 +28,13 @@ func start_transition(transition_name):
 			# TODO: CAN WE PLEASE NOT DO THIS
 			# TODO: DEBUG
 			for _i in range(5): # 3 loading frames, 1 start defer, 1 to begin the countdown
-				yield(get_tree(), "idle_frame")
+				await get_tree().idle_frame
 	
 	_play_anim(transition_name)
 
 func play_transition(transition):
-	if anim_player.is_connected("animation_finished", self, "_on_anim_finished"):
-		anim_player.disconnect("animation_finished", self, "_on_anim_finished")
+	if anim_player.is_connected("animation_finished", Callable(self, "_on_anim_finished")):
+		anim_player.disconnect("animation_finished", Callable(self, "_on_anim_finished"))
 	
 	match transition:
 		Transitions.BASIC_FADE_IN:
@@ -47,8 +47,8 @@ func play_transition(transition):
 			start_transition("Screen_Cap_Out")
 
 func reset():
-	if anim_player.is_connected("animation_finished", self, "_on_anim_finished"):
-		anim_player.disconnect("animation_finished", self, "_on_anim_finished")
+	if anim_player.is_connected("animation_finished", Callable(self, "_on_anim_finished")):
+		anim_player.disconnect("animation_finished", Callable(self, "_on_anim_finished"))
 	
 	anim_player.stop()
 	anim_player.play("RESET")
@@ -59,4 +59,4 @@ func _on_anim_finished(anim_name):
 func _play_anim(transition_name):
 	anim_player.stop()
 	anim_player.play(transition_name)
-	anim_player.connect("animation_finished", self, "_on_anim_finished", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	anim_player.connect("animation_finished", Callable(self, "_on_anim_finished").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)

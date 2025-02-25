@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Inst.ogg-71b8181db65874f919d0ab80335acf15.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f4uu3vphbvn8"
+path="res://.godot/imported/Inst.ogg-71b8181db65874f919d0ab80335acf15.oggvorbisstr"
 
 [deps]
 
 source_file="res://packages/fnf/songs/senpai/Inst.ogg"
-dest_files=[ "res://.import/Inst.ogg-71b8181db65874f919d0ab80335acf15.oggstr" ]
+dest_files=["res://.godot/imported/Inst.ogg-71b8181db65874f919d0ab80335acf15.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

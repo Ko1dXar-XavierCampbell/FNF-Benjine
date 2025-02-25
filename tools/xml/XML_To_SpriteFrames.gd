@@ -3,16 +3,16 @@ extends Node2D
 # ASSUMPTIONS:
 # - Sheet and image have the same path
 # - Sheet is an Adobe Animate XML and image is a PNG
-export(String) var load_path = "res://"
-export(String) var xml_path = ""
-export(String) var save_path = "res://"
-export(bool) var optimize = false
+@export var load_path: String = "res://"
+@export var xml_path: String = ""
+@export var save_path: String = "res://"
+@export var optimize: bool = false
 
-onready var anim_sprite = $AnimatedSprite
+@onready var anim_sprite = $AnimatedSprite2D
 
 func _ready():
 	set_process(false)
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	
 	var xml_parser = XMLParser.new()
 	if xml_path == "":
@@ -24,7 +24,7 @@ func _ready():
 	var texture = load(load_path + ".png")
 	var cur_anim_name
 	
-	print(ResourceSaver.get_recognized_extensions(frames))
+	print(ResourceSaver._get_recognized_extensions(frames))
 	
 	var err = xml_parser.read()
 	while err == OK:
@@ -60,17 +60,17 @@ func _ready():
 					new_frame.atlas = texture
 					new_frame.region = new_region
 					new_frame.margin = new_margin
-					new_frame.flags = Texture.FLAG_MIPMAPS
+					new_frame.flags = Texture2D.FLAG_MIPMAPS
 					new_frame.filter_clip = true
 					
 					frames.add_frame(cur_anim_name, new_frame)
 		
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		err = xml_parser.read()
 	
 	print("done")
 	
-	frames.remove_animation("default")
+	frames.remove_animation_library("default")
 	ResourceSaver.save(save_path + ".res", frames, ResourceSaver.FLAG_COMPRESS)
 	
 	print("saved, restart the project to unfuck up the sheet")

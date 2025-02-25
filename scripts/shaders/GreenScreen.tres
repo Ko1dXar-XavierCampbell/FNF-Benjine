@@ -3,7 +3,7 @@
 [resource]
 code = "shader_type canvas_item;
 
-uniform vec4 chroma_key : hint_color = vec4(1.0);
+uniform vec4 chroma_key : source_color = vec4(1.0);
 uniform float bias = 0.01;
 
 void fragment()

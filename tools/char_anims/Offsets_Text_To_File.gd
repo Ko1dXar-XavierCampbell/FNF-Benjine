@@ -1,10 +1,10 @@
 extends Node
 
-export(String) var offset_text_path = "res://"
-export(String) var offset_file_path = "res://"
+@export var offset_text_path: String = "res://"
+@export var offset_file_path: String = "res://"
 
 func _ready():
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	var offset_text = File.new()
 	
 	offset_text.open(offset_text_path, File.READ)

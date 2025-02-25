@@ -1,13 +1,13 @@
 extends Note
 
-export(NodePath) var note_model_path = NodePath("Note")
-export(NodePath) var sustain_line_model_path = NodePath("Sustain_Line")
-export(NodePath) var sustain_cap_model_path = NodePath("Sustain_Cap")
-export(NodePath) var tween_nodepath = NodePath("Tween")
+@export var note_model_path: NodePath = NodePath("Note")
+@export var sustain_line_model_path: NodePath = NodePath("Sustain_Line")
+@export var sustain_cap_model_path: NodePath = NodePath("Sustain_Cap")
+@export var tween_nodepath: NodePath = NodePath("Tween")
 
-onready var tween: Tween = get_node(tween_nodepath)
+@onready var tween: Tween = get_node(tween_nodepath)
 
-onready var last_known_scroll_speed = Conductor.scroll_speed
+@onready var last_known_scroll_speed = Conductor.scroll_speed
 
 var model
 
@@ -47,7 +47,7 @@ func do_hit_action(lvl, dir, lane_type_string: String):
 		var remaining_time = Conductor.get_sixteenth_length() / Conductor.pitch_scale * remaining_percent
 		
 		tween.interpolate_property(model, "scale:y", model.scale.y * remaining_percent, 0, remaining_time)
-		tween.connect("tween_all_completed", self, "queue_free", [], CONNECT_ONESHOT)
+		tween.connect("tween_all_completed", Callable(self, "queue_free").bind(), CONNECT_ONE_SHOT)
 		tween.start()
 
 func _process(_delta):

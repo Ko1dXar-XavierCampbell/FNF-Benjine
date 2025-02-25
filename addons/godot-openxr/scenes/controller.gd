@@ -1,4 +1,4 @@
-extends ARVRController
+extends XRController3D
 
 const TRIGGER_PRESS_THRESHOLD = 0.6
 

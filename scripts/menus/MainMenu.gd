@@ -21,19 +21,19 @@ const FREAKY_MENU = preload("res://assets/music/freakyMenu.ogg")
 const CONFIRM_SOUND = preload("res://assets/sounds/confirmMenu.ogg")
 const CANCEL_SOUND = preload("res://assets/sounds/cancelMenu.ogg")
 
-export(NodePath) var menu_bg_path
-export(NodePath) var options_list_path
-export(NodePath) var mod_type_path
-export(NodePath) var camera_path
-export(NodePath) var position_path
-export(NodePath) var menu_select_sound_path
+@export var menu_bg_path: NodePath
+@export var options_list_path: NodePath
+@export var mod_type_path: NodePath
+@export var camera_path: NodePath
+@export var position_path: NodePath
+@export var menu_select_sound_path: NodePath
 
-onready var menu_bg = get_node(menu_bg_path)
-onready var options_list = get_node(options_list_path)
-onready var mod_type = get_node(mod_type_path)
-onready var camera = get_node(camera_path)
-onready var position = get_node(position_path)
-onready var menu_select_sound = get_node(menu_select_sound_path)
+@onready var menu_bg = get_node(menu_bg_path)
+@onready var options_list = get_node(options_list_path)
+@onready var mod_type = get_node(mod_type_path)
+@onready var camera = get_node(camera_path)
+@onready var position = get_node(position_path)
+@onready var menu_select_sound = get_node(menu_select_sound_path)
 
 var option_idx = 0
 var advanced_mods = false
@@ -63,10 +63,10 @@ func on_ready():
 		options_list_ref.get_child(idx).play(OPTIONS[idx] + suffix)
 		
 		if idx == 2 && OS.get_name() == "HTML5":
-			options_list_ref.get_child(idx).modulate = Color.dimgray
+			options_list_ref.get_child(idx).modulate = Color.DIM_GRAY
 	
 	if !Conductor.playing || Conductor.stream != FREAKY_MENU:
-		Conductor.volume_db = linear2db(0.8)
+		Conductor.volume_db = linear_to_db(0.8)
 		Conductor.play_music(FREAKY_MENU, 102)
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_IN)
@@ -122,8 +122,8 @@ func on_input(event):
 		
 		var timer = get_tree().create_timer(1)
 		
-		timer.connect("timeout", TransitionSystem, "play_transition", [TransitionSystem.Transitions.BASIC_FADE_OUT], CONNECT_DEFERRED | CONNECT_ONESHOT)
-		timer.connect("timeout", TransitionSystem, "connect", ["transition_finished", self, "_switch_to_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		timer.connect("timeout", Callable(TransitionSystem, "play_transition").bind(TransitionSystem.Transitions.BASIC_FADE_OUT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
+		timer.connect("timeout", Callable(TransitionSystem, "connect").bind("transition_finished", self, "_switch_to_menu", [], CONNECT_DEFERRED | CONNECT_ONE_SHOT), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 	
 	elif event.is_action_released("ui_cancel"):
 		set_process_input(false)
@@ -135,7 +135,7 @@ func on_input(event):
 		menu_select_sound.play()
 		
 		TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-		TransitionSystem.connect("transition_finished", self, "_switch_to_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _switch_to_menu(_trans_name):
 	match option_idx:

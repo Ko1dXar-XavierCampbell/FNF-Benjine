@@ -1,15 +1,15 @@
 extends "res://scripts/game/characters/Character.gd"
 
-export(String) var first_idle = "Dance_Left"
-export(String) var second_idle = "Dance_Right"
+@export var first_idle: String = "Dance_Left"
+@export var second_idle: String = "Dance_Right"
 
-export(bool) var starts_on_left = true
+@export var starts_on_left: bool = true
 
 var danced_right = true
 
 func on_ready():
 	danced_right = starts_on_left
-	.on_ready()
+	super.on_ready()
 
 func idle():
 	if danced_right:

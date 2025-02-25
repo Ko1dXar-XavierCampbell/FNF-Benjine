@@ -4,12 +4,12 @@ extends Node2D
 # ASSUMPTION: the DEFAULT initial and updating properties
 #             assume the lead sprite to be a AnimatedSprite
 
-export(NodePath) var lead_sprite_path
+@export var lead_sprite_path: NodePath
 
-export(Array, String) var initial_properties = [
+@export var initial_properties = [ # (Array, String)
 	"centered"
 ]
-export(Array, String) var updating_properties = [
+@export var updating_properties = [ # (Array, String)
 	"frames",
 	"animation",
 	"frame",
@@ -19,12 +19,12 @@ export(Array, String) var updating_properties = [
 	"global_transform"
 ]
 
-export(int)   var num_trailsprites = 10
-export(float) var update_delay = 0.03
-export(float) var start_alpha = 0.4
-export(float) var diff_alpha = 0.05
+@export var num_trailsprites: int = 10
+@export var update_delay: float = 0.03
+@export var start_alpha: float = 0.4
+@export var diff_alpha: float = 0.05
 
-onready var lead_sprite = get_node_or_null(lead_sprite_path)
+@onready var lead_sprite = get_node_or_null(lead_sprite_path)
 
 var trailsprites = []
 
@@ -46,7 +46,7 @@ func generate_trailsprites():
 	
 	# Initialize all trailing sprites
 	for ts_idx in ts_indices:
-		var trailsprite = ClassDB.instance(lead_sprite.get_class())
+		var trailsprite = ClassDB.instantiate(lead_sprite.get_class())
 		
 		for property in all_properties:
 			trailsprite.set(property, lead_sprite.get(property))
@@ -71,4 +71,4 @@ func _update_trail():
 
 func _start_delay():
 	var timer = get_tree().create_timer(update_delay, false)
-	timer.connect("timeout", self, "_update_trail", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	timer.connect("timeout", Callable(self, "_update_trail").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)

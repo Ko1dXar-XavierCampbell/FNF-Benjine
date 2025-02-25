@@ -16,5 +16,5 @@ load_path = "res://packages/fnfvr/resources/graphics/game/levels/week_5/upperBop
 save_path = "res://packages/fnfvr/resources/graphics/game/levels/week_5/Upper_Boppers_VR"
 optimize = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource( 1 )

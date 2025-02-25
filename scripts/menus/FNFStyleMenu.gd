@@ -5,12 +5,12 @@ signal option_selected(option_idx, option)
 
 const FNF_STYLE_TEXT_BOLD = preload("res://scenes/shared/menus/FNFStyleText_Bold.tscn")
 
-export(NodePath) var selection_audio_path = NodePath("Selection_Audio")
-export(NodePath) var container_path = NodePath("Options_Container")
-export(Array, String) var options
+@export var selection_audio_path: NodePath = NodePath("Selection_Audio")
+@export var container_path: NodePath = NodePath("Options_Container")
+@export var options # (Array, String)
 
-onready var selection_audio = get_node(selection_audio_path)
-onready var options_container = get_node(container_path)
+@onready var selection_audio = get_node(selection_audio_path)
+@onready var options_container = get_node(container_path)
 
 var cur_selected = 0
 
@@ -55,7 +55,7 @@ func change_option_to(idx):
 	_update_alphas()
 
 func get_option_position(idx):
-	var scaled_idx = range_lerp(idx, 0, 1, 0, 1.3)
+	var scaled_idx = remap(idx, 0, 1, 0, 1.3)
 	
 	var new_x = (idx * 20) + 90
 	var new_y = (scaled_idx * 120) + (GodotX.WINDOW_Y * 0.48)
@@ -63,7 +63,7 @@ func get_option_position(idx):
 	return Vector2(new_x, new_y)
 
 func update_option_position(option, idx_relative_to_selected):
-	option.rect_global_position = lerp(option.rect_global_position, get_option_position(idx_relative_to_selected), get_lerp_val())
+	option.global_position = lerp(option.global_position, get_option_position(idx_relative_to_selected), get_lerp_val())
 
 func get_option_alpha(idx):
 	if idx == 0:
@@ -84,10 +84,10 @@ func get_lerp_val():
 	return GodotX.get_haxeflixel_lerp(0.3)
 
 func _create_text(idx):
-	var new_text = FNF_STYLE_TEXT_BOLD.instance()
+	var new_text = FNF_STYLE_TEXT_BOLD.instantiate()
 	
 	new_text.text = options[idx]
-	new_text.rect_global_position = get_option_position(idx)
+	new_text.global_position = get_option_position(idx)
 	new_text.call_deferred("force_update_transform")
 	
 	new_text.modulate.a = get_option_alpha(idx)

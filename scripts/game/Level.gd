@@ -33,31 +33,31 @@ const RandRepeatEventList = preload("res://scripts/game/events/RandRepeatGameEve
 
 enum Ratings { SICK, GOOD, BAD, SHIT }
 
-export(Dictionary) var performers = {
+@export var performers: Dictionary = {
 	player = "bf",
 	metronome = "gf",
 	opponent = ""
 }
 
-export(Dictionary) var character_paths = {
+@export var character_paths: Dictionary = {
 	bf = NodePath(),
 	gf = NodePath()
 }
 
-export(Dictionary) var step_zone_paths = {
+@export var step_zone_paths: Dictionary = {
 	player = NodePath(),
 	opponent = NodePath()
 }
 
-export(NodePath) var hud_path
-export(NodePath) var default_pos_path = NodePath("HUDPackage2D/Default_Pos")
+@export var hud_path: NodePath
+@export var default_pos_path: NodePath = NodePath("HUDPackage2D/Default_Pos")
 
-onready var lvl_manager = get_parent()
+@onready var lvl_manager = get_parent()
 
 # ---------- Characters ----------
 
 # GitHub issue #48038: Exported arrays / dictionaries are shared
-onready var _performers = performers.duplicate(true)
+@onready var _performers = performers.duplicate(true)
 
 var characters = {
 	bf = null,
@@ -67,8 +67,8 @@ var characters = {
 # ---------- HUD ----------
 # (Includes step zone and countdown voices)
 
-onready var hud = get_node(hud_path)
-onready var default_position = get_node(default_pos_path)
+@onready var hud = get_node(hud_path)
+@onready var default_position = get_node(default_pos_path)
 
 var step_zones = {
 	player = null,
@@ -127,7 +127,7 @@ func on_ready():
 	
 	# This fixes all stutters caused by loading for some goddamn reason idfk why
 	for _i in range(3):
-		yield(get_tree(), "idle_frame")
+		await get_tree().idle_frame
 	
 	handle_prev_transition()
 	
@@ -154,7 +154,7 @@ func set_preload_variables():
 	]
 
 func set_immediate_mandatory_connections():
-	Debug.connect("botplay_changed", self, "_on_botplay_changed")
+	Debug.connect("botplay_changed", Callable(self, "_on_botplay_changed"))
 
 func handle_prev_transition():
 	match TransitionSystem.anim_player.assigned_animation:
@@ -181,8 +181,8 @@ func start_level_part_2():
 	set_process(true)
 	set_process_input(true)
 	
-	Conductor.connect("quarter_hit", self, "do_countdown", [], CONNECT_ONESHOT)
-	Conductor.connect("quarter_hit", self, "connect_end_of_song_signal", [], CONNECT_ONESHOT)
+	Conductor.connect("quarter_hit", Callable(self, "do_countdown").bind(), CONNECT_ONE_SHOT)
+	Conductor.connect("quarter_hit", Callable(self, "connect_end_of_song_signal").bind(), CONNECT_ONE_SHOT)
 
 func end_level_part_1():
 	Conductor.stop_song()
@@ -281,7 +281,7 @@ func do_general_level_prep():
 	update_health(1, true)
 
 func initialize_camera():
-	var first_char = level_info.camera_pan_events.list[0].func_ref_args[0] if level_info.camera_pan_events && !level_info.camera_pan_events.list.empty() else null
+	var first_char = level_info.camera_pan_events.list[0].func_ref_args[0] if level_info.camera_pan_events && !level_info.camera_pan_events.list.is_empty() else null
 	set_cam_follow_point(first_char)
 	
 	hud.camera.reset_position()
@@ -306,13 +306,13 @@ func do_countdown(quarter):
 			hud.countdown_tween.interpolate_property(hud.countdown_msgs, "modulate:a", 1, 0, Conductor.get_seconds_per_beat(), Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 			hud.countdown_tween.start()
 		
-		Conductor.call_deferred("connect", "quarter_hit", self, "do_countdown", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		Conductor.call_deferred("connect", "quarter_hit", self, "do_countdown", [], CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func connect_end_of_song_signal(quarter):
 	if quarter == 0:
-		Conductor.connect("finished", self, "on_conductor_song_finished")
+		Conductor.connect("finished", Callable(self, "on_conductor_song_finished"))
 	else:
-		Conductor.call_deferred("connect", "quarter_hit", self, "connect_end_of_song_signal", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+		Conductor.call_deferred("connect", "quarter_hit", self, "connect_end_of_song_signal", [], CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func do_post_level_story_event():
 	if lvl_manager.in_last_state():
@@ -329,7 +329,7 @@ func transition_to_level_exit():
 	set_process_input(false)
 	
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-	TransitionSystem.connect("transition_finished", self, "end_level_part_2", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	TransitionSystem.connect("transition_finished", Callable(self, "end_level_part_2").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func do_level_cleanup():
 	clear_lanes()
@@ -531,7 +531,7 @@ func switch_icons(performer_name, char_or_performer):
 	
 	if character:
 		var time_before_replace = 0
-		var new_icon = character.icon.instance()
+		var new_icon = character.icon.instantiate()
 		
 		########################
 		
@@ -725,7 +725,7 @@ func get_character(character_name):
 	return null
 
 func has_performer(performer_name):
-	return _performers.has(performer_name) && !_performers[performer_name].empty() && \
+	return _performers.has(performer_name) && !_performers[performer_name].is_empty() && \
 		   has_character(_performers[performer_name])
 
 func get_performer(performer_name):

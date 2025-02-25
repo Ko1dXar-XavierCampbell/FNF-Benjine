@@ -1,7 +1,7 @@
 extends Node2D
 
-onready var tween = $Tween
-onready var combo_pos = $Combo_Pos
+@onready var tween = $Tween
+@onready var combo_pos = $Combo_Pos
 
 func show_adjustments():
 	combo_pos.position.x = UserData.get_setting("combo_x_offset", 0, "gameplay")

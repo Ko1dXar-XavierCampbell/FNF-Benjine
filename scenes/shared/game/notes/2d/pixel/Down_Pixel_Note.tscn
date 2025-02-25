@@ -13,7 +13,7 @@ script = ExtResource( 2 )
 sustain_line_stylebox = ExtResource( 5 )
 sustain_cap_stylebox = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = 1.5708
 scale = Vector2( 6, 6 )
 frames = ExtResource( 1 )

@@ -14,10 +14,10 @@ const DEFAULT_HTI_MAP = [
 	}
 ]
 
-export(NodePath) var icon_path = "Icon"
-export(Array, Dictionary) var health_to_index_map = DEFAULT_HTI_MAP
+@export var icon_path: NodePath = "Icon"
+@export var health_to_index_map = DEFAULT_HTI_MAP # (Array, Dictionary)
 
-onready var icon = get_node_or_null(icon_path)
+@onready var icon = get_node_or_null(icon_path)
 
 func change_icon(health_percent):
 	if (!icon): return

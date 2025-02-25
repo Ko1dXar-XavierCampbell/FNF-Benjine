@@ -15,7 +15,7 @@ func _input(event):
 
 func handle_options_exit():
 	TransitionSystem.play_transition(TransitionSystem.Transitions.BASIC_FADE_OUT)
-	TransitionSystem.connect("transition_finished", self, "_switch_to_main_menu", [], CONNECT_DEFERRED | CONNECT_ONESHOT)
+	TransitionSystem.connect("transition_finished", Callable(self, "_switch_to_main_menu").bind(), CONNECT_DEFERRED | CONNECT_ONE_SHOT)
 
 func _switch_to_main_menu(_trans_name):
 	get_parent().switch_state(MAIN_MENU)

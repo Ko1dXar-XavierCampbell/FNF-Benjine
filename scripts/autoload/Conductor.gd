@@ -11,7 +11,7 @@ const COUNTDOWN_CONSTANT = -4 # The number of beats before a level song plays (f
 const SPAWN_TIME_CONSTANT = 2 # Seconds to spawn a note before its strum time in seconds at a scroll speed of 1
 const EARLY_HIT_MULT = 0.5
 
-onready var vocals = $Vocals
+@onready var vocals = $Vocals
 
 var song_position: float = 0 # in seconds
 
@@ -95,13 +95,13 @@ func play_level_song_with_countdown(song_chart: SongChart, level_info: LevelInfo
 	counting_down = true
 	set_process(true)
 	
-	connect("quarter_hit", self, "_wait_for_countdown_finish", [song_chart, level_info])
+	connect("quarter_hit", Callable(self, "_wait_for_countdown_finish").bind(song_chart, level_info))
 
 func _wait_for_countdown_finish(quarter, song_chart, level_info):
 	if quarter < 0:
 		return
 	
-	disconnect("quarter_hit", self, "_wait_for_countdown_finish")
+	disconnect("quarter_hit", Callable(self, "_wait_for_countdown_finish"))
 	
 	counting_down = false
 	set_process(false)
@@ -116,8 +116,8 @@ func stop_song():
 	
 	set_process(false)
 	
-	if is_connected("quarter_hit", self, "_wait_for_countdown_finish"):
-		disconnect("quarter_hit", self, "_wait_for_countdown_finish")
+	if is_connected("quarter_hit", Callable(self, "_wait_for_countdown_finish")):
+		disconnect("quarter_hit", Callable(self, "_wait_for_countdown_finish"))
 		counting_down = false
 
 func _process(_delta):
@@ -131,7 +131,7 @@ func _process(_delta):
 		last_quarter = cur_quarter
 
 func update_time():
-	var accurate_delta = (OS.get_ticks_usec() - previous_engine_time) / 1_000_000.0 * pitch_scale
+	var accurate_delta = (Time.get_ticks_usec() - previous_engine_time) / 1_000_000.0 * pitch_scale
 	
 	if counting_down:
 		var countdown_length = COUNTDOWN_CONSTANT * get_seconds_per_beat(countdown_bpm)
@@ -220,7 +220,7 @@ func reset_playhead():
 	bpm_map_idx = 0
 
 func reset_time_at_last_update():
-	previous_engine_time = OS.get_ticks_usec()
+	previous_engine_time = Time.get_ticks_usec()
 
 func set_pitch_scale(scale: float = 1):
 	pitch_scale = scale

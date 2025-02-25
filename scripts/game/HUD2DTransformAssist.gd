@@ -1,4 +1,4 @@
-extends Position2D
+extends Marker2D
 
 #const TRANSFORMING_PROPERTIES = [
 #	"position",
@@ -13,11 +13,11 @@ extends Position2D
 #	"global_transform"
 #]
 
-export(NodePath) var hud_path
-export(NodePath) var top_left_path = NodePath("Top_Left")
+@export var hud_path: NodePath
+@export var top_left_path: NodePath = NodePath("Top_Left")
 
-onready var hud = get_node(hud_path)
-onready var top_left = get_node(top_left_path)
+@onready var hud = get_node(hud_path)
+@onready var top_left = get_node(top_left_path)
 
 func update_hud_transform():
 	force_update_transform()

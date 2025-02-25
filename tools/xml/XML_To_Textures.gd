@@ -3,13 +3,13 @@ extends Node2D
 # ASSUMPTIONS:
 # - Sheet and image have the same path
 # - Sheet is an Adobe Animate XML and image is a PNG
-export(String) var load_path = "res://"
-export(String) var save_path = "res://"
-export(bool) var optimize = false
+@export var load_path: String = "res://"
+@export var save_path: String = "res://"
+@export var optimize: bool = false
 
 func _ready():
 	set_process(false)
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	
 	var xml_parser = XMLParser.new()
 	var open_err = xml_parser.open(load_path + ".xml")
@@ -43,14 +43,14 @@ func _ready():
 					new_img.atlas = texture
 					new_img.region = new_region
 					new_img.margin = new_margin
-					new_img.flags = Texture.FLAG_MIPMAPS
+					new_img.flags = Texture2D.FLAG_MIPMAPS
 					new_img.filter_clip = true
 					
 					ResourceSaver.save(save_path + "_" + loaded_name + ".res", new_img, ResourceSaver.FLAG_COMPRESS)
 					
 					prev_img = new_img
 					
-		yield(get_tree().create_timer(0.01), "timeout")
+		await get_tree().create_timer(0.01).timeout
 		err = xml_parser.read()
 #
 	print("done")

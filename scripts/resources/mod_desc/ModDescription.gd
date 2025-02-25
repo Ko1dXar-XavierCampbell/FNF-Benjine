@@ -2,15 +2,15 @@ extends Resource
 class_name ModDescription
 
 # Required info for mods
-export(String) var mod_name = "My FNF Mod"
-export(String) var mod_author = "Me"
-export(String) var mod_version = "1.0.0"
-export(String) var mod_package_name = ""
-export(bool) var advanced_mod = false
+@export var mod_name: String = "My FNF Mod"
+@export var mod_author: String = "Me"
+@export var mod_version: String = "1.0.0"
+@export var mod_package_name: String = ""
+@export var advanced_mod: bool = false
 # Required info for advanced mods only
-export(Texture) var banner = null
-export(String, FILE) var main_path = "res://scenes/Main.tscn"
-export(String, MULTILINE) var description = ""
+@export var banner: Texture2D = null
+@export var main_path = "res://scenes/Main.tscn" # (String, FILE)
+@export var description = "" # (String, MULTILINE)
 
 func _init(mod_name_ = "My FNF Mod",
 		   mod_author_ = "Me",

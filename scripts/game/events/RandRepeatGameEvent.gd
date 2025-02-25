@@ -13,7 +13,7 @@ func _init(
 		time_increment_ = [],
 		generate_with_ints_: bool = false,
 		inclusive_int_range_: bool = true):
-	._init(
+	super._init(
 		occurrence_time_,
 		time_units_,
 		func_ref_,
@@ -25,7 +25,7 @@ func _init(
 	inclusive_int_range = inclusive_int_range_
 
 func deserialize(level: Node, event_info) -> void:
-	.deserialize(level, event_info)
+	super.deserialize(level, event_info)
 	generate_with_ints = event_info.generate_with_ints
 	inclusive_int_range = event_info.inclusive_int_range
 
@@ -44,6 +44,6 @@ func increase_occurrence_time():
 		generated_increment = (randi() % time_range) + min_time
 
 	else:
-		generated_increment = rand_range(min_time, max_time)
+		generated_increment = randf_range(min_time, max_time)
 
 	occurrence_time += generated_increment

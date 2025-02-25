@@ -8,12 +8,12 @@
 [ext_resource path="res://assets/materials/note3ds/Left_Sustain_Inner_Color.tres" type="Material" id=6]
 [ext_resource path="res://assets/materials/note3ds/Left_Sustain_Outer_Color.tres" type="Material" id=7]
 
-[node name="Note3D" type="PathFollow"]
+[node name="Note3D" type="PathFollow3D"]
 loop = false
 script = ExtResource( 5 )
 
 [node name="Note" parent="." instance=ExtResource( 1 )]
-transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform3D( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Arrow" parent="Note/Note_Model/RootNode" index="0"]
 material_override = ExtResource( 4 )

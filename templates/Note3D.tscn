@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/materials/note3ds/Up_Note.tres" type="Material" id=4]
 [ext_resource path="res://scripts/game/notes/Note3D.gd" type="Script" id=5]
 
-[node name="Note3D" type="PathFollow"]
+[node name="Note3D" type="PathFollow3D"]
 loop = false
 script = ExtResource( 5 )
 

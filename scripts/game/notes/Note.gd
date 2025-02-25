@@ -13,13 +13,13 @@ const MAX_JACK_TIME = 1 / 6.0
 
 enum Type {REGULAR, SUSTAIN_LINE, SUSTAIN_CAP}
 
-export(String) var regular_hit_action = "default"
-export(String) var sustain_hit_action = "default"
+@export var regular_hit_action: String = "default"
+@export var sustain_hit_action: String = "default"
 
-export(String) var regular_miss_action = "default"
-export(String) var sustain_miss_action = "default"
+@export var regular_miss_action: String = "default"
+@export var sustain_miss_action: String = "default"
 
-export(bool) var ai_miss = false
+@export var ai_miss: bool = false
 
 var strum_time: float
 var note_type = Type.REGULAR

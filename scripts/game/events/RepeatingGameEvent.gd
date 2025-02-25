@@ -11,7 +11,7 @@ func _init(
 		func_args_: Array = [],
 		check_floored_time_: bool = false,
 		time_increment_ = 0):
-	._init(
+	super._init(
 		occurrence_time_,
 		time_units_,
 		func_ref_,
@@ -21,7 +21,7 @@ func _init(
 	time_increment = time_increment_
 
 func deserialize(level: Node, event_info) -> void:
-	.deserialize(level, event_info)
+	super.deserialize(level, event_info)
 	time_increment = event_info.time_increment
 
 func increase_occurrence_time():

@@ -1,6 +1,6 @@
 extends Node2D
 
-export(String) var offset_file = "res://"
+@export var offset_file: String = "res://"
 
 func _ready():
 	pass # Replace with function body.

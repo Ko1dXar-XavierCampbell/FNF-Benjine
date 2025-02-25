@@ -4,7 +4,7 @@ func play_anim(anim_data, anim_length = 0, forced = true, uninterruptable = fals
 	var anim_name = get_anim_name(anim_data)
 	
 	if !(anim_name == anim_player.assigned_animation && anim_name in get_looping_anim_names()):
-		.play_anim(anim_data, anim_length, forced, uninterruptable)
+		super.play_anim(anim_data, anim_length, forced, uninterruptable)
 	
 #	if anim_data is int:
 #		anim_name = direction_anims[anim_data]

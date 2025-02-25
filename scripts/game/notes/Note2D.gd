@@ -1,17 +1,17 @@
 extends Note
 
-export(NodePath) var anim_sprite_nodepath = NodePath("AnimatedSprite")
-export(NodePath) var sustain_nodepath = NodePath("Sustain")
-export(NodePath) var tween_nodepath = NodePath("Tween")
+@export var anim_sprite_nodepath: NodePath = NodePath("AnimatedSprite2D")
+@export var sustain_nodepath: NodePath = NodePath("Sustain")
+@export var tween_nodepath: NodePath = NodePath("Tween")
 
-export(StyleBoxTexture) var sustain_line_stylebox
-export(StyleBoxTexture) var sustain_cap_stylebox
+@export var sustain_line_stylebox: StyleBoxTexture
+@export var sustain_cap_stylebox: StyleBoxTexture
 
-onready var anim_sprite: AnimatedSprite = get_node(anim_sprite_nodepath)
-onready var sustain = get_node(sustain_nodepath)
-onready var tween: Tween = get_node(tween_nodepath)
+@onready var anim_sprite: AnimatedSprite2D = get_node(anim_sprite_nodepath)
+@onready var sustain = get_node(sustain_nodepath)
+@onready var tween: Tween = get_node(tween_nodepath)
 
-onready var last_known_scroll_speed = Conductor.scroll_speed
+@onready var last_known_scroll_speed = Conductor.scroll_speed
 
 func initialize_note():
 	if note_type == Type.SUSTAIN_LINE || note_type == Type.SUSTAIN_CAP:
@@ -43,7 +43,7 @@ func do_hit_action(lvl, dir, lane_type_string: String):
 		var remaining_time = Conductor.get_sixteenth_length() / Conductor.pitch_scale * remaining_percent
 		
 		tween.interpolate_property(sustain, "percent_length", remaining_percent, 0, remaining_time)
-		tween.connect("tween_all_completed", self, "queue_free", [], CONNECT_ONESHOT)
+		tween.connect("tween_all_completed", Callable(self, "queue_free").bind(), CONNECT_ONE_SHOT)
 		tween.start()
 
 func _process(_delta):

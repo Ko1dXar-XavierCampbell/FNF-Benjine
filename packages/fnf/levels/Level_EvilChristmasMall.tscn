@@ -4,9 +4,9 @@
 [ext_resource path="res://scenes/shared/game/HUDPackage2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/shared/game/characters/Girlfriend_Christmas.tscn" type="PackedScene" id=3]
 [ext_resource path="res://packages/fnf/scripts/game/levels/Level_EvilChristmasMall.gd" type="Script" id=4]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/evilBG.png" type="Texture" id=5]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/evilTree.png" type="Texture" id=6]
-[ext_resource path="res://packages/fnf/resources/graphics/week5/evilSnow.png" type="Texture" id=7]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/evilBG.png" type="Texture2D" id=5]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/evilTree.png" type="Texture2D" id=6]
+[ext_resource path="res://packages/fnf/resources/graphics/week5/evilSnow.png" type="Texture2D" id=7]
 [ext_resource path="res://packages/fnf/characters/monster/Monster_Christmas.tscn" type="PackedScene" id=8]
 [ext_resource path="res://packages/fnf/resources/sounds/Lights_Turn_On.ogg" type="AudioStream" id=9]
 [ext_resource path="res://packages/fnf/resources/sounds/Lights_Shut_off.ogg" type="AudioStream" id=10]
@@ -20,8 +20,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ false ]
 }
@@ -32,8 +32,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ) ]
 }
@@ -44,8 +44,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0.952, 0.952 ) ]
 }
@@ -61,8 +61,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -73,8 +73,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.75 ),
-"transitions": PoolRealArray( 0, 1 ),
+"times": PackedFloat32Array( 0, 1.75 ),
+"transitions": PackedFloat32Array( 0, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
 }
@@ -94,7 +94,7 @@ tracks/2/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 9 )
 } ],
-"times": PoolRealArray( 0, 1.75 )
+"times": PackedFloat32Array( 0, 1.75 )
 }
 tracks/3/type = "method"
 tracks/3/path = NodePath("../..")
@@ -103,8 +103,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.75, 5.05 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 1.75, 5.05 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "set_to_horror_pos"
@@ -120,8 +120,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 1.75, 2.55, 5.05 ),
-"transitions": PoolRealArray( -2, -2, 1 ),
+"times": PackedFloat32Array( 1.75, 2.55, 5.05 ),
+"transitions": PackedFloat32Array( -2, -2, 1 ),
 "update": 0,
 "values": [ Vector2( 0.667, 0.667 ), Vector2( 0.667, 0.667 ), Vector2( 0.952, 0.952 ) ]
 }
@@ -150,20 +150,20 @@ hud_path = NodePath("HUDPackage2D/HUD")
 motion_scale = Vector2( 0.2, 0.2 )
 motion_offset = Vector2( -512, -288 )
 
-[node name="EvilBg" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="EvilBg" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( -400, -500 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="EvilTree" type="Sprite" parent="ParallaxBackground/BG"]
+[node name="EvilTree" type="Sprite2D" parent="ParallaxBackground/BG"]
 position = Vector2( 300, -300 )
 texture = ExtResource( 6 )
 centered = false
 
 [node name="Snow" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="EvilSnow" type="Sprite" parent="ParallaxBackground/Snow"]
+[node name="EvilSnow" type="Sprite2D" parent="ParallaxBackground/Snow"]
 position = Vector2( -200, 700 )
 texture = ExtResource( 7 )
 centered = false
@@ -181,7 +181,7 @@ idle_frequency = 2
 [node name="Monster_Christmas" parent="." instance=ExtResource( 8 )]
 idle_frequency = 2
 
-[node name="Horror_Pos" type="Position2D" parent="."]
+[node name="Horror_Pos" type="Marker2D" parent="."]
 position = Vector2( 592, -2050 )
 
 [node name="HUDPackage2D" parent="." instance=ExtResource( 2 )]
@@ -194,7 +194,7 @@ zoom_on_quarter_hit = 1.065
 [node name="Flash" type="Polygon2D" parent="HUDPackage2D/HUD" index="2"]
 visible = false
 color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( -640, -360, 640, -360, 640, 360, -640, 360 )
+polygon = PackedVector2Array( -640, -360, 640, -360, 640, 360, -640, 360 )
 
 [node name="Scary_Sounds" type="AudioStreamPlayer" parent="HUDPackage2D/HUD" index="3"]
 stream = ExtResource( 9 )
