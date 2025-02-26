@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740495213
+::res://::1740580434
 benjine_icon.png::CompressedTexture2D::7463773657350185118::1740494289::1740495240::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::-1::1740495032::0::1::::<><>::
-default_env.tres::Environment::-1::1740495032::0::1::::<><>::
+default_env.tres::Environment::7795438017298473852::1740496243::0::1::::<><>::
 icon.png::CompressedTexture2D::4329770739974397856::1740494289::1740495240::1::::<><>::
-README.md::TextFile::-1::1740494287::0::1::::<><>::
+README.md::TextFile::-1::1740495368::0::1::::<><>::
 ::res://addons/::1740494288
 ::res://addons/dialogic/::1740494287
 Dialog.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://addons/dialogic/Images/Plugin/placeholder.png<>res://addons/dialogic/Nodes/DialogProxy.gd
@@ -30,12 +30,12 @@ Welcome.md::TextFile::-1::1740494287::0::1::::<><>::
 ::res://addons/dialogic/Documentation/Content/Events/CustomEvents/::1740494287
 CreateCustomEvents.md::TextFile::-1::1740494287::0::1::::<><>::
 ImportCustomEvents.md::TextFile::-1::1740494287::0::1::::<><>::
-::res://addons/dialogic/Documentation/Content/Events/CustomEvents/Images/::1740494287
+::res://addons/dialogic/Documentation/Content/Events/CustomEvents/Images/::1740495246
 CreationProcess.PNG::CompressedTexture2D::3956233320578270258::1740494287::1740495246::1::::<><>::
 CustomEventsShowOff.PNG::CompressedTexture2D::3514852029328233220::1740494287::1740495246::1::::<><>::
 EventBlock.png::CompressedTexture2D::4953754085736573947::1740494287::1740495246::1::::<><>::
 EventBlock_EventData.PNG::CompressedTexture2D::3365586652431944482::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Documentation/Content/Events/Images/::1740494287
+::res://addons/dialogic/Documentation/Content/Events/Images/::1740495246
 audio_event.png::CompressedTexture2D::4392631502169218955::1740494287::1740495246::1::::<><>::
 Call_Node.PNG::CompressedTexture2D::7985422597531402674::1740494287::1740495246::1::::<><>::
 Event_Change_Timeline.PNG::CompressedTexture2D::6639424486395564080::1740494287::1740495246::1::::<><>::
@@ -69,7 +69,7 @@ portraits-not-showing.md::TextFile::-1::1740494287::0::1::::<><>::
 resolution-small-dialog-big.md::TextFile::-1::1740494287::0::1::::<><>::
 Signals.md::TextFile::-1::1740494287::0::1::::<><>::
 why-not-graph-nodes.md::TextFile::-1::1740494287::0::1::::<><>::
-::res://addons/dialogic/Documentation/Content/Images/::1740494287
+::res://addons/dialogic/Documentation/Content/Images/::1740495246
 dialogic-hero-1.3.png::CompressedTexture2D::5206088995873333402::1740494287::1740495246::1::::<><>::
 ::res://addons/dialogic/Documentation/Content/Reference/::1740494287
 000.md::TextFile::-1::1740494287::0::1::::<><>::
@@ -78,7 +78,7 @@ Character.md::TextFile::-1::1740494287::0::1::::<><>::
 History.md::TextFile::-1::1740494287::0::1::::<><>::
 Theme.md::TextFile::-1::1740494287::0::1::::<><>::
 Timeline.md::TextFile::-1::1740494287::0::1::::<><>::
-::res://addons/dialogic/Documentation/Content/Reference/Images/::1740494287
+::res://addons/dialogic/Documentation/Content/Reference/Images/::1740495247
 history_button_positions.png::CompressedTexture2D::1447052366565022506::1740494287::1740495247::1::::<><>::
 history_character_color_example.png::CompressedTexture2D::7930549563484727075::1740494287::1740495247::1::::<><>::
 history_log_margin.png::CompressedTexture2D::1724477068152827248::1740494287::1740495247::1::::<><>::
@@ -96,7 +96,7 @@ Saving.md::TextFile::-1::1740494287::0::1::::<><>::
 Updating.md::TextFile::-1::1740494287::0::1::::<><>::
 Values.md::TextFile::-1::1740494287::0::1::::<><>::
 VoiceLines.md::TextFile::-1::1740494287::0::1::::<><>::
-::res://addons/dialogic/Documentation/Content/Tutorials/Images/::1740494287
+::res://addons/dialogic/Documentation/Content/Tutorials/Images/::1740495247
 Character_Editor_With_Portrait.PNG::CompressedTexture2D::2369324022422224105::1740494287::1740495247::1::::<><>::
 Dialogic_Tab.PNG::CompressedTexture2D::3117031251604939925::1740494287::1740495247::1::::<><>::
 Empty_Character_Editor.PNG::CompressedTexture2D::2379146234134546487::1740494287::1740495247::1::::<><>::
@@ -125,7 +125,7 @@ DocumentationH2.tres::FontFile::-1::1740495036::0::1::::<><>::res://addons/dialo
 DocumentationH3.tres::FontFile::-1::1740495036::0::1::::<><>::res://addons/dialogic/Documentation/Theme/Font/NotoSans-Bold.ttf
 DocumentationH4.tres::FontFile::-1::1740495036::0::1::::<><>::res://addons/dialogic/Documentation/Theme/Font/NotoSans-BoldItalic.ttf
 DocumentationH5.tres::FontFile::-1::1740495036::0::1::::<><>::res://addons/dialogic/Documentation/Theme/Font/NotoSans-Italic.ttf
-::res://addons/dialogic/Documentation/Theme/Font/::1740494287
+::res://addons/dialogic/Documentation/Theme/Font/::1740495231
 LICENSE.txt::TextFile::-1::1740494287::0::1::::<><>::
 NotoSans-Bold.ttf::FontFile::6344070050125344516::1740494287::1740495231::1::::<><>::
 NotoSans-BoldItalic.ttf::FontFile::6364742329172032882::1740494287::1740495231::1::::<><>::
@@ -272,8 +272,8 @@ TextEditor.tscn::PackedScene::-1::1740495036::0::1::::<><>::res://addons/dialogi
 ::res://addons/dialogic/Editor/Events/Parts/WaitSeconds/::1740494287
 EventPart_WaitSeconds.gd::GDScript::-1::1740495036::0::1::::<>Control<>::
 WaitSeconds.tscn::PackedScene::-1::1740495036::0::1::::<><>::res://addons/dialogic/Editor/Events/Parts/WaitSeconds/EventPart_WaitSeconds.gd<>res://addons/dialogic/Editor/Events/Parts/Text/GreyLabel.tscn<>res://addons/dialogic/Editor/Events/styles/InputFieldsStyle.tres<>res://addons/dialogic/Editor/Events/Parts/SpinBoxPreventDnD.gd
-::res://addons/dialogic/Editor/Events/styles/::1740494287
-InputFieldsStyle.tres::Theme::-1::1740495036::0::1::::<><>::
+::res://addons/dialogic/Editor/Events/styles/::1740495316
+InputFieldsStyle.tres::Theme::2806658710825705663::1740495316::0::1::::<><>::
 ResourceMenuHover.tres::StyleBoxFlat::-1::1740495036::0::1::::<><>::
 ResourceMenuNormal.tres::StyleBoxFlat::-1::1740495036::0::1::::<><>::
 ResourceMenuPanelBackground.tres::StyleBoxFlat::-1::1740495036::0::1::::<><>::
@@ -326,7 +326,7 @@ TimelineTestingScene.tscn::PackedScene::-1::1740495035::0::1::::<><>::res://addo
 ValueEditor.gd::GDScript::-1::1740495035::0::1::::<>ScrollContainer<>::
 ValueEditor.tscn::PackedScene::-1::1740495035::0::1::::<><>::res://addons/dialogic/Editor/ValueEditor/ValueEditor.gd<>res://addons/dialogic/Editor/Common/TLabel.tscn
 ::res://addons/dialogic/Example Assets/::1740494287
-::res://addons/dialogic/Example Assets/backgrounds/::1740494287
+::res://addons/dialogic/Example Assets/backgrounds/::1740495246
 background-1.png::CompressedTexture2D::8127275214229050413::1740494287::1740495246::1::::<><>::
 background-2.png::CompressedTexture2D::2134949570392231227::1740494287::1740495246::1::::<><>::
 GlossaryBackground.tres::StyleBoxFlat::-1::1740495035::0::1::::<><>::
@@ -341,7 +341,7 @@ DefaultFont.tres::FontFile::-1::1740495035::0::1::::<><>::res://addons/dialogic/
 DefaultItalicFont.tres::FontFile::-1::1740495035::0::1::::<><>::res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Italic.ttf
 GlossaryFont.tres::FontFile::-1::1740495035::0::1::::<><>::res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Black.ttf
 NameFont.tres::FontFile::-1::1740495035::0::1::::<><>::res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Black.ttf
-::res://addons/dialogic/Example Assets/Fonts/Overlock/::1740494287
+::res://addons/dialogic/Example Assets/Fonts/Overlock/::1740495231
 OFL.txt::TextFile::-1::1740494287::0::1::::<><>::
 Overlock-Black.ttf::FontFile::1654699154409533490::1740494287::1740495231::1::::<><>::
 Overlock-BlackItalic.ttf::FontFile::4469598182871162402::1740494287::1740495231::1::::<><>::
@@ -357,15 +357,15 @@ HistoryButton.tscn::PackedScene::-1::1740495035::0::1::::<><>::res://addons/dial
 HistoryReturnButton.tscn::PackedScene::-1::1740495035::0::1::::<><>::res://addons/dialogic/Example Assets/History/HistoryButton-theme.tres
 HistoryRow.gd::GDScript::-1::1740495035::0::1::::<>PanelContainer<>::
 HistoryRow.tscn::PackedScene::-1::1740495035::0::1::::<><>::res://addons/dialogic/Example Assets/History/HistoryRow.gd<>res://addons/dialogic/Example Assets/backgrounds/background-2.png
-::res://addons/dialogic/Example Assets/next-indicator/::1740494287
+::res://addons/dialogic/Example Assets/next-indicator/::1740495246
 next-indicator.png::CompressedTexture2D::236080688234592724::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Example Assets/portraits/::1740494287
+::res://addons/dialogic/Example Assets/portraits/::1740495246
 df-1.png::CompressedTexture2D::738372831050092774::1740494287::1740495246::1::::<><>::
 df-2.png::CompressedTexture2D::4001201256819705895::1740494287::1740495246::1::::<><>::
 df-3.png::CompressedTexture2D::5583254727312329674::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Example Assets/Sound Effects/::1740494287
+::res://addons/dialogic/Example Assets/Sound Effects/::1740495257
 Beep.wav::AudioStreamWAV::2145907685130715180::1740494287::1740495257::1::::<><>::
-::res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/::1740494287
+::res://addons/dialogic/Example Assets/Sound Effects/Keyboard Noises/::1740495257
 LICENSE.txt::TextFile::-1::1740494287::0::1::::<><>::
 typing1.wav::AudioStreamWAV::1162788669423585582::1740494287::1740495257::1::::<><>::
 typing2.wav::AudioStreamWAV::4425220978245093339::1740494287::1740495257::1::::<><>::
@@ -373,9 +373,9 @@ typing3.wav::AudioStreamWAV::5535774616768539882::1740494287::1740495257::1::::<
 typing4.wav::AudioStreamWAV::1845921136059006456::1740494287::1740495257::1::::<><>::
 typing5.wav::AudioStreamWAV::2936654480652176357::1740494287::1740495257::1::::<><>::
 ::res://addons/dialogic/Images/::1740494287
-::res://addons/dialogic/Images/Context Menus/::1740494287
+::res://addons/dialogic/Images/Context Menus/::1740495246
 Remove.svg::CompressedTexture2D::6935784419432859923::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Images/Event Icons/::1740494287
+::res://addons/dialogic/Images/Event Icons/::1740495246
 character-join.svg::CompressedTexture2D::2733069583278369131::1740494287::1740495245::1::::<><>::
 character-leave.svg::CompressedTexture2D::7615147521733728787::1740494287::1740495245::1::::<><>::
 character.svg::CompressedTexture2D::1380115318041321871::1740494287::1740495245::1::::<><>::
@@ -384,7 +384,7 @@ event-solid.svg::CompressedTexture2D::7778510695381170429::1740494287::174049524
 label.svg::CompressedTexture2D::3659872394414710148::1740494287::1740495246::1::::<><>::
 Portrait.svg::CompressedTexture2D::1317336688558167720::1740494287::1740495246::1::::<><>::
 warning.svg::CompressedTexture2D::569061671371718140::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Images/Event Icons/Main Icons/::1740494287
+::res://addons/dialogic/Images/Event Icons/Main Icons/::1740495246
 audio-event.svg::CompressedTexture2D::5199061437113188318::1740494287::1740495246::1::::<><>::
 background-music.svg::CompressedTexture2D::1018076975521052870::1740494287::1740495246::1::::<><>::
 call-node.svg::CompressedTexture2D::1996838295547564975::1740494287::1740495246::1::::<><>::
@@ -407,11 +407,11 @@ set-theme.svg::CompressedTexture2D::972284181056084133::1740494287::1740495245::
 set-value.svg::CompressedTexture2D::6604759056128757867::1740494287::1740495245::1::::<><>::
 text-event.svg::CompressedTexture2D::2182737237299243292::1740494287::1740495245::1::::<><>::
 wait-seconds.svg::CompressedTexture2D::874316488052075589::1740494287::1740495245::1::::<><>::
-::res://addons/dialogic/Images/Pieces/::1740494287
+::res://addons/dialogic/Images/Pieces/::1740495246
 closed-icon.svg::CompressedTexture2D::6909952454208782430::1740494287::1740495246::1::::<><>::
 expand-icon.svg::CompressedTexture2D::8869498569882968575::1740494287::1740495246::1::::<><>::
 open-icon.svg::CompressedTexture2D::5254336584516997658::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Images/Plugin/::1740494287
+::res://addons/dialogic/Images/Plugin/::1740495246
 placeholder.png::CompressedTexture2D::2277012360334169617::1740494287::1740495246::1::::<><>::
 plugin-editor-icon-dark-theme-0.75.svg::CompressedTexture2D::2127096704375549730::1740494287::1740495246::1::::<><>::
 plugin-editor-icon-dark-theme-1.5.svg::CompressedTexture2D::132222087376394925::1740494287::1740495246::1::::<><>::
@@ -428,7 +428,7 @@ plugin-editor-icon-light-theme-1.svg::CompressedTexture2D::353911575610437585::1
 plugin-editor-icon-light-theme-2.svg::CompressedTexture2D::3103151787800730965::1740494287::1740495246::1::::<><>::
 plugin-editor-icon-light-theme.svg::CompressedTexture2D::2055171635990000736::1740494287::1740495246::1::::<><>::
 white-texture.png::CompressedTexture2D::5020342969754746827::1740494287::1740495246::1::::<><>::
-::res://addons/dialogic/Images/Resources/::1740494287
+::res://addons/dialogic/Images/Resources/::1740495249
 character-1.25.svg::CompressedTexture2D::2433441298641981951::1740494287::1740495246::1::::<><>::
 character-2.svg::CompressedTexture2D::7292421567632193197::1740494287::1740495246::1::::<><>::
 character.svg::CompressedTexture2D::612348848140199714::1740494287::1740495249::1::::<><>::
@@ -441,7 +441,7 @@ theme.svg::CompressedTexture2D::5015276465709394251::1740494287::1740495249::1::
 timeline-1.25.svg::CompressedTexture2D::3560319342596548420::1740494287::1740495248::1::::<><>::
 timeline-2.svg::CompressedTexture2D::8888292293350407009::1740494287::1740495248::1::::<><>::
 timeline.svg::CompressedTexture2D::536623823139511359::1740494287::1740495249::1::::<><>::
-::res://addons/dialogic/Images/Toolbar/::1740494287
+::res://addons/dialogic/Images/Toolbar/::1740495249
 add-character-1.25.svg::CompressedTexture2D::8485402675176934673::1740494287::1740495249::1::::<><>::
 add-character-2.svg::CompressedTexture2D::1285895982781578785::1740494287::1740495249::1::::<><>::
 add-character.svg::CompressedTexture2D::2076310223739288493::1740494287::1740495249::1::::<><>::
@@ -457,15 +457,15 @@ add-theme.svg::CompressedTexture2D::2099448650344490402::1740494287::1740495249:
 add-timeline-1.25.svg::CompressedTexture2D::959341078278455196::1740494287::1740495248::1::::<><>::
 add-timeline-2.svg::CompressedTexture2D::8222807949329114355::1740494287::1740495248::1::::<><>::
 add-timeline.svg::CompressedTexture2D::5457071653297603586::1740494287::1740495248::1::::<><>::
-::res://addons/dialogic/Images/Tutorials/::1740494287
+::res://addons/dialogic/Images/Tutorials/::1740495248
 arrow-down.svg::CompressedTexture2D::3570073762750880341::1740494287::1740495248::1::::<><>::
-::res://addons/dialogic/Localization/::1740494287
+::res://addons/dialogic/Localization/::1740495230
 dialogic.csv::Translation::1973112670500459263::1740494287::1740495230::1::::<><>::
-dialogic.zh_CN.translation::OptimizedTranslation::5721236659839122635::1740495230::0::1::::<><>::
+dialogic.de.translation::OptimizedTranslation::1009267997954734651::1740495230::0::1::::<><>::
 dialogic.en.translation::OptimizedTranslation::5778161642070287495::1740495230::0::1::::<><>::
 dialogic.es.translation::OptimizedTranslation::7256591440586742063::1740495230::0::1::::<><>::
 dialogic.fr.translation::OptimizedTranslation::8747614242370003650::1740495230::0::1::::<><>::
-dialogic.de.translation::OptimizedTranslation::1009267997954734651::1740495230::0::1::::<><>::
+dialogic.zh_CN.translation::OptimizedTranslation::5721236659839122635::1740495230::0::1::::<><>::
 translation_service.gd::GDScript::-1::1740495035::0::1::::DTS<>RefCounted<>::
 ::res://addons/dialogic/Nodes/::1740494287
 Background.gd::GDScript::-1::1740495035::0::1::::<>TextureRect<>::
@@ -536,7 +536,7 @@ inspector_timeline_picker.gd::GDScript::-1::1740495034::0::1::::<>EditorInspecto
 timeline_picker.gd::GDScript::-1::1740495035::0::1::::<>EditorProperty<>::
 ::res://addons/dialogic/Parser/::1740494287
 DialogicParser.gd::GDScript::-1::1740495034::0::1::::DialogicParser<>Node<>::
-::res://addons/godot-openxr/::1740494288
+::res://addons/godot-openxr/::1740495248
 CHANGES.md::TextFile::-1::1740494287::0::1::::<><>::
 icon.png::CompressedTexture2D::3717942703070474496::1740494288::1740495248::1::::<><>::
 plugin.cfg::TextFile::-1::1740494288::0::1::::<><>::
@@ -544,16 +544,16 @@ plugin.gd::GDScript::-1::1740495034::0::1::::<>EditorPlugin<>::
 README.md::TextFile::-1::1740494287::0::1::::<><>::
 runtimes.json::JSON::-1::1740494288::0::1::::<><>::
 ::res://addons/godot-openxr/assets/::1740494287
-::res://addons/godot-openxr/assets/valve_hand_models/::1740494288
+::res://addons/godot-openxr/assets/valve_hand_models/::1740495300
 blinn1.material::StandardMaterial3D::-1::1740494287::0::1::::<><>::res://addons/godot-openxr/assets/valve_hand_models/textures/vr_glove_color_red.jpg<>res://addons/godot-openxr/assets/valve_hand_models/textures/vr_glove_normal.png
 glove.material::StandardMaterial3D::-1::1740494287::0::1::::<><>::res://addons/godot-openxr/assets/valve_hand_models/textures/vr_glove_color_red.jpg<>res://addons/godot-openxr/assets/valve_hand_models/textures/vr_glove_normal.png
 left_hand.glb::PackedScene::7861559822556003276::1740494288::1740495271::1::::<><>::uid://vecbfnsl0n5u::::res://addons/godot-openxr/assets/valve_hand_models/left_hand_file3.jpg<>uid://clp6t3gl7886s::::res://addons/godot-openxr/assets/valve_hand_models/left_hand_file2.png
 left_hand_file2.png::CompressedTexture2D::5577801951041927580::1740495257::1740495300::1::::<><>::
 left_hand_file3.jpg::CompressedTexture2D::1482346730727101116::1740495265::1740495300::1::::<><>::
-right_hand_file3.jpg::CompressedTexture2D::5210449402202770498::1740495279::1740495300::1::::<><>::
-right_hand_file2.png::CompressedTexture2D::5942996660182655748::1740495271::1740495300::1::::<><>::
 right_hand.glb::PackedScene::2913536940524156235::1740494288::1740495284::1::::<><>::uid://cgh8ltrah1d27::::res://addons/godot-openxr/assets/valve_hand_models/right_hand_file3.jpg<>uid://cqw3j0o4uqo01::::res://addons/godot-openxr/assets/valve_hand_models/right_hand_file2.png
-::res://addons/godot-openxr/assets/valve_hand_models/textures/::1740494288
+right_hand_file2.png::CompressedTexture2D::5942996660182655748::1740495271::1740495300::1::::<><>::
+right_hand_file3.jpg::CompressedTexture2D::5210449402202770498::1740495279::1740495300::1::::<><>::
+::res://addons/godot-openxr/assets/valve_hand_models/textures/::1740495312
 vr_glove_color.jpg::CompressedTexture2D::4263098382774091458::1740494288::1740495249::1::::<><>::
 vr_glove_color_red.jpg::CompressedTexture2D::900350761536471629::1740494288::1740495312::1::::<><>::
 vr_glove_normal.png::CompressedTexture2D::8172363554731079921::1740494288::1740495312::1::::<><>::
@@ -586,7 +586,7 @@ XRPose.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://addons/godot-openx
 ::res://addons/imrp/::1740494288
 plugin.cfg::TextFile::-1::1740494288::0::1::::<><>::
 plugin.gd::GDScript::-1::1740495034::0::1::::<>EditorPlugin<>::
-::res://addons/imrp/icons/::1740494288
+::res://addons/imrp/icons/::1740495248
 Search.svg::CompressedTexture2D::5086112652685506099::1740494288::1740495248::1::::<><>::
 ::res://addons/imrp/src/::1740494288
 ::res://addons/imrp/src/scene/::1740494288
@@ -599,7 +599,7 @@ benjine_credits.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/reso
 benjine_desc.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/resources/mod_desc/ModDescription.gd<>res://assets/graphics/menus/mods/benjine_mod_banner.png
 benjine_keybinds.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/general/ResourceList.gd<>res://scripts/resources/option_entries/KeybindEntry.gd
 default_override.cfg::TextFile::-1::1740494288::0::1::::<><>::
-::res://assets/fonts/::1740494289
+::res://assets/fonts/::1740495231
 pixel.otf::FontFile::2863233443872343855::1740494289::1740495231::1::::<><>::
 Pixel_Textbox.tres::FontFile::-1::1740495034::0::1::::<><>::res://assets/fonts/pixel.otf
 VCR_20.tres::FontFile::-1::1740495034::0::1::::<><>::res://assets/fonts/VCR_OSD_MONO_1.001.ttf
@@ -608,7 +608,7 @@ VCR_32_Options.tres::FontFile::-1::1740495034::0::1::::<><>::res://assets/fonts/
 VCR_32_Options_W_Outline.tres::FontFile::-1::1740495034::0::1::::<><>::res://assets/fonts/VCR_OSD_MONO_1.001.ttf
 VCR_OSD_MONO_1.001.ttf::FontFile::4388699789527582847::1740494288::1740495231::1::::<><>::
 VolumeFont.tres::FontFile::-1::1740495034::0::1::::<><>::res://assets/fonts/pixel.otf
-::res://assets/fonts/fnf_psych/::1740494288
+::res://assets/fonts/fnf_psych/::1740495248
 alphabet.png::CompressedTexture2D::994388621631732317::1740494288::1740495248::1::::<><>::
 alphabet.xml::TextFile::-1::1740494288::0::1::::<><>::
 FNF_Bold1.font::FontFile::6384363639855707732::1740494288::1740495230::1::::<><>::
@@ -916,7 +916,7 @@ alphabet_~0000.res::AtlasTexture::-1::1740494289::0::1::::<><>::res://assets/fon
 alphabet_~0002.res::AtlasTexture::-1::1740494289::0::1::::<><>::res://assets/fonts/fnf_psych/alphabet.png
 ::res://assets/graphics/::1740494289
 NOTE_assets.xml::TextFile::-1::1740494289::0::1::::<><>::
-::res://assets/graphics/boyfriend/::1740494289
+::res://assets/graphics/boyfriend/::1740495257
 bfCar.png::CompressedTexture2D::7391474248248336604::1740494289::1740495251::1::::<><>::
 bfCar.xml::TextFile::-1::1740494289::0::1::::<><>::
 bfChristmas.png::CompressedTexture2D::2227464568406191585::1740494289::1740495250::1::::<><>::
@@ -949,21 +949,21 @@ Right_Miss.tres::Animation::-1::1740495034::0::1::::<><>::
 Up.tres::Animation::-1::1740495034::0::1::::<><>::
 Up_Miss.tres::Animation::-1::1740495034::0::1::::<><>::
 ::res://assets/graphics/game/::1740494289
-::res://assets/graphics/game/hud/::1740494289
+::res://assets/graphics/game/hud/::1740495624
 bad.png::CompressedTexture2D::7870204749510899983::1740494289::1740495247::1::::<><>::
 countdown_messages.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/set.png<>res://assets/graphics/game/hud/go.png<>res://assets/graphics/game/hud/ready.png
 go.png::CompressedTexture2D::6277521674367794873::1740494289::1740495247::1::::<><>::
 good.png::CompressedTexture2D::81992177047232264::1740494289::1740495247::1::::<><>::
 iconGrid.png::CompressedTexture2D::4104328968270059327::1740494289::1740495247::1::::<><>::
-icon_grid.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/iconGrid.png
+icon_grid.tres::SpriteFrames::3599388587177982520::1740495624::0::1::::<><>::uid://byqfx0of28h3t::::res://assets/graphics/game/hud/iconGrid.png
 icon_grid_extended.png::CompressedTexture2D::795473299705447578::1740494289::1740495247::1::::<><>::
-icon_grid_extended.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/icon_grid_extended.png
+icon_grid_extended.tres::SpriteFrames::7601452083366219995::1740495624::0::1::::<><>::uid://llllgmbl4rmg::::res://assets/graphics/game/hud/icon_grid_extended.png
 ratings.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/shit.png<>res://assets/graphics/game/hud/bad.png<>res://assets/graphics/game/hud/sick.png<>res://assets/graphics/game/hud/good.png
 ready.png::CompressedTexture2D::3917747218989887330::1740494289::1740495247::1::::<><>::
 set.png::CompressedTexture2D::5566874717069580909::1740494289::1740495247::1::::<><>::
 shit.png::CompressedTexture2D::7310443901923210958::1740494289::1740495247::1::::<><>::
 sick.png::CompressedTexture2D::7450801652812048443::1740494289::1740495247::1::::<><>::
-::res://assets/graphics/game/hud/combo_nums/::1740494289
+::res://assets/graphics/game/hud/combo_nums/::1740495249
 combo_nums.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/combo_nums/num4.png<>res://assets/graphics/game/hud/combo_nums/num2.png<>res://assets/graphics/game/hud/combo_nums/num7.png<>res://assets/graphics/game/hud/combo_nums/num0.png<>res://assets/graphics/game/hud/combo_nums/num9.png<>res://assets/graphics/game/hud/combo_nums/num1.png<>res://assets/graphics/game/hud/combo_nums/num8.png<>res://assets/graphics/game/hud/combo_nums/num6.png<>res://assets/graphics/game/hud/combo_nums/num3.png<>res://assets/graphics/game/hud/combo_nums/num5.png
 num0.png::CompressedTexture2D::7380713507040906384::1740494289::1740495249::1::::<><>::
 num1.png::CompressedTexture2D::601155020636204820::1740494289::1740495249::1::::<><>::
@@ -975,7 +975,7 @@ num6.png::CompressedTexture2D::6441918696788580903::1740494289::1740495249::1:::
 num7.png::CompressedTexture2D::1672754933759288641::1740494289::1740495249::1::::<><>::
 num8.png::CompressedTexture2D::7490407687064248915::1740494289::1740495249::1::::<><>::
 num9.png::CompressedTexture2D::2371293778000085040::1740494289::1740495249::1::::<><>::
-::res://assets/graphics/game/hud/pixel/::1740494289
+::res://assets/graphics/game/hud/pixel/::1740495247
 bad-pixel.png::CompressedTexture2D::6074180148477571675::1740494289::1740495247::1::::<><>::
 countdown_messages.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/pixel/date-pixel.png<>res://assets/graphics/game/hud/pixel/ready-pixel.png<>res://assets/graphics/game/hud/pixel/set-pixel.png
 date-pixel.png::CompressedTexture2D::498106302167466285::1740494289::1740495247::1::::<><>::
@@ -985,7 +985,7 @@ ready-pixel.png::CompressedTexture2D::736887170235737715::1740494289::1740495247
 set-pixel.png::CompressedTexture2D::1978927920249368064::1740494289::1740495247::1::::<><>::
 shit-pixel.png::CompressedTexture2D::4517195268391307081::1740494289::1740495247::1::::<><>::
 sick-pixel.png::CompressedTexture2D::2457476310327593063::1740494289::1740495247::1::::<><>::
-::res://assets/graphics/game/hud/pixel/combo_nums/::1740494289
+::res://assets/graphics/game/hud/pixel/combo_nums/::1740495249
 combo_nums.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/pixel/combo_nums/num7-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num0-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num2-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num4-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num6-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num8-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num1-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num3-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num9-pixel.png<>res://assets/graphics/game/hud/pixel/combo_nums/num5-pixel.png
 num0-pixel.png::CompressedTexture2D::6594623805886855034::1740494289::1740495249::1::::<><>::
 num1-pixel.png::CompressedTexture2D::3364048913162128177::1740494289::1740495249::1::::<><>::
@@ -997,7 +997,7 @@ num6-pixel.png::CompressedTexture2D::5694879181700466358::1740494289::1740495247
 num7-pixel.png::CompressedTexture2D::848440308545242749::1740494289::1740495247::1::::<><>::
 num8-pixel.png::CompressedTexture2D::3960711955431715948::1740494289::1740495247::1::::<><>::
 num9-pixel.png::CompressedTexture2D::4973921321499811602::1740494289::1740495247::1::::<><>::
-::res://assets/graphics/game/notes/::1740494289
+::res://assets/graphics/game/notes/::1740495249
 blue_cap.png::CompressedTexture2D::9115194657366657918::1740494289::1740495247::1::::<><>::
 blue_sus.png::CompressedTexture2D::93064700163153894::1740494289::1740495247::1::::<><>::
 noteSplashes.png::CompressedTexture2D::6031714241519926113::1740494289::1740495249::1::::<><>::
@@ -1005,10 +1005,10 @@ noteSplashes.xml::TextFile::-1::1740494289::0::1::::<><>::
 NOTE_assets.png::CompressedTexture2D::8127457489748016414::1740494289::1740495248::1::::<><>::
 NOTE_assets.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/graphics/game/notes/NOTE_assets.png
 NOTE_assets.xml::TextFile::-1::1740494289::0::1::::<><>::
-::res://assets/graphics/game/notes/pixel/::1740494289
+::res://assets/graphics/game/notes/pixel/::1740495247
 arrows-pixels.png::CompressedTexture2D::7769208518506680563::1740494289::1740495247::1::::<><>::
 Pixel_Notes.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/arrows-pixels.png<>res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
-::res://assets/graphics/game/notes/pixel/sustains/::1740494289
+::res://assets/graphics/game/notes/pixel/sustains/::1740495247
 arrowEnds.png::CompressedTexture2D::331647872818110771::1740494289::1740495247::1::::<><>::
 Down_Sustain_Cap_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
 Down_Sustain_Line_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
@@ -1018,7 +1018,7 @@ Right_Sustain_Cap_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res
 Right_Sustain_Line_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
 Up_Sustain_Cap_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
 Up_Sustain_Line_Pixel.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/pixel/sustains/arrowEnds.png
-::res://assets/graphics/game/notes/sustains/::1740494289
+::res://assets/graphics/game/notes/sustains/::1740495247
 Down_Sustain_Cap.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/sustains/sustain_notes.png
 Down_Sustain_Line.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/sustains/sustain_notes.png
 Left_Sustain_Cap.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/sustains/sustain_notes.png
@@ -1028,7 +1028,7 @@ Right_Sustain_Line.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://as
 sustain_notes.png::CompressedTexture2D::8734114097519075379::1740494289::1740495247::1::::<><>::
 Up_Sustain_Cap.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/sustains/sustain_notes.png
 Up_Sustain_Line.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/notes/sustains/sustain_notes.png
-::res://assets/graphics/girlfriend/::1740494289
+::res://assets/graphics/girlfriend/::1740495255
 gfCar.png::CompressedTexture2D::454122370392301875::1740494289::1740495249::1::::<><>::
 gfCar.xml::TextFile::-1::1740494289::0::1::::<><>::
 gfChristmas.png::CompressedTexture2D::8928835459535621674::1740494289::1740495255::1::::<><>::
@@ -1047,14 +1047,14 @@ Dance_Left.tres::Animation::-1::1740495034::0::1::::<><>::res://assets/graphics/
 Dance_Right.tres::Animation::-1::1740495034::0::1::::<><>::res://assets/graphics/girlfriend/Spritesheet_Girlfriend.res
 ::res://assets/graphics/menus/::1740494289
 SB_Empty.tres::StyleBoxEmpty::-1::1740495034::0::1::::<><>::
-::res://assets/graphics/menus/bgs/::1740494289
+::res://assets/graphics/menus/bgs/::1740495248
 menuBG.png::CompressedTexture2D::4779512396572973319::1740494289::1740495247::1::::<><>::
 menuBGBlue.png::CompressedTexture2D::4079629054106514988::1740494289::1740495247::1::::<><>::
 menuBGMagenta.png::CompressedTexture2D::8595911746264665948::1740494289::1740495247::1::::<><>::
 menuBG_epic.png::CompressedTexture2D::2586798049928275983::1740494289::1740495248::1::::<><>::
 menuDesat.png::CompressedTexture2D::1234525507137262257::1740494289::1740495247::1::::<><>::
 options_menu_bg.png::CompressedTexture2D::8621753244150933047::1740494289::1740495247::1::::<><>::
-::res://assets/graphics/menus/credits/::1740494289
+::res://assets/graphics/menus/credits/::1740495247
 bastiaan_icon.png::CompressedTexture2D::4252837737815358134::1740494289::1740495247::1::::<><>::
 bb-panzu.png::CompressedTexture2D::2417333668264580429::1740494289::1740495247::1::::<><>::
 bk_icon.png::CompressedTexture2D::6456701275938107027::1740494289::1740495247::1::::<><>::
@@ -1073,15 +1073,15 @@ riveroaken.png::CompressedTexture2D::5391204985897586802::1740494289::1740495235
 sayge_icon.png::CompressedTexture2D::1058905149824703248::1740494289::1740495235::1::::<><>::
 shadowmario.png::CompressedTexture2D::2661155773616134682::1740494289::1740495234::1::::<><>::
 unknown_credit.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/game/hud/iconGrid.png
-::res://assets/graphics/menus/loading_screens/::1740494289
+::res://assets/graphics/menus/loading_screens/::1740495235
 benjine_simple_splash.png::CompressedTexture2D::5117310679008780566::1740494289::1740495234::1::::<><>::
 benjine_splash.png::CompressedTexture2D::6326141275702426392::1740494289::1740495235::1::::<><>::
 funkay.png::CompressedTexture2D::1003259063679339971::1740494289::1740495234::1::::<><>::
 long_color_bar.png::CompressedTexture2D::7578517137507691231::1740494289::1740495234::1::::<><>::
 one_black_pixel.png::CompressedTexture2D::1341215835072160261::1740494289::1740495234::1::::<><>::
-::res://assets/graphics/menus/logos/::1740494289
+::res://assets/graphics/menus/logos/::1740495234
 benjine_logo.png::CompressedTexture2D::5024462470830251526::1740494289::1740495234::1::::<><>::
-::res://assets/graphics/menus/main_menu/::1740494289
+::res://assets/graphics/menus/main_menu/::1740495316
 credits_basic.png::CompressedTexture2D::4505709769835431602::1740494289::1740495234::1::::<><>::
 credits_white.png::CompressedTexture2D::2434990390413850139::1740494289::1740495234::1::::<><>::
 FNF_main_menu_assets.png::CompressedTexture2D::5958755569804970787::1740494289::1740495234::1::::<><>::
@@ -1090,18 +1090,18 @@ Main_Menu_Options.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/
 mods_basic.png::CompressedTexture2D::3152540487939670124::1740494289::1740495234::1::::<><>::
 mods_white.png::CompressedTexture2D::1523040158186057836::1740494289::1740495234::1::::<><>::
 mod_type_selection.png::CompressedTexture2D::6761519130677241083::1740494289::1740495234::1::::<><>::
-Mod_Type_Selection_BG.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/main_menu/mod_type_selection.png
-::res://assets/graphics/menus/mods/::1740494289
+Mod_Type_Selection_BG.tres::SpriteFrames::1997567690949832523::1740495316::0::1::::<><>::uid://c3llh5o4ghtwl::::res://assets/graphics/menus/main_menu/mod_type_selection.png
+::res://assets/graphics/menus/mods/::1740495237
 benjine_mod_banner.png::CompressedTexture2D::7685242196527684002::1740494289::1740495237::1::::<><>::
 did_you_know_that_you_have_rights.jpg::CompressedTexture2D::7704840285748031073::1740494289::1740495237::1::::<><>::
 SMPTE_Color_Bars.svg::CompressedTexture2D::3069030321285393777::1740494289::1740495237::1::::<><>::
-::res://assets/graphics/menus/mod_loader/::1740494289
+::res://assets/graphics/menus/mod_loader/::1740495237
 mod_loader_screen_part_1.png::CompressedTexture2D::5593907414216082950::1740494289::1740495237::1::::<><>::
 mod_loader_screen_part_2.png::CompressedTexture2D::1799028882395158144::1740494289::1740495237::1::::<><>::
-::res://assets/graphics/menus/options/::1740494289
+::res://assets/graphics/menus/options/::1740495237
 benjine_joypad_buttons.png::CompressedTexture2D::287361483277555283::1740494289::1740495237::1::::<><>::
 benjine_joypad_buttons.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/options/benjine_joypad_buttons.png
-::res://assets/graphics/menus/story_mode/::1740494289
+::res://assets/graphics/menus/story_mode/::1740495237
 campaign_menu_UI_assets.png::CompressedTexture2D::5656238869612065587::1740494289::1740495237::1::::<><>::
 campaign_menu_UI_assets.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/graphics/menus/story_mode/campaign_menu_UI_assets.png
 campaign_menu_UI_assets.xml::TextFile::-1::1740494289::0::1::::<><>::
@@ -1110,7 +1110,7 @@ easy.png::CompressedTexture2D::4227121902621604325::1740494289::1740495237::1:::
 hard.png::CompressedTexture2D::6410096866375184199::1740494289::1740495237::1::::<><>::
 normal.png::CompressedTexture2D::7243008564394022025::1740494289::1740495237::1::::<><>::
 no_week.png::CompressedTexture2D::2797908253445028184::1740494289::1740495237::1::::<><>::
-::res://assets/graphics/menus/title_screen/::1740494289
+::res://assets/graphics/menus/title_screen/::1740495240
 gfDanceTitle.png::CompressedTexture2D::2109957365368750644::1740494289::1740495239::1::::<><>::
 gfDanceTitle.xml::TextFile::-1::1740494289::0::1::::<><>::
 GF_Dance_Title.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/graphics/menus/title_screen/gfDanceTitle.png
@@ -1118,20 +1118,20 @@ titleEnter.png::CompressedTexture2D::1777678638090591631::1740494289::1740495240
 titleEnter.xml::TextFile::-1::1740494289::0::1::::<><>::
 Title_Enter.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/graphics/menus/title_screen/titleEnter.png
 ::res://assets/graphics/menus/ui/::1740494289
-::res://assets/graphics/menus/ui/orange_h_slider/::1740494289
+::res://assets/graphics/menus/ui/orange_h_slider/::1740495235
 OrangeSlider_BG.tres::StyleBoxTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/orange_h_slider/OrangeSlider_BG_Img.tres
 OrangeSlider_BG_Img.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/orange_h_slider/orange_h_slider.png
 Orange_Grabber.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/orange_h_slider/orange_h_slider.png
 Orange_Grabber_Disabled.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/orange_h_slider/orange_h_slider.png
 Orange_Grabber_Highlight.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/orange_h_slider/orange_h_slider.png
 orange_h_slider.png::CompressedTexture2D::8198979547711501000::1740494289::1740495235::1::::<><>::
-::res://assets/graphics/menus/ui/static_checkbox/::1740494289
+::res://assets/graphics/menus/ui/static_checkbox/::1740495235
 Static_CB_Checked.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/static_checkbox/static_checkbox_small.png
 Static_CB_Checked_Disabled.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/static_checkbox/static_checkbox_small.png
 Static_CB_Unchecked.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/static_checkbox/static_checkbox_small.png
 Static_CB_Unchecked_Disabled.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://assets/graphics/menus/ui/static_checkbox/static_checkbox_small.png
 static_checkbox_small.png::CompressedTexture2D::8039524881038721629::1740494289::1740495235::1::::<><>::
-::res://assets/graphics/partners/::1740494289
+::res://assets/graphics/partners/::1740495245
 bfAndGF.png::CompressedTexture2D::2086680416823109508::1740494289::1740495237::1::::<><>::
 bfAndGF.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://assets/graphics/partners/bfAndGF.png
 bfAndGF.xml::TextFile::-1::1740494289::0::1::::<><>::
@@ -1162,7 +1162,7 @@ Up_Note.tres::ShaderMaterial::-1::1740495034::0::1::::<><>::res://scripts/shader
 Up_Sustain_Inner_Color.tres::StandardMaterial3D::-1::1740495034::0::1::::<><>::
 Up_Sustain_Outer_Color.tres::StandardMaterial3D::-1::1740495034::0::1::::<><>::
 ::res://assets/models/::1740494289
-::res://assets/models/notes/::1740494289
+::res://assets/models/notes/::1740495285
 Fixed_Arrow_The_Second.fbx::PackedScene::5568584639427653836::1740494289::1740495285::0::::<><>::
 Material_001.material::StandardMaterial3D::-1::1740494289::0::1::::<><>::
 Note.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://assets/models/notes/Note_Model.tscn<>res://assets/materials/note3ds/Step_Zone_Note.tres
@@ -1170,14 +1170,14 @@ Note_Model.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://assets/models/
 Sustain_Cap.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://assets/materials/note3ds/Up_Sustain_Inner_Color.tres<>res://assets/materials/note3ds/Up_Sustain_Outer_Color.tres<>res://assets/materials/note3ds/Sustain_White.tres
 Sustain_Cylinder.tres::CylinderMesh::-1::1740495034::0::1::::<><>::
 Sustain_Line.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://assets/materials/note3ds/Up_Sustain_Inner_Color.tres<>res://assets/materials/note3ds/Up_Sustain_Outer_Color.tres<>res://assets/materials/note3ds/Sustain_White.tres
-::res://assets/music/::1740494289
+::res://assets/music/::1740495231
 Advance.ogg::AudioStreamOggVorbis::3805397435185982036::1740494289::1740495231::1::::<><>::
 breakfast.ogg::AudioStreamOggVorbis::7386090310556391461::1740494289::1740495231::1::::<><>::
 freakyMenu.ogg::AudioStreamOggVorbis::2540089788007732023::1740494289::1740495231::1::::<><>::
 Funkin_Settings_Music.ogg::AudioStreamOggVorbis::4495002969757554173::1740494289::1740495231::1::::<><>::
 gameOver-pixel.ogg::AudioStreamOggVorbis::6836407734604348839::1740494289::1740495231::1::::<><>::
 gameOver.ogg::AudioStreamOggVorbis::8970935075142035568::1740494289::1740495231::1::::<><>::
-::res://assets/sounds/::1740494289
+::res://assets/sounds/::1740495231
 cancelMenu.ogg::AudioStreamOggVorbis::8959978041799296667::1740494289::1740495231::1::::<><>::
 confirmMenu.ogg::AudioStreamOggVorbis::3283345778359765819::1740494289::1740495231::1::::<><>::
 fnf_loss_sfx-pixel.ogg::AudioStreamOggVorbis::5346982783169161624::1740494289::1740495231::1::::<><>::
@@ -1226,7 +1226,7 @@ GF_Wave.tres::Shader::-1::1740495034::0::1::::<><>::
 Level_Test.gd::GDScript::-1::1740495034::0::1::::<>Node<>::
 ::res://packages/benjine_test_mod/songs/::1740494289
 song_list.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/resources/song_list/SongList.gd<>res://packages/benjine_test_mod/songs/test/test.data.tres
-::res://packages/benjine_test_mod/songs/test/::1740494289
+::res://packages/benjine_test_mod/songs/test/::1740495231
 difficulty0.json::JSON::-1::1740494289::0::1::::<><>::
 Inst.mp3::AudioStreamMP3::451885620639820126::1740494289::1740495231::1::::<><>::
 test.chart.res::Resource::-1::1740494289::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/benjine_test_mod/songs/test/Inst.mp3
@@ -1234,14 +1234,14 @@ test.data.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/resources/
 test.lvl_info.res::Resource::-1::1740494289::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/benjine_test_mod/songs/test/test.chart.res<>res://packages/benjine_test_mod/levels/Level_Test.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 ::res://packages/fnf/::1740494290
 ::res://packages/fnf/characters/::1740494290
-::res://packages/fnf/characters/daddy_dearest/::1740494289
+::res://packages/fnf/characters/daddy_dearest/::1740495234
 DaddyDearest.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/daddy_dearest/DADDY_DEAREST.res<>res://packages/fnf/characters/daddy_dearest/DD_Icon_Extended.tscn
 DADDY_DEAREST.png::CompressedTexture2D::7338127986434465619::1740494289::1740495234::1::::<><>::
 DADDY_DEAREST.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/daddy_dearest/DADDY_DEAREST.png
 DADDY_DEAREST.xml::TextFile::-1::1740494289::0::1::::<><>::
 DD_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 DD_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://packages/fnf/characters/daddy_dearest/DaddyDearest.tscn<>res://assets/materials/menus/StoryModeCharacterShader.tres
-::res://packages/fnf/characters/mommy_mearest/::1740494289
+::res://packages/fnf/characters/mommy_mearest/::1740495238
 MM_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 MM_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/BeatNode.gd<>res://packages/fnf/characters/mommy_mearest/Mom_Assets.res<>res://assets/materials/menus/StoryModeCharacterShader.tres
 momCar.png::CompressedTexture2D::9160505865797894055::1740494289::1740495238::1::::<><>::
@@ -1251,7 +1251,7 @@ Mom_Assets.png::CompressedTexture2D::7572950466965370718::1740494289::1740495235
 Mom_Assets.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/mommy_mearest/Mom_Assets.png
 Mom_Assets.xml::TextFile::-1::1740494289::0::1::::<><>::
 Mom_Car.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/mommy_mearest/momCar.png
-::res://packages/fnf/characters/monster/::1740494289
+::res://packages/fnf/characters/monster/::1740495237
 Monster.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/monster/Monster_Assets.res<>res://packages/fnf/characters/monster/Monster_Icon_Extended.tscn
 monsterChristmas.png::CompressedTexture2D::4461477900948601120::1740494289::1740495236::1::::<><>::
 monsterChristmas.xml::TextFile::-1::1740494289::0::1::::<><>::
@@ -1261,21 +1261,21 @@ Monster_Assets.xml::TextFile::-1::1740494289::0::1::::<><>::
 Monster_Christmas.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/monster/monsterChristmas.png
 Monster_Christmas.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/monster/Monster_Christmas.res<>res://packages/fnf/characters/monster/Monster_Icon_Extended.tscn
 Monster_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
-::res://packages/fnf/characters/parents_christmas/::1740494289
+::res://packages/fnf/characters/parents_christmas/::1740495241
 mom_dad_christmas_assets.png::CompressedTexture2D::5725100373923116772::1740494289::1740495241::1::::<><>::
 mom_dad_christmas_assets.xml::TextFile::-1::1740494289::0::1::::<><>::
 Parents_Christmas.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/parents_christmas/mom_dad_christmas_assets.png
 Parents_Christmas.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/AltAnimsCharacter.gd<>res://packages/fnf/characters/parents_christmas/Parents_Christmas.res<>res://packages/fnf/characters/parents_christmas/Parents_XMas_Icon_Extended.tscn
 Parents_XMas_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 ParentXMas_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://packages/fnf/characters/parents_christmas/Parents_Christmas.tscn<>res://assets/materials/menus/StoryModeCharacterShader.tres
-::res://packages/fnf/characters/pico/::1740494289
+::res://packages/fnf/characters/pico/::1740495233
 Pico.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/pico/Pico_FNF_assetss.png
 Pico.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/pico/Pico.res<>res://packages/fnf/characters/pico/Pico_Icon_Extended.tscn
 Pico_FNF_assetss.png::CompressedTexture2D::5672060364138654378::1740494289::1740495233::1::::<><>::
 Pico_FNF_assetss.xml::TextFile::-1::1740494289::0::1::::<><>::
 Pico_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 Pico_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/pico/Pico.res<>res://assets/graphics/game/hud/icon_grid.tres<>res://assets/materials/menus/StoryModeCharacterShader.tres
-::res://packages/fnf/characters/senpai/::1740494289
+::res://packages/fnf/characters/senpai/::1740495232
 Menu_Senpai.png::CompressedTexture2D::4777390403915019724::1740494289::1740495231::1::::<><>::
 Menu_Senpai.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/senpai/Menu_Senpai.png
 Menu_Senpai.xml::TextFile::-1::1740494289::0::1::::<><>::
@@ -1286,32 +1286,32 @@ senpai.xml::TextFile::-1::1740494289::0::1::::<><>::
 Senpai_Angered_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 Senpai_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 Senpai_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/BeatNode.gd<>res://packages/fnf/characters/senpai/Menu_Senpai.res
-::res://packages/fnf/characters/spirit/::1740494289
+::res://packages/fnf/characters/spirit/::1740495232
 spirit.png::CompressedTexture2D::2746929134602915570::1740494289::1740495232::1::::<><>::
 Spirit.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/spirit/spirit.png
 Spirit.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/spirit/Spirit.res<>res://packages/fnf/characters/spirit/Spirit_Icon_Extended.tscn
 spirit.txt::TextFile::-1::1740494289::0::1::::<><>::
 Spirit_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
-::res://packages/fnf/characters/spooky_kids/::1740494290
+::res://packages/fnf/characters/spooky_kids/::1740495232
 SKids_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 SKids_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://packages/fnf/characters/spooky_kids/Spooky_Kids.tscn<>res://assets/materials/menus/StoryModeCharacterShader.tres
 Spooky_Kids.res::SpriteFrames::-1::1740494289::0::1::::<><>::res://packages/fnf/characters/spooky_kids/spooky_kids_assets.png
 Spooky_Kids.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/DoubleIdleCharacter.gd<>res://packages/fnf/characters/spooky_kids/Spooky_Kids.res<>res://packages/fnf/characters/spooky_kids/SKids_Icon_Extended.tscn
 spooky_kids_assets.png::CompressedTexture2D::3903318424099575402::1740494289::1740495232::1::::<><>::
 spooky_kids_assets.xml::TextFile::-1::1740494290::0::1::::<><>::
-::res://packages/fnf/characters/tankman/::1740494290
+::res://packages/fnf/characters/tankman/::1740495234
 Tankman.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/characters/tankman/tankmanCaptain.png
 Tankman.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://scripts/game/characters/Character.gd<>res://packages/fnf/characters/tankman/Tankman.res<>res://packages/fnf/characters/tankman/Tankman_Icon_Extended.tscn
 tankmanCaptain.png::CompressedTexture2D::3809554210039265769::1740494290::1740495234::1::::<><>::
 tankmanCaptain.xml::TextFile::-1::1740494290::0::1::::<><>::
 Tankman_Icon_Extended.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://templates/HealthIcon.tscn<>res://assets/graphics/game/hud/icon_grid_extended.tres
 Tankman_StoryMode.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://packages/fnf/characters/tankman/Tankman.tscn<>res://assets/materials/menus/StoryModeCharacterShader.tres
-::res://packages/fnf/characters/w7_gf/::1740494290
+::res://packages/fnf/characters/w7_gf/::1740495241
 gfTankmen.png::CompressedTexture2D::3515781229644306601::1740494290::1740495241::1::::<><>::
 gfTankmen.xml::TextFile::-1::1740494290::0::1::::<><>::
 W7_GF.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/characters/w7_gf/gfTankmen.png
 W7_GF.tscn::PackedScene::-1::1740495034::0::1::::<><>::res://packages/fnf/characters/w7_gf/W7_GF.res<>res://scripts/game/characters/DoubleIdleBeatNode.gd
-::res://packages/fnf/characters/w7_pico/::1740494290
+::res://packages/fnf/characters/w7_pico/::1740495242
 picoSpeaker.png::CompressedTexture2D::28928355437942250::1740494290::1740495242::1::::<><>::
 picoSpeaker.xml::TextFile::-1::1740494290::0::1::::<><>::
 Pico_Speaker.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/characters/w7_pico/picoSpeaker.png
@@ -1351,16 +1351,16 @@ week4_cars.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/general/R
 ::res://packages/fnf/resources/data/week7/::1740494290
 week7_rolling_tank.tres::Resource::-1::1740495034::0::1::::<><>::res://scripts/general/ResourceList.gd<>res://scripts/game/events/RepeatingGameEventInfo.gd
 ::res://packages/fnf/resources/graphics/::1740494290
-::res://packages/fnf/resources/graphics/week1/::1740494290
+::res://packages/fnf/resources/graphics/week1/::1740495244
 stageback.png::CompressedTexture2D::6175490180802832564::1740494290::1740495231::1::::<><>::
 stagecurtains.png::CompressedTexture2D::4255007642767490395::1740494290::1740495244::1::::<><>::
 stagefront.png::CompressedTexture2D::3310202419690670965::1740494290::1740495244::1::::<><>::
 stage_light.png::CompressedTexture2D::6017360343726789099::1740494290::1740495243::1::::<><>::
-::res://packages/fnf/resources/graphics/week2/::1740494290
+::res://packages/fnf/resources/graphics/week2/::1740495257
 halloween_bg.png::CompressedTexture2D::6569093714395447905::1740494290::1740495257::1::::<><>::
 halloween_bg.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week2/halloween_bg.png
 halloween_bg.xml::TextFile::-1::1740494290::0::1::::<><>::
-::res://packages/fnf/resources/graphics/week3/::1740494290
+::res://packages/fnf/resources/graphics/week3/::1740495243
 behindTrain.png::CompressedTexture2D::2178332751248090941::1740494290::1740495243::1::::<><>::
 city.png::CompressedTexture2D::1072407848099274668::1740494290::1740495243::1::::<><>::
 sky.png::CompressedTexture2D::488938503767236603::1740494290::1740495243::1::::<><>::
@@ -1371,7 +1371,7 @@ win1.png::CompressedTexture2D::619867318340771304::1740494290::1740495243::1::::
 win2.png::CompressedTexture2D::9118992811273496576::1740494290::1740495243::1::::<><>::
 win3.png::CompressedTexture2D::5563263763124867730::1740494290::1740495242::1::::<><>::
 win4.png::CompressedTexture2D::2909031536202644915::1740494290::1740495242::1::::<><>::
-::res://packages/fnf/resources/graphics/week4/::1740494290
+::res://packages/fnf/resources/graphics/week4/::1740495246
 bgLimo.png::CompressedTexture2D::7144413449459045173::1740494290::1740495244::1::::<><>::
 bgLimo.xml::TextFile::-1::1740494290::0::1::::<><>::
 BG_Limo.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week4/bgLimo.png
@@ -1385,7 +1385,7 @@ limoDrive.xml::TextFile::-1::1740494290::0::1::::<><>::
 limoOverlay.png::CompressedTexture2D::3621180600876775539::1740494290::1740495243::1::::<><>::
 limoSunset.png::CompressedTexture2D::2596671894021146591::1740494290::1740495246::1::::<><>::
 Limo_Dancer.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week4/limoDancer.png
-::res://packages/fnf/resources/graphics/week5/::1740494290
+::res://packages/fnf/resources/graphics/week5/::1740495247
 bgEscalator.png::CompressedTexture2D::5921980195064268276::1740494290::1740495246::1::::<><>::
 bgWalls.png::CompressedTexture2D::3373485439187743047::1740494290::1740495247::1::::<><>::
 bottomBop.png::CompressedTexture2D::8862398789491698660::1740494290::1740495246::1::::<><>::
@@ -1403,7 +1403,7 @@ santa.xml::TextFile::-1::1740494290::0::1::::<><>::
 upperBop.png::CompressedTexture2D::3347016550612463916::1740494290::1740495245::1::::<><>::
 upperBop.xml::TextFile::-1::1740494290::0::1::::<><>::
 Upper_Boppers.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week5/upperBop.png
-::res://packages/fnf/resources/graphics/week6/::1740494290
+::res://packages/fnf/resources/graphics/week6/::1740495242
 animatedEvilSchool.png::CompressedTexture2D::4880016105505669765::1740494290::1740495242::1::::<><>::
 animatedEvilSchool.xml::TextFile::-1::1740494290::0::1::::<><>::
 Animated_Evil_School.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week6/animatedEvilSchool.png
@@ -1423,22 +1423,22 @@ weebTrees.png::CompressedTexture2D::4872722535355072911::1740494290::1740495239:
 weebTrees.txt::TextFile::-1::1740494290::0::1::::<><>::
 weebTreesBack.png::CompressedTexture2D::3359272245604323141::1740494290::1740495238::1::::<><>::
 Weeb_Petals.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week6/petals.png
-::res://packages/fnf/resources/graphics/week6/bf_portraits/::1740494290
+::res://packages/fnf/resources/graphics/week6/bf_portraits/::1740495243
 bfPortrait.png::CompressedTexture2D::6810769993981205764::1740494290::1740495243::1::::<><>::
 bfPortrait.xml::TextFile::-1::1740494290::0::1::::<><>::
 BF_Portrait.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week6/bf_portraits/bfPortrait.png
 bf_portrait_static.png::CompressedTexture2D::6421348606002341175::1740494290::1740495243::1::::<><>::
-::res://packages/fnf/resources/graphics/week6/senpai_dies/::1740494290
+::res://packages/fnf/resources/graphics/week6/senpai_dies/::1740495244
 senpaiCrazy.png::CompressedTexture2D::5361807248811326792::1740494290::1740495244::1::::<><>::
 senpaiCrazy.xml::TextFile::-1::1740494290::0::1::::<><>::
 Senpai_Dies.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week6/senpai_dies/senpaiCrazy.png
-::res://packages/fnf/resources/graphics/week6/senpai_portraits/::1740494290
+::res://packages/fnf/resources/graphics/week6/senpai_portraits/::1740495243
 senpaiPortrait.png::CompressedTexture2D::6678122176099748613::1740494290::1740495243::1::::<><>::
 senpaiPortrait.xml::TextFile::-1::1740494290::0::1::::<><>::
 Senpai_Portrait.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week6/senpai_portraits/senpaiPortrait.png
 senpai_portrait_angry_static.png::CompressedTexture2D::5191723964635884447::1740494290::1740495243::1::::<><>::
 senpai_portrait_normal_static.png::CompressedTexture2D::3905162484461950554::1740494290::1740495243::1::::<><>::
-::res://packages/fnf/resources/graphics/week6/textboxes/::1740494290
+::res://packages/fnf/resources/graphics/week6/textboxes/::1740495243
 hand_textbox.png::CompressedTexture2D::1073800057925599773::1740494290::1740495243::1::::<><>::
 pixel_day_bg.png::CompressedTexture2D::4666314666130112101::1740494290::1740495243::1::::<><>::
 pixel_textbox_evil_static.png::CompressedTexture2D::2131028804980080042::1740494290::1740495243::1::::<><>::
@@ -1465,7 +1465,7 @@ trees_front17.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://packages/f
 trees_front18.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://packages/fnf/resources/graphics/week6/weebTrees.png
 trees_front19.tres::AtlasTexture::-1::1740495034::0::1::::<><>::res://packages/fnf/resources/graphics/week6/weebTrees.png
 Weeb_Trees.tres::SpriteFrames::-1::1740495034::0::1::::<><>::res://packages/fnf/resources/graphics/week6/trees_front/trees_front08.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front05.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front03.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front06.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front07.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front02.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front04.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front01.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front00.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front09.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front14.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front13.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front12.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front16.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front18.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front15.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front10.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front11.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front19.tres<>res://packages/fnf/resources/graphics/week6/trees_front/trees_front17.tres
-::res://packages/fnf/resources/graphics/week7/::1740494290
+::res://packages/fnf/resources/graphics/week7/::1740495247
 smokeLeft.png::CompressedTexture2D::3761194663367012559::1740494290::1740495241::1::::<><>::
 smokeLeft.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week7/smokeLeft.png
 smokeLeft.xml::TextFile::-1::1740494290::0::1::::<><>::
@@ -1504,7 +1504,7 @@ tankSky.png::CompressedTexture2D::8290195455467076614::1740494290::1740495241::1
 tankWatchtower.png::CompressedTexture2D::6655513294849355081::1740494290::1740495241::1::::<><>::
 tankWatchtower.res::SpriteFrames::-1::1740494290::0::1::::<><>::res://packages/fnf/resources/graphics/week7/tankWatchtower.png
 tankWatchtower.xml::TextFile::-1::1740494290::0::1::::<><>::
-::res://packages/fnf/resources/graphics/week_logos/::1740494290
+::res://packages/fnf/resources/graphics/week_logos/::1740495240
 week0.png::CompressedTexture2D::2884262454242332297::1740494290::1740495240::1::::<><>::
 week1.png::CompressedTexture2D::6747041317372540225::1740494290::1740495240::1::::<><>::
 week2.png::CompressedTexture2D::2893595314114590388::1740494290::1740495240::1::::<><>::
@@ -1514,7 +1514,7 @@ week5.png::CompressedTexture2D::3105251932161176755::1740494290::1740495240::1::
 week6.png::CompressedTexture2D::3525904773778342170::1740494290::1740495240::1::::<><>::
 week7.png::CompressedTexture2D::1726288383812765742::1740494290::1740495240::1::::<><>::
 ::res://packages/fnf/resources/music/::1740494290
-::res://packages/fnf/resources/music/week6/::1740494290
+::res://packages/fnf/resources/music/week6/::1740495231
 Lunchbox.ogg::AudioStreamOggVorbis::6840599250283067173::1740494290::1740495231::1::::<><>::
 LunchboxScary.ogg::AudioStreamOggVorbis::667838163580008623::1740494290::1740495231::1::::<><>::
 ::res://packages/fnf/resources/scenes/::1740494290
@@ -1529,7 +1529,7 @@ BF_Pixel_Portrait.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://package
 Fangirls.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://packages/fnf/resources/graphics/week6/Fangirls.res<>res://scripts/game/characters/DoubleIdleBeatNode.gd
 Senpai_Dies.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://packages/fnf/resources/graphics/week6/senpai_dies/Senpai_Dies.res<>res://packages/fnf/resources/sounds/Senpai_Dies.ogg
 Senpai_Portrait.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://packages/fnf/resources/graphics/week6/senpai_portraits/Senpai_Portrait.res
-::res://packages/fnf/resources/sounds/::1740494290
+::res://packages/fnf/resources/sounds/::1740495231
 ANGRY_TEXT_BOX.ogg::AudioStreamOggVorbis::6829763748504498695::1740494290::1740495231::1::::<><>::
 carPass0.ogg::AudioStreamOggVorbis::6892067357077152097::1740494290::1740495231::1::::<><>::
 carPass1.ogg::AudioStreamOggVorbis::5031030067783207892::1740494290::1740495231::1::::<><>::
@@ -1560,7 +1560,7 @@ Level_Stage.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
 Level_Tankman.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
 ::res://packages/fnf/songs/::1740494291
 song_list.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_list/SongList.gd<>res://packages/fnf/resources/graphics/week_logos/week0.png<>res://packages/fnf/songs/tutorial/tutorial.data.tres<>res://packages/fnf/songs/fresh/fresh.data.tres<>res://packages/fnf/songs/dadbattle/dadbattle.data.tres<>res://packages/fnf/songs/bopeebo/bopeebo.data.tres<>res://packages/fnf/resources/graphics/week_logos/week1.png<>res://packages/fnf/songs/monster/monster.data.tres<>res://packages/fnf/songs/spookeez/spookeez.data.tres<>res://packages/fnf/songs/south/south.data.tres<>res://packages/fnf/resources/graphics/week_logos/week2.png<>res://packages/fnf/resources/graphics/week_logos/week5.png<>res://packages/fnf/resources/graphics/week_logos/week6.png<>res://packages/fnf/resources/graphics/week_logos/week4.png<>res://packages/fnf/resources/graphics/week_logos/week7.png<>res://packages/fnf/resources/graphics/week_logos/week3.png<>res://packages/fnf/songs/philly/philly.data.tres<>res://packages/fnf/songs/thorns/thorns.data.tres<>res://packages/fnf/songs/guns/guns.data.tres<>res://packages/fnf/songs/high/high.data.tres<>res://packages/fnf/songs/stress/stress.data.tres<>res://packages/fnf/songs/eggnog/eggnog.data.tres<>res://packages/fnf/songs/roses/roses.data.tres<>res://packages/fnf/songs/satin-panties/satin-panties.data.tres<>res://packages/fnf/songs/ugh/ugh.data.tres<>res://packages/fnf/songs/winter-horrorland/winter-horrorland.data.tres<>res://packages/fnf/songs/pico/pico.data.tres<>res://packages/fnf/songs/milf/milf.data.tres<>res://packages/fnf/songs/senpai/senpai.data.tres<>res://packages/fnf/songs/blammed/blammed.data.tres<>res://packages/fnf/songs/cocoa/cocoa.data.tres<>res://assets/graphics/menus/story_mode/default_difficulties.tres
-::res://packages/fnf/songs/blammed/::1740494290
+::res://packages/fnf/songs/blammed/::1740495231
 blammed-easy.json::JSON::-1::1740494290::0::1::::<><>::
 blammed-hard.json::JSON::-1::1740494290::0::1::::<><>::
 blammed.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1573,7 +1573,7 @@ blammed_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/
 blammed_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/blammed/blammed_normal.chart.res<>res://packages/fnf/levels/Level_Pico.tscn<>res://packages/fnf/resources/data/week3/week3_train_passes.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::1921015883952339455::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::478812501167202632::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/bopeebo/::1740494290
+::res://packages/fnf/songs/bopeebo/::1740495231
 bopeebo-easy.json::JSON::-1::1740494290::0::1::::<><>::
 bopeebo-hard.json::JSON::-1::1740494290::0::1::::<><>::
 bopeebo.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1587,7 +1587,7 @@ bopeebo_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/
 bopeebo_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/bopeebo/bopeebo_normal.chart.res<>res://packages/fnf/levels/Level_Stage.tscn<>res://packages/fnf/songs/bopeebo/bopeebo.repeating_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::4441552794736206380::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::4886395871665811913::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/cocoa/::1740494290
+::res://packages/fnf/songs/cocoa/::1740495231
 cocoa-easy.json::JSON::-1::1740494290::0::1::::<><>::
 cocoa-hard.json::JSON::-1::1740494290::0::1::::<><>::
 cocoa.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1601,7 +1601,7 @@ cocoa_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/re
 cocoa_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/cocoa/cocoa_normal.chart.res<>res://packages/fnf/levels/Level_ChristmasMall.tscn<>res://packages/fnf/songs/cocoa/cocoa.onetime_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::4790442830233222594::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::6111171083296707227::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/dadbattle/::1740494290
+::res://packages/fnf/songs/dadbattle/::1740495231
 dadbattle-easy.json::JSON::-1::1740494290::0::1::::<><>::
 dadbattle-hard.json::JSON::-1::1740494290::0::1::::<><>::
 dadbattle.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1614,7 +1614,7 @@ dadbattle_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://script
 dadbattle_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/dadbattle/dadbattle_normal.chart.res<>res://packages/fnf/levels/Level_Stage.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.mp3::AudioStreamMP3::6908446474515092350::1740494290::1740495231::1::::<><>::
 Voices.mp3::AudioStreamMP3::7889133218477340577::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/eggnog/::1740494290
+::res://packages/fnf/songs/eggnog/::1740495231
 eggnog-easy.json::JSON::-1::1740494290::0::1::::<><>::
 eggnog-hard.json::JSON::-1::1740494290::0::1::::<><>::
 eggnog.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1628,7 +1628,7 @@ eggnog_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/r
 eggnog_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/eggnog/eggnog_normal.chart.res<>res://packages/fnf/levels/Level_ChristmasMall.tscn<>res://packages/fnf/songs/eggnog/eggnog.onetime_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::8051433683023798923::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::8686187456101427439::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/fresh/::1740494290
+::res://packages/fnf/songs/fresh/::1740495231
 fresh-easy.json::JSON::-1::1740494290::0::1::::<><>::
 fresh-hard.json::JSON::-1::1740494290::0::1::::<><>::
 fresh.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1642,7 +1642,7 @@ fresh_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/re
 fresh_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/fresh/fresh_normal.chart.res<>res://packages/fnf/levels/Level_Stage.tscn<>res://packages/fnf/songs/fresh/fresh.onetime_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::5280193400214378721::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::6538289434370365185::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/guns/::1740494290
+::res://packages/fnf/songs/guns/::1740495231
 guns-easy.json::JSON::-1::1740494290::0::1::::<><>::
 guns-hard.json::JSON::-1::1740494290::0::1::::<><>::
 guns.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1655,7 +1655,7 @@ guns_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/res
 guns_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/guns/guns_normal.chart.res<>res://packages/fnf/levels/Level_Tankman.tscn<>res://packages/fnf/resources/data/week7/week7_rolling_tank.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.mp3::AudioStreamMP3::7379711926821604203::1740494290::1740495231::1::::<><>::
 Voices.mp3::AudioStreamMP3::8753957453833479603::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/high/::1740494290
+::res://packages/fnf/songs/high/::1740495231
 high-easy.json::JSON::-1::1740494290::0::1::::<><>::
 high-hard.json::JSON::-1::1740494290::0::1::::<><>::
 high.data.tres::Resource::-1::1740495033::0::1::::<><>::res://scripts/resources/song_data/SongData.gd<>res://assets/graphics/game/hud/icon_grid_extended.tres
@@ -1668,7 +1668,7 @@ high_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/res
 high_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/high/high_normal.chart.res<>res://packages/fnf/levels/Level_Limo.tscn<>res://packages/fnf/resources/data/week4/week4_cars.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Inst.ogg::AudioStreamOggVorbis::1877054998047730230::1740494290::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::3689047503537057736::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/milf/::1740494290
+::res://packages/fnf/songs/milf/::1740495231
 Inst.ogg::AudioStreamOggVorbis::4194649790860404899::1740494290::1740495231::1::::<><>::
 milf-easy.json::JSON::-1::1740494290::0::1::::<><>::
 milf-hard.json::JSON::-1::1740494290::0::1::::<><>::
@@ -1682,7 +1682,7 @@ milf_hard.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/re
 milf_normal.chart.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/milf/Inst.ogg<>res://packages/fnf/songs/milf/Voices.ogg
 milf_normal.lvl_info.res::Resource::-1::1740494290::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/milf/milf_normal.chart.res<>res://packages/fnf/levels/Level_Limo.tscn<>res://packages/fnf/songs/milf/milf.onetime_events.tres<>res://packages/fnf/resources/data/week4/week4_cars.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::2033437086686720517::1740494290::1740495231::1::::<><>::
-::res://packages/fnf/songs/monster/::1740494291
+::res://packages/fnf/songs/monster/::1740495231
 Inst.ogg::AudioStreamOggVorbis::1624925878424106798::1740494290::1740495231::1::::<><>::
 monster-easy.json::JSON::-1::1740494291::0::1::::<><>::
 monster-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1695,7 +1695,7 @@ monster_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts
 monster_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/monster/Inst.ogg<>res://packages/fnf/songs/monster/Voices.ogg
 monster_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/monster/monster_normal.chart.res<>res://packages/fnf/levels/Level_Halloween.tscn<>res://packages/fnf/resources/data/week2/week2_lightning_strike.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::8940832146470905295::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/philly/::1740494291
+::res://packages/fnf/songs/philly/::1740495231
 Inst.ogg::AudioStreamOggVorbis::9169723348573546634::1740494291::1740495231::1::::<><>::
 philly-easy.json::JSON::-1::1740494291::0::1::::<><>::
 philly-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1708,7 +1708,7 @@ philly_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/
 philly_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/philly/Inst.ogg<>res://packages/fnf/songs/philly/Voices.ogg
 philly_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/philly/philly_normal.chart.res<>res://packages/fnf/levels/Level_Pico.tscn<>res://packages/fnf/resources/data/week3/week3_train_passes.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::1414940528446372694::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/pico/::1740494291
+::res://packages/fnf/songs/pico/::1740495231
 Inst.ogg::AudioStreamOggVorbis::7796557284813836287::1740494291::1740495231::1::::<><>::
 pico-easy.json::JSON::-1::1740494291::0::1::::<><>::
 pico-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1721,7 +1721,7 @@ pico_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/re
 pico_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/pico/Inst.ogg<>res://packages/fnf/songs/pico/Voices.ogg
 pico_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/pico/pico_normal.chart.res<>res://packages/fnf/levels/Level_Pico.tscn<>res://packages/fnf/resources/data/week3/week3_train_passes.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::8745574661526256465::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/roses/::1740494291
+::res://packages/fnf/songs/roses/::1740495231
 Inst.ogg::AudioStreamOggVorbis::9028274775377475363::1740494291::1740495231::1::::<><>::
 roses-easy.json::JSON::-1::1740494291::0::1::::<><>::
 roses-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1735,7 +1735,7 @@ roses_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/r
 roses_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/roses/Inst.ogg<>res://packages/fnf/songs/roses/Voices.ogg
 roses_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/roses/roses_normal.chart.res<>res://packages/fnf/levels/Level_School.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::8830115001135906250::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/satin-panties/::1740494291
+::res://packages/fnf/songs/satin-panties/::1740495231
 Inst.ogg::AudioStreamOggVorbis::3485247934790378770::1740494291::1740495231::1::::<><>::
 satin-panties-easy.json::JSON::-1::1740494291::0::1::::<><>::
 satin-panties-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1748,7 +1748,7 @@ satin-panties_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://s
 satin-panties_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/satin-panties/Inst.ogg<>res://packages/fnf/songs/satin-panties/Voices.ogg
 satin-panties_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/satin-panties/satin-panties_normal.chart.res<>res://packages/fnf/levels/Level_Limo.tscn<>res://packages/fnf/resources/data/week4/week4_cars.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::4088349711041958350::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/senpai/::1740494291
+::res://packages/fnf/songs/senpai/::1740495231
 Inst.ogg::AudioStreamOggVorbis::412062732576969159::1740494291::1740495231::1::::<><>::
 senpai-easy.json::JSON::-1::1740494291::0::1::::<><>::
 senpai-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1762,7 +1762,7 @@ senpai_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/
 senpai_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/senpai/Inst.ogg<>res://packages/fnf/songs/senpai/Voices.ogg
 senpai_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/senpai/senpai_normal.chart.res<>res://packages/fnf/levels/Level_School.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::2070655431043430065::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/south/::1740494291
+::res://packages/fnf/songs/south/::1740495231
 Inst.ogg::AudioStreamOggVorbis::7229232432271825273::1740494291::1740495231::1::::<><>::
 south-easy.json::JSON::-1::1740494291::0::1::::<><>::
 south-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1775,7 +1775,7 @@ south_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/r
 south_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/south/Inst.ogg<>res://packages/fnf/songs/south/Voices.ogg
 south_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/south/south_normal.chart.res<>res://packages/fnf/levels/Level_Halloween.tscn<>res://packages/fnf/resources/data/week2/week2_lightning_strike.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::3172697843741337765::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/spookeez/::1740494291
+::res://packages/fnf/songs/spookeez/::1740495231
 Inst.mp3::AudioStreamMP3::2623981695163968639::1740494291::1740495231::1::::<><>::
 spookeez-easy.json::JSON::-1::1740494291::0::1::::<><>::
 spookeez-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1788,7 +1788,7 @@ spookeez_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://script
 spookeez_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/spookeez/Inst.mp3<>res://packages/fnf/songs/spookeez/Voices.mp3
 spookeez_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/spookeez/spookeez_normal.chart.res<>res://packages/fnf/levels/Level_Halloween.tscn<>res://packages/fnf/resources/data/week2/week2_lightning_strike.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.mp3::AudioStreamMP3::4228398413205295969::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/stress/::1740494291
+::res://packages/fnf/songs/stress/::1740495231
 Inst.mp3::AudioStreamMP3::675260462427930427::1740494291::1740495231::1::::<><>::
 picospeaker.json::JSON::-1::1740494291::0::1::::<><>::
 stress-easy.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1802,7 +1802,7 @@ stress_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/
 stress_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/stress/Inst.mp3<>res://packages/fnf/songs/stress/Voices.mp3
 stress_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/stress/stress_normal.chart.res<>res://packages/fnf/levels/Level_Tankman.tscn<>res://packages/fnf/resources/data/week7/week7_rolling_tank.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.mp3::AudioStreamMP3::6548776066281707077::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/thorns/::1740494291
+::res://packages/fnf/songs/thorns/::1740495231
 Inst.ogg::AudioStreamOggVorbis::2378134189765173958::1740494291::1740495231::1::::<><>::
 thorns-easy.json::JSON::-1::1740494291::0::1::::<><>::
 thorns-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1816,7 +1816,7 @@ thorns_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/
 thorns_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/thorns/Inst.ogg<>res://packages/fnf/songs/thorns/Voices.ogg
 thorns_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/thorns/thorns_normal.chart.res<>res://packages/fnf/levels/Level_EvilSchool.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.ogg::AudioStreamOggVorbis::1204310853928287735::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/tutorial/::1740494291
+::res://packages/fnf/songs/tutorial/::1740495231
 Inst.ogg::AudioStreamOggVorbis::859011849311859251::1740494291::1740495231::1::::<><>::
 tutorial-easy.json::JSON::-1::1740494291::0::1::::<><>::
 tutorial-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1829,7 +1829,7 @@ tutorial_hard.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/r
 tutorial_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/tutorial/tutorial_hard.chart.res<>res://packages/fnf/levels/Level_Stage.tscn<>res://packages/fnf/songs/tutorial/tutorial.onetime_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 tutorial_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/tutorial/Inst.ogg
 tutorial_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/tutorial/tutorial_normal.chart.res<>res://packages/fnf/levels/Level_Stage.tscn<>res://packages/fnf/songs/tutorial/tutorial.onetime_events.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
-::res://packages/fnf/songs/ugh/::1740494291
+::res://packages/fnf/songs/ugh/::1740495231
 Inst.mp3::AudioStreamMP3::2523925300693078306::1740494291::1740495231::1::::<><>::
 ugh-easy.json::JSON::-1::1740494291::0::1::::<><>::
 ugh-hard.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1842,7 +1842,7 @@ ugh_hard.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/res
 ugh_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/song_chart/SongChart.gd<>res://packages/fnf/songs/ugh/Inst.mp3<>res://packages/fnf/songs/ugh/Voices.mp3
 ugh_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/ugh/ugh_normal.chart.res<>res://packages/fnf/levels/Level_Tankman.tscn<>res://packages/fnf/resources/data/week7/week7_rolling_tank.tres<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 Voices.mp3::AudioStreamMP3::1473158437255917902::1740494291::1740495231::1::::<><>::
-::res://packages/fnf/songs/winter-horrorland/::1740494291
+::res://packages/fnf/songs/winter-horrorland/::1740495231
 Inst.ogg::AudioStreamOggVorbis::7537552088172430103::1740494291::1740495231::1::::<><>::
 Voices.ogg::AudioStreamOggVorbis::8013467161196966060::1740494291::1740495231::1::::<><>::
 winter-horrorland-easy.json::JSON::-1::1740494291::0::1::::<><>::
@@ -1857,14 +1857,14 @@ winter-horrorland_normal.chart.res::Resource::-1::1740494291::0::1::::<><>::res:
 winter-horrorland_normal.lvl_info.res::Resource::-1::1740494291::0::1::::<><>::res://scripts/resources/level_info/LevelInfo.gd<>res://packages/fnf/songs/winter-horrorland/winter-horrorland_normal.chart.res<>res://packages/fnf/levels/Level_EvilChristmasMall.tscn<>res://scripts/general/ResourceList.gd<>res://scripts/game/events/GameEventInfo.gd
 ::res://scenes/::1740494291
 Main.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/Main.gd
-::res://scenes/autoload/::1740494291
-Conductor.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/autoload/Conductor.gd
-Loader.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/autoload/Loader.gd
-TransitionSystem.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/autoload/TransitionSystem.gd
-VolumeChanger.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/fonts/VolumeFont.tres<>res://scripts/autoload/VolumeChanger.gd<>res://assets/sounds/hxf_beep.ogg
+::res://scenes/autoload/::1740496233
+Conductor.tscn::PackedScene::5294628473556809321::1740496233::0::1::::<><>::res://scripts/autoload/Conductor.gd
+Loader.tscn::PackedScene::8751658764864144709::1740496233::0::1::::<><>::res://scripts/autoload/Loader.gd
+TransitionSystem.tscn::PackedScene::3290003625885431211::1740496233::0::1::::<><>::res://scripts/autoload/TransitionSystem.gd
+VolumeChanger.tscn::PackedScene::6411636188345842017::1740496233::0::1::::<><>::res://assets/fonts/VolumeFont.tres<>res://scripts/autoload/VolumeChanger.gd<>uid://tob02ib435ec::::res://assets/sounds/hxf_beep.ogg
 ::res://scenes/effects/::1740494291
-::res://scenes/effects/hxf_trail/::1740494291
-HXF_GhostTrail.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/effects/hxf_trail/HXF_GhostTrail.gd
+::res://scenes/effects/hxf_trail/::1740496233
+HXF_GhostTrail.tscn::PackedScene::1117566660260945299::1740496233::0::1::::<><>::res://scripts/effects/hxf_trail/HXF_GhostTrail.gd
 ::res://scenes/shared/::1740494291
 ::res://scenes/shared/game/::1740494291
 GameCamera2D.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/cameras/GameCamera.gd<>res://scripts/game/characters/BeatNode.gd
@@ -1877,17 +1877,17 @@ PauseState.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/P
 PopupCombo.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphics/game/hud/ratings.tres<>res://assets/graphics/game/hud/combo_nums/combo_nums.tres<>res://scripts/game/PopupCombo.gd
 PopupCombo_Pixel.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphics/game/hud/pixel/combo_nums/combo_nums.tres<>res://assets/graphics/game/hud/pixel/ratings.tres<>res://scripts/game/PopupCombo.gd
 VideoCutsceneState.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/VideoCutsceneState.gd<>res://assets/fonts/fnf_psych/FNF_Bold1.font<>res://assets/fonts/VCR_32_Options.tres
-::res://scenes/shared/game/characters/::1740494291
-BF_StoryMode.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/materials/menus/StoryModeCharacterShader.tres<>res://scenes/shared/game/characters/Boyfriend.tscn
-Boyfriend.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphics/boyfriend/Spritesheet_Boyfriend.res<>res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/boyfriend/anims/Idle.tres<>res://assets/graphics/boyfriend/anims/Left.tres<>res://assets/graphics/boyfriend/anims/Right.tres<>res://assets/graphics/boyfriend/anims/Down.tres<>res://assets/graphics/boyfriend/anims/Up.tres<>res://scenes/shared/game/icons/BF_Icon_Extended.tscn<>res://assets/graphics/boyfriend/anims/Death_Confirm.tres<>res://assets/graphics/boyfriend/anims/Death_Loop.tres<>res://assets/graphics/boyfriend/anims/Death_Start.tres
-Boyfriend_Car.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/boyfriend/BF_Car.res<>res://scenes/shared/game/icons/BF_Icon_Extended.tscn
-Boyfriend_Christmas.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphics/boyfriend/BF_Christmas.res<>res://scenes/shared/game/characters/Boyfriend.tscn
+::res://scenes/shared/game/characters/::1740496243
+BF_StoryMode.tscn::PackedScene::2209009692640934507::1740496233::0::1::::<><>::res://assets/materials/menus/StoryModeCharacterShader.tres<>uid://2bjwp8118ys3::::res://scenes/shared/game/characters/Boyfriend.tscn<>res://assets/graphics/boyfriend/anims/Death_Confirm.tres<>res://assets/graphics/boyfriend/anims/Death_Loop.tres<>res://assets/graphics/boyfriend/anims/Death_Start.tres<>res://assets/graphics/boyfriend/anims/Down.tres<>res://assets/graphics/boyfriend/anims/Idle.tres<>res://assets/graphics/boyfriend/anims/Left.tres<>res://assets/graphics/boyfriend/anims/Right.tres<>res://assets/graphics/boyfriend/anims/Up.tres
+Boyfriend.tscn::PackedScene::1897749736427929096::1740496233::0::1::::<><>::res://assets/graphics/boyfriend/Spritesheet_Boyfriend.res<>res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/boyfriend/anims/Idle.tres<>res://assets/graphics/boyfriend/anims/Left.tres<>res://assets/graphics/boyfriend/anims/Right.tres<>res://assets/graphics/boyfriend/anims/Down.tres<>res://assets/graphics/boyfriend/anims/Up.tres<>res://scenes/shared/game/icons/BF_Icon_Extended.tscn<>res://assets/graphics/boyfriend/anims/Death_Confirm.tres<>res://assets/graphics/boyfriend/anims/Death_Loop.tres<>res://assets/graphics/boyfriend/anims/Death_Start.tres
+Boyfriend_Car.tscn::PackedScene::3163341091405322018::1740496233::0::1::::<><>::res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/boyfriend/BF_Car.res<>res://scenes/shared/game/icons/BF_Icon_Extended.tscn
+Boyfriend_Christmas.tscn::PackedScene::7777517735182506272::1740496243::0::1::::<><>::res://assets/graphics/boyfriend/BF_Christmas.res<>uid://2bjwp8118ys3::::res://scenes/shared/game/characters/Boyfriend.tscn<>res://assets/graphics/boyfriend/anims/Death_Confirm.tres<>res://assets/graphics/boyfriend/anims/Death_Loop.tres<>res://assets/graphics/boyfriend/anims/Death_Start.tres<>res://assets/graphics/boyfriend/anims/Down.tres<>res://assets/graphics/boyfriend/anims/Idle.tres<>res://assets/graphics/boyfriend/anims/Left.tres<>res://assets/graphics/boyfriend/anims/Right.tres<>res://assets/graphics/boyfriend/anims/Up.tres
 Boyfriend_Pixel.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/boyfriend/BF_Pixel.res<>res://scenes/shared/game/icons/BF_Pixel_Icon_Extended.tscn<>res://assets/graphics/boyfriend/BF_Pixel_Death.res
 GF_StoryMode.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/materials/menus/StoryModeCharacterShader.tres<>res://scenes/shared/game/characters/Girlfriend.tscn
 Girlfriend.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphics/girlfriend/Spritesheet_Girlfriend.res<>res://scripts/game/characters/DoubleIdleCharacter.gd<>res://assets/graphics/girlfriend/anims/Dance_Right.tres<>res://assets/graphics/girlfriend/anims/Dance_Left.tres<>res://scenes/shared/game/icons/GF_Icon_Extended.tscn<>res://assets/graphics/girlfriend/GF_Car.res
 Girlfriend_Christmas.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/characters/DoubleIdleBeatNode.gd<>res://assets/graphics/girlfriend/GF_Christmas.res
 Girlfriend_Pixel.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/characters/DoubleIdleBeatNode.gd<>res://assets/graphics/girlfriend/GF_Pixel.res
-Partners.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/partners/bfAndGF.res<>res://assets/graphics/partners/bfHoldingGF-DEAD.res
+Partners.tscn::PackedScene::6923796399549985622::1740496234::0::1::::<><>::res://scripts/game/characters/PlayableCharacter.gd<>res://assets/graphics/partners/bfAndGF.res<>res://assets/graphics/partners/bfHoldingGF-DEAD.res
 ::res://scenes/shared/game/game_over/::1740494291
 GameOver.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://templates/GameOver_Template.tscn<>res://scenes/shared/game/characters/Boyfriend.tscn
 GameOver_BF_and_Bogus.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://templates/GameOver_Template.tscn<>res://scenes/shared/game/characters/Boyfriend.tscn<>res://packages/bogus/characters/bogus/Bogus.tscn
@@ -1937,8 +1937,8 @@ Up_Note.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/models/not
 ::res://scenes/shared/general/di_particles/::1740494291
 DIParticles2D.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/general/DriverIndependentParticles.gd
 DIParticles3D.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/general/DriverIndependentParticles.gd
-::res://scenes/shared/menus/::1740494291
-DescriptionLoader.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/menus/DescriptionLoader.gd<>res://assets/fonts/VCR_OSD_MONO_1.001.ttf<>res://assets/graphics/menus/mod_loader/mod_loader_screen_part_1.png
+::res://scenes/shared/menus/::1740496233
+DescriptionLoader.tscn::PackedScene::732681610336712553::1740496233::0::1::::<><>::res://scripts/menus/DescriptionLoader.gd<>uid://b3r6ikpnupm28::::res://assets/fonts/VCR_OSD_MONO_1.001.ttf<>uid://clxy3qsfd4iqo::::res://assets/graphics/menus/mod_loader/mod_loader_screen_part_1.png
 FNFStyleMenu.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://scripts/menus/FNFStyleMenu.gd<>res://assets/sounds/scrollMenu.ogg
 FNFStyleText_Bold.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/fonts/fnf_psych/FNF_Bold1.font<>res://assets/fonts/fnf_psych/FNF_Bold2.font
 FNFStyleText_Normal.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/fonts/fnf_psych/FNF_Normal1.font<>res://assets/fonts/fnf_psych/FNF_Normal2.font
@@ -1965,13 +1965,13 @@ WeekOption.tscn::PackedScene::-1::1740495033::0::1::::<><>::res://assets/graphic
 ::res://scripts/::1740494291
 FreeplayOnlyMain.gd::GDScript::-1::1740495032::0::1::::<>Node<>::
 Main.gd::GDScript::-1::1740495032::0::1::::<>Node<>::
-::res://scripts/autoload/::1740494291
+::res://scripts/autoload/::1740496244
 Conductor.gd::GDScript::-1::1740495033::0::1::::<>AudioStreamPlayer<>::
 Debug.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
 GodotX.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
 Loader.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
 TransitionSystem.gd::GDScript::-1::1740495033::0::1::::<>CanvasLayer<>::
-UserData.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
+UserData.gd::GDScript::-1::1740496244::0::1::::<>Node<>::
 VolumeChanger.gd::GDScript::-1::1740495033::0::1::::<>CanvasLayer<>::
 ::res://scripts/autoload/assistants/::1740494291
 AssistantAnimSprite.gd::GDScript::-1::1740495033::0::1::::<>Node<>::
@@ -2063,7 +2063,7 @@ WeekSelection.gd::GDScript::-1::1740495032::0::1::::<>Node<>::
 ::res://scripts/resources/::1740494291
 ::res://scripts/resources/credit_entry/::1740494291
 CreditEntry.gd::GDScript::-1::1740495032::0::1::::CreditEntry<>Resource<>::
-::res://scripts/resources/level_info/::1740494291
+::res://scripts/resources/level_info/::1740495240
 LevelInfo.gd::GDScript::-1::1740495032::0::1::::LevelInfo<>Resource<>::
 level_info_icon.svg::CompressedTexture2D::4943304534552168488::1740494291::1740495240::1::::<><>::
 ::res://scripts/resources/mod_credits/::1740494291
@@ -2073,7 +2073,7 @@ ModDescription.gd::GDScript::-1::1740495032::0::1::::ModDescription<>Resource<>:
 ::res://scripts/resources/option_entries/::1740494291
 KeybindEntry.gd::GDScript::-1::1740495032::0::1::::KeybindEntry<>Resource<>::
 OptionEntry.gd::GDScript::-1::1740495032::0::1::::OptionEntry<>Resource<>::
-::res://scripts/resources/song_chart/::1740494291
+::res://scripts/resources/song_chart/::1740495240
 SongChart.gd::GDScript::-1::1740495032::0::1::::SongChart<>Resource<>::
 song_chart_icon.svg::CompressedTexture2D::485725331733991957::1740494291::1740495240::1::::<><>::
 ::res://scripts/resources/song_data/::1740494291
