@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://2bjwp8118ys3"]
 
-[ext_resource type="SpriteFrames" path="res://assets/graphics/boyfriend/Spritesheet_Boyfriend.res" id="1"]
+[ext_resource type="SpriteFrames" uid="uid://dbsvc5p1nriua" path="res://assets/graphics/boyfriend/Spritesheet_Boyfriend.res" id="1"]
 [ext_resource type="Script" path="res://scripts/game/characters/PlayableCharacter.gd" id="2"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Idle.tres" id="3"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Left.tres" id="4"]

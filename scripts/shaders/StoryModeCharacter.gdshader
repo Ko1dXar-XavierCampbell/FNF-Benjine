@@ -7,7 +7,7 @@ void fragment()
 {
 	vec4 init_color = texture(TEXTURE, UV);
 	init_color.rgb = vec3((init_color.r + init_color.g + init_color.b) / 3.0);
-	
+
 	if (init_color.r < threshold)
 	{
 		if (init_color.a == 1.0)
@@ -17,6 +17,6 @@ void fragment()
 	{
 		init_color.rgb = replacement_color.rgb;
 	}
-	
+
 	COLOR = init_color;
 }

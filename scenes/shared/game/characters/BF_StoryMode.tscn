@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://6qccjllpujl8"]
 
-[ext_resource type="Material" path="res://assets/materials/menus/StoryModeCharacterShader.tres" id="1"]
+[ext_resource type="Material" uid="uid://eypy11hqf48b" path="res://assets/materials/menus/StoryModeCharacterShader.tres" id="1"]
 [ext_resource type="PackedScene" uid="uid://2bjwp8118ys3" path="res://scenes/shared/game/characters/Boyfriend.tscn" id="2"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Death_Confirm.tres" id="4_pe1ou"]
 [ext_resource type="Animation" path="res://assets/graphics/boyfriend/anims/Death_Loop.tres" id="5_28jxd"]
